@@ -1,0 +1,8 @@
+Q. How to set maven build made from the source code?
+ 
+1.	Rename the “Application” folder to “Application_backup” present in Ephesoft folder. (after installation)
+2.	Copy the maven build and place the build in a folder inside Ephesoft folder.
+3.	Rename the copied folder to “Application”.
+4.	Copy “Application_backup\native” folder, “Application_backup\applicationContext.xml” file and “Application_backup\WEB-INF\classes\META-INF” folder to “Application” folder at the corresponding location.
+5.	Copy the jars present in “jars.zip” folder inside “Application\WEB-INF\lib”.
+6.	Start the server.
