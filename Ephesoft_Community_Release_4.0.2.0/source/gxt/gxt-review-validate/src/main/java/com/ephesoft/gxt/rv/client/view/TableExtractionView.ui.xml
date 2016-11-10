@@ -1,0 +1,28 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view" xmlns:rv="urn:import:com.ephesoft.gxt.rv.client.widget"
+	xmlns:corePanel="urn:import:com.ephesoft.gxt.core.client"
+	xmlns:menu="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="validationOptionsData">
+		<ui:attributes width="1" height="-1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="tablesListData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+	
+	<container:VerticalLayoutContainer>
+		<container:child layoutData="{validationOptionsData}">
+			<menu:CustomMenuBar ui:field="tableExtractionMenuBar" />
+		</container:child>
+		<container:child layoutData="{tablesListData}">
+			<coreView:ListPanel ui:field="dataTableListPanel" />
+		</container:child>
+	</container:VerticalLayoutContainer>
+</ui:UiBinder>

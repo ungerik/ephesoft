@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+	typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+	targetNamespace="http://www.activiti.org/test">
+	<process id="Page_Process_Module_BC3" name="Page_Process_Module_BC3"
+		isExecutable="true">
+		<extensionElements>
+			<activiti:executionListener event="start"
+				delegateExpression="${moduleExecutionStartListener}" />
+			<activiti:executionListener event="end"
+				delegateExpression="${moduleExecutionEndListener}"></activiti:executionListener>
+		</extensionElements>
+		<startEvent id="start" />
+		<sequenceFlow sourceRef="start"
+			targetRef="Image_Process_Create_OCR_Input_Plugin-Plugin" />
+		<callActivity id="Image_Process_Create_OCR_Input_Plugin-Plugin"
+			activiti:async="true" calledElement="Image_Process_Create_OCR_Input_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Image_Process_Create_OCR_Input_Plugin-Plugin"
+			targetRef="Page_Process_Scripting_Plugin-Plugin" />
+		<callActivity id="Page_Process_Scripting_Plugin-Plugin"
+			activiti:async="true" calledElement="Page_Process_Scripting_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+				<activiti:in sourceExpression="ScriptPageProcessing"
+					target="scriptName" />
+				<activiti:in sourceExpression="Page_Process_Scripting_Plugin"
+					target="backupFileName" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Page_Process_Scripting_Plugin-Plugin"
+			targetRef="end" />
+		<endEvent id="end" />
+	</process>
+	<bpmndi:BPMNDiagram id="BPMNDiagram_Page_Process_Module_BC3">
+		<bpmndi:BPMNPlane bpmnElement="Page_Process_Module_BC3"
+			id="BPMNPlane_Page_Process_Module_BC3" />
+	</bpmndi:BPMNDiagram>
+</definitions>

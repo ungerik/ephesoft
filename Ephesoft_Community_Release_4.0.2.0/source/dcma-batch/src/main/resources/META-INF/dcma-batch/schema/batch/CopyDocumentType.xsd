@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Copy_Document_Type">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Batch_Class_Id" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="Existing_Doc_Type_Name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="New_Document_Type" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="Description" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+              <xsd:element name="Confidence_Threshold" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

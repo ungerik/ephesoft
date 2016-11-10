@@ -1,0 +1,88 @@
+/*#Preview {
+    width:610px;
+    margin:0 auto;
+}
+*/
+.nivoSlider {
+    position:relative;
+    min-height:350px;
+    background:#202834 url(../images/loading.gif) no-repeat 50% 50%;
+	z-index:1;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+}
+
+/*#content {
+    width:610px;
+    margin:0 auto;
+    position:relative;
+}
+#content h2 {
+    margin-left:30px;
+}
+
+#footer {
+    text-align:center;
+    padding:30px 0;
+    color:#31333E;
+    text-shadow:0px 1px 0px #6F7784;
+}
+#footer a {
+    color:#31333E;
+    border-color:#31333E;
+}*/
+
+.nivo-directionNav a {
+    display:block;
+    width:30px;
+    height:30px;
+    background:url(../images/arrows.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+}
+a.nivo-nextNav {
+    background-position:-30px 0;
+    right:15px;
+}
+a.nivo-prevNav {
+    left:15px;
+}
+
+#slider1 .nivo-controlNav {
+    position:absolute;
+    left:47%;
+    bottom:30px;
+}
+#slider1 .nivo-controlNav a{
+    display:block;
+    width:10px;
+    height:10px;
+    background:#fff; /*url(../images/bullets.png) no-repeat 2px 2px*/
+    text-indent:-9999px;
+    border:0;
+    margin-right:5px;
+    float:left;
+	border-radius:50%;
+	padding:2px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+}
+#slider1 .nivo-controlNav a.active {
+	background:#000;
+   /* background-position:-8px 2px;*/
+}
+
+#slider1 a {
+    display:block; /* IE Fix */
+}
+#slider1 .nivo-caption{
+	display:none !important;
+}

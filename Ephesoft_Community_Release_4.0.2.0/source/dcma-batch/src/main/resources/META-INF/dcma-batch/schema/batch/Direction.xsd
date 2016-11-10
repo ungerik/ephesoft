@@ -1,0 +1,12 @@
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ephesoft.com/batch/direction"
+	xmlns:bs="http://www.ephesoft.com/batch/direction">
+	<xs:simpleType name="direction">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EAST" />
+			<xs:enumeration value="SOUTH" />
+			<xs:enumeration value="WEST" />
+			<xs:enumeration value="NORTH" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

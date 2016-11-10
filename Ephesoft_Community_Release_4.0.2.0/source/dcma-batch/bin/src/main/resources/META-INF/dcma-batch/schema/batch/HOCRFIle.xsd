@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:include schemaLocation="DocumentAPI.xsd" />
+  <xsd:complexType name="HOCR_File">
+      <xsd:sequence>
+        <xsd:element name="File_Name" minOccurs="0" maxOccurs="1" type="xsd:normalizedString"/>
+        <xsd:element name="Document_Level_Fields" minOccurs="0" maxOccurs="1">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Document_Level_Field" minOccurs="0" maxOccurs="unbounded" type="docField"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

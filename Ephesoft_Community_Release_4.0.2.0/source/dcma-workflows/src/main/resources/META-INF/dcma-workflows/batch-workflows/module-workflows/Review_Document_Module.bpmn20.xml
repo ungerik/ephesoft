@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+	xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema"
+	expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+
+	<process id="Review_Document_Module">
+		<extensionElements>
+			<activiti:executionListener event="start"
+				delegateExpression="${moduleExecutionStartListener}"></activiti:executionListener>
+			<activiti:executionListener event="end"
+				delegateExpression="${moduleExecutionEndListener}"></activiti:executionListener>
+		</extensionElements>
+		<startEvent id="start" />
+		<sequenceFlow sourceRef="start" targetRef="reviewDecision" />
+		<serviceTask id='reviewDecision' name='reviewDecision'
+			activiti:class="com.ephesoft.dcma.workflows.decisionevaluator.ReviewEvaluation" />
+		<sequenceFlow sourceRef="reviewDecision" targetRef="is-review-required" />
+		<exclusiveGateway id="is-review-required" name="is-review-required"></exclusiveGateway>
+		<sequenceFlow targetRef="Review_Document_Plugin-Plugin"
+			sourceRef="is-review-required">
+			<conditionExpression xsi:type="tFormalExpression">${reviewEvaluationResult=='yes'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow targetRef="end" sourceRef="is-review-required">
+			<conditionExpression xsi:type="tFormalExpression">${reviewEvaluationResult=='no'}
+			</conditionExpression>
+		</sequenceFlow>
+		<callActivity id="Review_Document_Plugin-Plugin" name="Review_Document_Plugin"
+			activiti:async="true" calledElement="Review_Document_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow id="flow3" sourceRef="Review_Document_Plugin-Plugin"
+			targetRef="end" />
+		<endEvent id="end" />
+
+	</process>
+</definitions>

@@ -1,0 +1,134 @@
+package com.ephesoft.gxt.admin.client.presenter.tablecolumnextraction.advancedtablecolumnextractionrule;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.ephesoft.gxt.admin.client.controller.BatchClassManagementController;
+import com.ephesoft.gxt.admin.client.controller.BatchClassManagementController.BatchClassManagementEventBus;
+import com.ephesoft.gxt.admin.client.event.AdvancedTableColumnExtractionChangeEvent;
+import com.ephesoft.gxt.admin.client.event.AdvancedTableColumnExtractionInputPanelEvent;
+import com.ephesoft.gxt.admin.client.event.AdvancedTableExtractionFireColumnChangeEvent;
+import com.ephesoft.gxt.admin.client.event.SetOverlayCoordinatesEvent;
+import com.ephesoft.gxt.admin.client.i18n.AdminConstants;
+import com.ephesoft.gxt.admin.client.view.tablecolumnextraction.advcancedtablecolumnextractionrule.AdvancedTableColumnExtractionInputView;
+import com.ephesoft.gxt.core.shared.dto.PointCoordinate;
+import com.ephesoft.gxt.core.shared.dto.TableColumnExtractionRuleDTO;
+import com.ephesoft.gxt.core.shared.dto.TableExtractionRuleDTO;
+import com.ephesoft.gxt.core.shared.dto.TableInfoDTO;
+import com.google.gwt.core.shared.GWT;
+import com.google.gwt.event.shared.EventBus;
+import com.google.web.bindery.event.shared.binder.EventBinder;
+import com.google.web.bindery.event.shared.binder.EventHandler;
+
+public class AdvancedTableColumnExtractionInputPresenter extends
+		AdvancedTableColumnExtractionInlinePresenter<AdvancedTableColumnExtractionInputView> {
+
+	interface CustomEventBinder extends EventBinder<AdvancedTableColumnExtractionInputPresenter> {
+	}
+
+	private static final CustomEventBinder eventBinder = GWT.create(CustomEventBinder.class);
+
+	private String displayImageName;
+
+	private Map<String, TableColumnExtractionRuleDTO> columnNameToDTOMap;
+
+	@Override
+	public void injectEvents(EventBus eventBus) {
+		eventBinder.bindEventHandlers(this, eventBus);
+	}
+
+	public AdvancedTableColumnExtractionInputPresenter(BatchClassManagementController controller,
+			AdvancedTableColumnExtractionInputView view) {
+		super(controller, view);
+	}
+
+	@Override
+	public void bind() {
+		columnNameToDTOMap = controller.getAdvTableColumnExtractionPresenter().getColumnNameToDTOMap();
+		TableColumnExtractionRuleDTO selectedTableColumnExtractionRuleDTO = controller.getSelectedTableColumnExtractionRuleDTO();
+		view.setImageName(AdminConstants.EMPTY_STRING);
+		if (selectedTableColumnExtractionRuleDTO != null) {
+			TableExtractionRuleDTO tableExtractionRuleDTO = selectedTableColumnExtractionRuleDTO.getTableExtractionRuleDTO();
+			TableInfoDTO selectedTableInfoField = tableExtractionRuleDTO.getTableInfoDTO();
+			this.displayImageName = selectedTableInfoField.getDisplayImage();
+			view.setColStartCoord(selectedTableColumnExtractionRuleDTO.getColumnStartCoordinate());
+			view.setColEndCoord(selectedTableColumnExtractionRuleDTO.getColumnEndCoordinate());
+			view.setTableColumnExtractionRuleList(tableExtractionRuleDTO);
+			view.setSelectedTableColumn(selectedTableColumnExtractionRuleDTO.getColumnName());
+			if (null != displayImageName) {
+				view.setImageName(displayImageName);
+			}
+		}
+	}
+
+	public void clearColumnDTOMap() {
+		if (this.columnNameToDTOMap != null) {
+			this.columnNameToDTOMap.clear();
+		}
+	}
+
+	public void addToDtoMap(String columnName, TableColumnExtractionRuleDTO tableColumnExtractionRuleDTO) {
+		if (this.columnNameToDTOMap == null) {
+			this.columnNameToDTOMap = new HashMap<String, TableColumnExtractionRuleDTO>();
+		}
+		TableColumnExtractionRuleDTO localTableColDTO = createLocalDTO(tableColumnExtractionRuleDTO);
+		this.columnNameToDTOMap.put(columnName, localTableColDTO);
+	}
+
+	private TableColumnExtractionRuleDTO createLocalDTO(final TableColumnExtractionRuleDTO tableColumnExtractionRuleDTO) {
+		final TableColumnExtractionRuleDTO columnInfoDTO = new TableColumnExtractionRuleDTO();
+		controller.getAdvTableColumnExtractionPresenter().mergeTableColumnsInfoDTOs(columnInfoDTO, tableColumnExtractionRuleDTO);
+		return columnInfoDTO;
+	}
+
+	@EventHandler
+	public void setStartEndCoordinate(SetOverlayCoordinatesEvent event) {
+		PointCoordinate startCoord = event.getStartCoord();
+		PointCoordinate endCoord = event.getEndCoord();
+		view.setColStartCoord(String.valueOf(startCoord.getxCoordinate()));
+		view.setColEndCoord(String.valueOf(endCoord.getxCoordinate()));
+
+		// Setting coordinates value in temporary objects.
+		TableColumnExtractionRuleDTO ruleDTO = columnNameToDTOMap.get(view.getSelectedTableColumn());
+		if (null != ruleDTO) {
+			ruleDTO.setColumnStartCoordinate(String.valueOf(startCoord.getxCoordinate()));
+			ruleDTO.setColumnEndCoordinate(String.valueOf(endCoord.getxCoordinate()));
+			ruleDTO.setColumnCoordY0(String.valueOf(startCoord.getyCoordinate()));
+			ruleDTO.setColumnCoordY1(String.valueOf(endCoord.getyCoordinate()));
+		}
+	}
+
+	@EventHandler
+	public void updateInputPanel(AdvancedTableColumnExtractionInputPanelEvent event) {
+		if (event.getColumnName() != null && !event.getColumnName().equals(AdminConstants.EMPTY_STRING)) {
+			view.setSelectedTableColumn(event.getColumnName());
+		}
+		if (event.getDisplayImageName() != null && !event.getDisplayImageName().equals(AdminConstants.EMPTY_STRING)) {
+			view.setImageName(event.getDisplayImageName());
+		}
+		if (event.getStartCoord() != null) {
+			view.setColStartCoord(event.getStartCoord());
+		}
+		if (event.getEndCoord() != null) {
+			view.setColEndCoord(event.getEndCoord());
+		}
+	}
+
+	public void setSelectedTableColumnExtractionRuleDTO(final String selColumnIdentfier) {
+		if (selColumnIdentfier != null && !selColumnIdentfier.isEmpty()) {
+			TableColumnExtractionRuleDTO extractionRuleDTO = controller.getSelectedTableColumnExtractionRuleDTO();
+			if (null != extractionRuleDTO) {
+				TableColumnExtractionRuleDTO tableColumnExtractionRuleDTO = extractionRuleDTO.getTableExtractionRuleDTO()
+						.getTableColumnExtractionRuleByColumnName(selColumnIdentfier);
+				controller.setSelectedTableColumnExtractionRuleDTO(tableColumnExtractionRuleDTO);
+				BatchClassManagementEventBus.fireEvent(new AdvancedTableColumnExtractionChangeEvent());
+			}
+		}
+	}
+
+	@EventHandler
+	public void fireSelectedColumnValueChangeEvent(AdvancedTableExtractionFireColumnChangeEvent event) {
+		view.fireSelectedColumnValueChangeEvent();
+	}
+
+}

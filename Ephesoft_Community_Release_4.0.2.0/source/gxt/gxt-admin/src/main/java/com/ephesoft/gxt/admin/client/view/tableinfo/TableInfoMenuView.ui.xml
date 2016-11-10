@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:menuWidget="urn:import:com.google.gwt.user.client.ui"
+	xmlns:bcmMenuBar='urn:import:com.ephesoft.gxt.admin.client.view'
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+	<g:HorizontalPanel ui:field="gridViewMainPanel">
+		<bcmMenuBar:BatchClassManagementMenuBar ui:field="bcmMenuBar"/>
+		<menuWidget:ToggleButton ui:field="testTable"/>
+	</g:HorizontalPanel>
+</ui:UiBinder>

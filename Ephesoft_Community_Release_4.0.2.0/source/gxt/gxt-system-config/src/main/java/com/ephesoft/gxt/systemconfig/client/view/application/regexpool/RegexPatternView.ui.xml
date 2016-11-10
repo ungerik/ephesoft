@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:menuWidget="urn:import:com.google.gwt.user.client.ui"
+	xmlns:regex="urn:import:com.ephesoft.gxt.systemconfig.client.view.application.regexpool"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+<g:HorizontalPanel ui:field="regexHorizontalPanel">
+	<g:cell>
+		<regex:RegexPatternSelectionGridView ui:field="regexPatternGrid" />
+	</g:cell>
+</g:HorizontalPanel>
+	
+	
+</ui:UiBinder>

@@ -1,0 +1,81 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:client="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client.form'
+
+	xmlns:label='urn:import:com.ephesoft.gxt.core.client.ui.widget'>
+
+	<g:VerticalPanel width="100%" ui:field="editBatchClassViewPanel"
+		styleName="copyVerticalPanel">
+
+		<g:HorizontalPanel width="100%" styleName="nameHorizontalPanel">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<label:MandatoryLabel ui:field="nameLabel" />
+			</g:cell>
+			<g:cell width="5px">
+				<g:Label></g:Label>
+			</g:cell>
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="name"></gxt:TextField>
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%"
+			styleName="descriptionHorizontalPanel">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<label:MandatoryLabel ui:field="descLabel" />
+			</g:cell>
+			<g:cell width="5px">
+				<g:Label></g:Label>
+			</g:cell>
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="description"></gxt:TextField>
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%" styleName="priorityHorizontalPanel">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<label:MandatoryLabel ui:field="priorityLabel" />
+			</g:cell>
+
+			<g:cell horizontalAlignment="ALIGN_CENTER">
+				<label:Slider minValue="1" maxValue="100" increment="1"
+					ui:field="prioritySlider" />
+			</g:cell>
+
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="prioritySliderTextBox" />
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%" styleName="uncHorizontalPanel">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<label:MandatoryLabel ui:field="uncLabel" />
+			</g:cell>
+			<g:cell width="5px">
+				<g:Label></g:Label>
+			</g:cell>
+
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="uncFolder"></gxt:TextField>
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%"
+			styleName="gridWorkflowHorizontalPanel">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<g:Label ui:field="gridWorkflowLabel"></g:Label>
+			</g:cell>
+			<g:cell width="5px">
+				<g:Label></g:Label>
+			</g:cell>
+
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<g:CheckBox ui:field="gridCheckBox"/>
+			</g:cell>
+		</g:HorizontalPanel>
+
+<!-- 		<g:HorizontalPanel width="100%" ui:field="editBatchPanel"> -->
+<!-- 		</g:HorizontalPanel> -->
+
+	</g:VerticalPanel>
+</ui:UiBinder>

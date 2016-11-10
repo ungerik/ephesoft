@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+	typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+	targetNamespace="http://www.activiti.org/test">
+	<process id="Recostar_Extraction_Module" isExecutable="true">
+		<extensionElements>
+			<activiti:executionListener event="start"
+				delegateExpression="${moduleExecutionStartListener}"></activiti:executionListener>
+			<activiti:executionListener event="end"
+				delegateExpression="${moduleExecutionEndListener}"></activiti:executionListener>
+		</extensionElements>
+		<startEvent id="start" />
+		<sequenceFlow sourceRef="start"
+			targetRef="BarCode_Extraction_Plugin-Plugin" />
+		<callActivity id="BarCode_Extraction_Plugin-Plugin"
+			activiti:async="true" calledElement="BarCode_Extraction_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="BarCode_Extraction_Plugin-Plugin"
+			targetRef="Regular_Regex_Doc_Fields_Extraction_Plugin-Plugin" />
+		<callActivity id="Regular_Regex_Doc_Fields_Extraction_Plugin-Plugin"
+			activiti:async="true" calledElement="Regular_Regex_Doc_Fields_Extraction_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Regular_Regex_Doc_Fields_Extraction_Plugin-Plugin"
+			targetRef="Regex_Doc_Fields_Extraction_Plugin-Plugin" />
+		<callActivity id="Regex_Doc_Fields_Extraction_Plugin-Plugin"
+			activiti:async="true" calledElement="Regex_Doc_Fields_Extraction_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Regex_Doc_Fields_Extraction_Plugin-Plugin"
+			targetRef="Table_Doc_Fields_Extraction_Plugin-Plugin" />
+		<callActivity id="Table_Doc_Fields_Extraction_Plugin-Plugin"
+			activiti:async="true" calledElement="Table_Doc_Fields_Extraction_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Table_Doc_Fields_Extraction_Plugin-Plugin"
+			targetRef="Extraction_Scripting_Plugin-Plugin" />
+		<callActivity id="Extraction_Scripting_Plugin-Plugin"
+			activiti:async="true" calledElement="Extraction_Scripting_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+				<activiti:in target="scriptName" sourceExpression="ScriptExtraction" />
+				<activiti:in target="backupFileName" sourceExpression="Extraction_Scripting_Plugin" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Extraction_Scripting_Plugin-Plugin"
+			targetRef="end" />
+		<endEvent id="end" />
+	</process>
+</definitions>

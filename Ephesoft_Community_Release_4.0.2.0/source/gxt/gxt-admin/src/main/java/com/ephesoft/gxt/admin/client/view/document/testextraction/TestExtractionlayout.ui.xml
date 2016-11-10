@@ -1,0 +1,90 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:adminWidget="urn:import:com.ephesoft.gxt.admin.client.widget"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:menuView="urn:import:com.ephesoft.gxt.admin.client.view.document.testextraction"
+	xmlns:navigatorView="urn:import:com.ephesoft.gxt.admin.client.view.document.testextraction.navigator"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="topPanelData">
+		<ui:attributes size="0.30" />
+	</ui:with>
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="modulesData">
+		<ui:attributes size="152" />
+	</ui:with>
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="extractionMenuData">
+		<ui:attributes size="30" />
+	</ui:with>
+	
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData">
+		<ui:attributes size="0.20" />
+	</ui:with>
+
+	<container:SimpleContainer>
+		<container:child>
+			<container:BorderLayoutContainer
+				ui:field="borderLayoutContainer">
+				<container:north layoutData="{modulesData}">
+					<gxt:ContentPanel headerVisible="false"
+						styleName="firstContentPanel" ui:field="firstContentPanel">
+						<container:Viewport>
+							<container:BorderLayoutContainer>
+								<container:north layoutData="{extractionMenuData}">
+									<gxt:ContentPanel headerVisible="false"
+										styleName="secondContentPanel">
+										<menuView:TestExtractionMenuView
+											ui:field="testExtractionMenuView" />
+									</gxt:ContentPanel>
+								</container:north>
+								<container:center>
+									<gxt:ContentPanel headerVisible="false"
+										styleName="thirdContentPanel">
+										<menuView:TestExtractionClassificationTypeView
+											ui:field="testExtractionClassificationTypeView" />
+									</gxt:ContentPanel>
+								</container:center>
+							</container:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</container:north>
+				<container:center>
+					<gxt:ContentPanel headerVisible="false"
+						styleName="fourthContentPanel">
+						<container:Viewport>
+							<container:BorderLayoutContainer>
+								<container:west layoutData="{westData}">
+									<gxt:ContentPanel headerVisible="false"
+										styleName="fifthContentPanel">
+										<navigatorView:TestExtractionNavigatorView
+											ui:field="testExtractionNavigatorView" />
+									</gxt:ContentPanel>
+								</container:west>
+								<container:center>
+									<container:Viewport>
+										<gxt:ContentPanel headerVisible="false"
+											resize="true" ui:field="centerPanel">
+										</gxt:ContentPanel>
+									</container:Viewport>
+								</container:center>
+							</container:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</container:center>
+			</container:BorderLayoutContainer>
+		</container:child>
+	</container:SimpleContainer>
+</ui:UiBinder>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:bs="http://www.ephesoft.com/batch/batchStatus" xmlns:dir="http://www.ephesoft.com/batch/direction"
+	xsi:schemaLocation="
+http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd
+http://www.w3.org/2001/XMLSchema http://www.w3.org/2001/XMLSchema.xsd 
+http://www.ephesoft.com/batch/batchStatus BatchStatus.xsd
+http://www.ephesoft.com/batch/direction Direction.xsd
+"
+	version="2.1">
+	<bindings schemaLocation="Common.xsd">
+		<schemaBindings>
+			<package name="com.ephesoft.dcma.batch.schema" />
+		</schemaBindings>
+
+		<globalBindings>
+			<serializable uid="100" />
+<!-- 			<xjc:javaType name="java.lang.String" xmlType="xs:string" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.StringValueAdapter" /> -->
+<!-- 			<xjc:javaType name="java.lang.String" xmlType="xs:normalizedString" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.StringValueAdapter" /> -->
+<!-- 			<xjc:javaType name="java.lang.Integer" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.IntegerValueAdapter" -->
+<!-- 				xmlType="xs:int" /> -->
+<!-- 			<xjc:javaType name="java.lang.Float" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.FloatValueAdapter" xmlType="xs:float" /> -->
+<!-- 			<xjc:javaType name="java.lang.Double" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.DoubleValueAdapter" -->
+<!-- 				xmlType="xs:double" /> -->
+<!-- 			<xjc:javaType name="java.lang.Boolean" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.BooleanValueAdapter" -->
+<!-- 				xmlType="xs:boolean" /> -->
+<!-- 			<xjc:javaType name="java.math.BigInteger" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.BigIntegerValueAdapter" -->
+<!-- 				xmlType="xs:integer" /> -->
+<!-- 			<xjc:javaType name="com.ephesoft.dcma.batch.schema.Direction" -->
+<!-- 			adapter="com.ephesoft.dcma.batch.adapter.DirectionValueAdapter" -->
+<!-- 			xmlType="dir:direction" /> -->
+<!-- 			<xjc:javaType name="com.ephesoft.dcma.batch.schema.BatchStatus" -->
+<!-- 				adapter="com.ephesoft.dcma.batch.adapter.BatchStatusValueAdapter" -->
+<!-- 				xmlType="bs:batchStatus" /> -->
+		</globalBindings>
+	</bindings>
+</bindings>

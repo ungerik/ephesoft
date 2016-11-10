@@ -1,0 +1,43 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view" xmlns:rv="urn:import:com.ephesoft.gxt.rv.client.widget"
+	xmlns:corePanel="urn:import:com.ephesoft.gxt.core.client" xmlns:t="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:grid="urn:import:com.sencha.gxt.widget.core.client.grid">
+
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="tableOptions">
+		<ui:attributes width="1" height="-1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="tableRow">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<!-- <gxt:Window resizable="true" headerVisible="false" shadow="false"> -->
+	<gxt:FramedPanel headerVisible="false" borders="false"
+		resize="true" ui:field="headerPanel">
+		<container:VerticalLayoutContainer>
+			<container:child layoutData="{tableOptions}">
+				<g:FlowPanel styleName="tableButtonPanel">
+					<g:Label ui:field="tableNameLabel" styleName="tableName" />
+					<g:Button styleName="tableOptionsButton" ui:field="insertButton" />
+					<g:Button styleName="tableOptionsButton" ui:field="deleteButton" />
+					<g:Button styleName="tableOptionsButton" ui:field="deleteAllButton" />
+					<g:Button ui:field="rowExtractionButton" styleName="tableOptionsButton" />
+					<g:Button styleName="tableOptionsButton" ui:field="columnExtractionButton" />
+					<g:Button styleName="tableOptionsButton" ui:field="startExtractionButton" />
+					<g:Button styleName="tableOptionsButton" ui:field="rejectExtractionButton" />
+				</g:FlowPanel>
+			</container:child>
+			<container:child layoutData="{tableRow}">
+				<rv:DataTableGrid ui:field="dataTableGrid" />
+			</container:child>
+		</container:VerticalLayoutContainer>
+	</gxt:FramedPanel>
+	<!-- </gxt:Window> -->
+</ui:UiBinder>

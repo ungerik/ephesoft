@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	default-autowire="byName" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+  ">
+
+	<bean class="com.ephesoft.dcma.core.hibernate.EntityFactoryBean">
+		<property name="sourceList">
+			<list>
+				<value>com.ephesoft.dcma.da.domain.BatchClass</value>
+				<value>com.ephesoft.dcma.da.domain.BatchInstance</value>
+				<value>com.ephesoft.dcma.da.domain.DocumentType</value>
+				<value>com.ephesoft.dcma.da.domain.FieldType</value>
+				<value>com.ephesoft.dcma.da.domain.Module</value>
+				<value>com.ephesoft.dcma.da.domain.Plugin</value>
+				<value>com.ephesoft.dcma.da.domain.ModulePlugin</value>
+				<value>com.ephesoft.dcma.da.domain.PageType</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassModule</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassPlugin</value>
+				<value>com.ephesoft.dcma.da.domain.PluginConfig</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassPluginConfig</value>
+				<value>com.ephesoft.dcma.da.domain.PluginConfigSampleValue</value>
+				<value>com.ephesoft.dcma.da.domain.KVExtraction</value>
+				<value>com.ephesoft.dcma.da.domain.RegexValidation</value>
+				<value>com.ephesoft.dcma.da.domain.ServerRegistry</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassEmailConfiguration</value>
+				<value>com.ephesoft.dcma.da.domain.TableInfo</value>
+				<value>com.ephesoft.dcma.da.domain.TableColumnsInfo</value>
+				<value>com.ephesoft.dcma.da.domain.KVPageProcess</value>
+				<value>com.ephesoft.dcma.da.domain.Role</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassGroups</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassField</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassDynamicPluginConfig</value>
+				<value>com.ephesoft.dcma.da.domain.FunctionKey</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassModuleConfig</value>			
+				<value>com.ephesoft.dcma.da.domain.RemoteBatchInstance</value>
+				<value>com.ephesoft.dcma.da.domain.ModuleConfig</value>
+				<value>com.ephesoft.dcma.da.domain.BatchInstanceGroups</value>
+				<value>com.ephesoft.dcma.da.domain.AdvancedKVExtraction</value>
+				<value>com.ephesoft.dcma.da.domain.Dependency</value>
+				<value>com.ephesoft.dcma.da.domain.BatchClassScannerConfiguration</value>
+				<value>com.ephesoft.dcma.da.domain.ScannerMasterConfiguration</value>
+				<value>com.ephesoft.dcma.da.domain.ScannerMasterConfigSampleValue</value>
+			    <value>com.ephesoft.dcma.da.domain.ManualStepHistoryInWorkflow</value>
+			    <value>com.ephesoft.dcma.da.domain.BatchClassCmisConfiguration</value>
+			    <value>com.ephesoft.dcma.da.domain.User</value>
+			    <value>com.ephesoft.dcma.da.domain.BatchClassCloudConfig</value>
+			    <value>com.ephesoft.dcma.da.domain.ServiceStatus</value>
+			     <value>com.ephesoft.dcma.da.domain.ClusterProperty</value>
+			     <value>com.ephesoft.dcma.da.domain.Connections</value>
+			     <value>com.ephesoft.dcma.da.domain.DocumentTypeMappingConfig</value>
+			    <!-- Added for SSO implementation -->
+			    <value>com.ephesoft.dcma.da.domain.SecurityUser</value>
+			    <value>com.ephesoft.dcma.da.domain.SecurityGroup</value>
+                <value>com.ephesoft.dcma.da.domain.BatchInstanceRetries</value>
+                <value>com.ephesoft.dcma.da.domain.BatchInstanceErrorDetails</value>
+                <value>com.ephesoft.dcma.da.domain.LockStatus</value>
+                <value>com.ephesoft.dcma.da.domain.RegexGroup</value>
+                <value>com.ephesoft.dcma.da.domain.RegexPattern</value>
+                <value>com.ephesoft.dcma.da.domain.TableRuleInfo</value>
+                <value>com.ephesoft.dcma.da.domain.EncryptionKeyMetaData</value>
+                <value>com.ephesoft.dcma.da.domain.MobileWebServiceStatus</value>
+                <!-- Added for defining the table for defining the extraction rules for table-->
+				<value>com.ephesoft.dcma.da.domain.TableExtractionRule</value>
+				<!-- Added for defining the table for defining the column extraction rules for table-->
+				<value>com.ephesoft.dcma.da.domain.TableColumnExtractionRule</value>
+				<!-- Added for defining the table for storing details of Advanced KV Extraction -->
+				<value>com.ephesoft.dcma.da.domain.AdvancedKVExtractionDetail</value>
+				<value>com.ephesoft.dcma.da.domain.TableColumnDBExportMapping.TableColumnOptionalParameters</value>
+				<value>com.ephesoft.dcma.da.domain.IndexFieldDBExportMapping.IndexFieldOptionalParameters</value>
+				<value>com.ephesoft.dcma.da.domain.TableColumnDBExportMapping</value>
+				<value>com.ephesoft.dcma.da.domain.IndexFieldDBExportMapping</value>
+				<!--  Added for Reporting. -->
+				<value>com.ephesoft.dcma.da.domain.Report</value>
+				<value>com.ephesoft.dcma.da.domain.ReportsFolder</value>
+				<value>com.ephesoft.dcma.da.domain.SubReport</value>
+				<value>com.ephesoft.dcma.da.domain.ServerLicenseDetails</value>
+			</list>
+		</property>
+	</bean>
+</beans>

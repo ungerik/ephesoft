@@ -1,0 +1,41 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client" xmlns:f="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:button="urn:com.sencha.gxt.widget.core.client.button"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:menu="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<gxt:ContentPanel headerVisible="false">
+		<g:HorizontalPanel width="100%" verticalAlignment="ALIGN_TOP"
+			styleName="uploadBatchinputPanelCSS">
+
+			<g:cell width="35%">
+			<g:HorizontalPanel verticalAlignment="ALIGN_TOP">
+				<menu:CustomMenuBar ui:field="buttonBar" />
+			</g:HorizontalPanel>
+			</g:cell>
+			<g:cell width="35%">
+			<g:HorizontalPanel>
+				<g:Label horizontalAlignment="ALIGN_LEFT" ui:field="batchClassLabel"
+					styleName="uploadBatchLabelCSS" />
+
+				<g:Cell>
+					<coreWidget:ComboBox ui:field="batchClassComboBox" />
+				</g:Cell>
+				<g:Button ui:field="batchClassSortButton" />
+			</g:HorizontalPanel>
+			</g:cell>
+			<g:cell width="30%">
+			<g:HorizontalPanel>
+				<g:Label horizontalAlignment="ALIGN_LEFT" ui:field="batchDescriptionLabel"
+					styleName="uploadBatchLabelCSS" />
+
+				<g:TextBox ui:field="batchDescriptionTextbox">
+				</g:TextBox>
+
+			</g:HorizontalPanel>
+			</g:cell>
+		</g:HorizontalPanel>
+	</gxt:ContentPanel>
+
+</ui:UiBinder>

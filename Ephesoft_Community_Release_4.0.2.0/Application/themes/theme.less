@@ -1,0 +1,68 @@
+/*less css start here*/
+
+@base: #037ecf; /* tab and sub tab css color (default: #1e75cd, grey: #5B5B5B) */
+@baseDark: #34495e; /* header color */
+@baseLight: #add2ed; /* grid table and background css color (default: #92C1F0, grey: #CCCCCC) */
+@themeImagePath: "themes/default_theme/images/"; /* image theme folder */
+@black:black; /* font or text color for normal tab */
+@white:white; /*  font or text color for selected tab */
+@messageColor: @white;
+
+.bdrLight{border-color:@baseLight !important; border:1px solid;}
+.bdrBottomLight{ border-bottom-color:@baseLight !important; border-bottom:1px solid;}
+.bdrTopLight{border-top-color:@baseLight !important; border-top:1px solid;}
+.bdrLeftLight{border-left-color:@baseLight !important; border-left:1px solid;}
+.bdrRightLight{border-right-color:@baseLight !important; border-right:1px solid;}
+.darkbdr {border-color:@base !important;border: 1px solid;}
+.darkbdrBottom{border-bottom-color:@base !important;border-bottom: 2px solid;}
+.bdrDarker {border: 1px solid !important; border-color:lighten(@baseDark, 41%) !important;}
+.bdrThumbnailDarker {border: 1px solid; border-color:lighten(@baseDark, 41%);}
+.bdrBottomDarker {border-bottom: 1px solid !important; border-bottom-color:lighten(@baseDark, 41%) !important;}
+
+.headerLeft{
+	background-image: -moz-linear-gradient(left, @white 0%, @baseDark 100%);
+	background-image: -ms-linear-gradient(left, @white 0%, @baseDark 100%);
+	background-image: -webkit-linear-gradient(left, @white 0%, @baseDark 100%);
+}
+
+.tabNormalBg{background: lighten(@base, 48%) !important;}
+.tabSelectedBg{background:@base !important;}
+.tabDisableBg{background: lighten(@baseDark, 65%) !important; color:lighten(@black, 75%) !important;}
+.btnNormalBg{
+	background-color:#3892d3;
+	background: -webkit-linear-gradient(top, #4B9CD7 0%, #3892D3 50%, #358AC8 51%, #3892D3);
+	background: -o-linear-gradient(top, #4B9CD7 0%, #3892D3 50%, #358AC8 51%, #3892D3);
+	background: -ms-linear-gradient(top, #4B9CD7 0%, #3892D3 50%, #358AC8 51%, #3892D3);
+	background: linear-gradient(to bottom, #4B9CD7 0%, #3892D3 50%, #358AC8 51%, #3892D3);
+}
+
+.btnHoverBg{
+	background: -webkit-linear-gradient(top, #4792C8, #3386C2 50%, #307FB8 51%, #3386C2);
+	background: -o-linear-gradient(top, #4792C8, #3386C2 50%, #307FB8 51%, #3386C2);
+	background: -ms-linear-gradient(top, #4792C8, #3386C2 50%, #307FB8 51%, #3386C2);
+	background: linear-gradient(to bottom, #4792C8, #3386C2 50%, #307FB8 51%, #3386C2);
+}
+
+.btnDisableBg{
+    background:lighten(@baseDark, 68%) !important; /* for non-css3 browsers */
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important; 
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important; 
+	/* IE 10 */ 
+	background: -ms-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important;
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(top, lighten(@baseDark, 68%),  lighten(@baseDark, 68%)) !important;	
+}
+
+/*fontAwesome for icon*/
+.fontAwesome{
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*less css end here*/

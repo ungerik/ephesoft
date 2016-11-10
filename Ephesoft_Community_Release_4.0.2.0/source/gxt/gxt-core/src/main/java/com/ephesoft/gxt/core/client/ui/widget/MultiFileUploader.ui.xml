@@ -1,0 +1,40 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:corePanel="urn:import:com.ephesoft.gxt.core.client"
+	xmlns:uploader="urn:import:org.moxieapps.gwt.uploader.client">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="uploaderData">
+		<ui:attributes width="100" height="20" />
+	</ui:with>
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="orLabelData">
+		<ui:attributes width="100" height="20" />
+	</ui:with>
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="dragDropData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<container:SimpleContainer ui:field="parentContainer">
+		<container:VerticalLayoutContainer
+			ui:field="uploaderContainer">
+			<container:child layoutData="{uploaderData}">
+				<uploader:Uploader ui:field="uploader" />
+			</container:child>
+			<container:child layoutData="{orLabelData}">
+				<g:Label ui:field="orLabel" />
+			</container:child>
+			<container:child layoutData="{dragDropData}">
+				<g:Label ui:field="dragDropLabel" />
+			</container:child>
+		</container:VerticalLayoutContainer>
+	</container:SimpleContainer>
+</ui:UiBinder>

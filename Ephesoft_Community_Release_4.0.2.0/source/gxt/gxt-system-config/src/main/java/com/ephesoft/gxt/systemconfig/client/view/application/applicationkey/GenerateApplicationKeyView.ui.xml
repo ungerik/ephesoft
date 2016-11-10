@@ -1,0 +1,18 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client">
+
+
+	<container:VerticalLayoutContainer
+		ui:field="vPanel">
+		<container:HorizontalLayoutContainer ui:field="hPanel">
+			<container:child>
+				<g:Label ui:field="keyGenerationLabel" />
+			</container:child>
+			<container:child>
+				<g:TextBox ui:field="keyTextBox" />
+			</container:child>
+		</container:HorizontalLayoutContainer>
+	</container:VerticalLayoutContainer>
+</ui:UiBinder>

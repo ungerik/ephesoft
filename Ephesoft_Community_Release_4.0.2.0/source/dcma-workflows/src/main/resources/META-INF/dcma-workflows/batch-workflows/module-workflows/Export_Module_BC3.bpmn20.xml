@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+	xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI"
+	typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath"
+	targetNamespace="http://www.activiti.org/test">
+	<process id="Export_Module_BC3" name="Export_Module_BC3"
+		isExecutable="true">
+		<extensionElements>
+			<activiti:executionListener event="start"
+				delegateExpression="${moduleExecutionStartListener}" />
+			<activiti:executionListener event="end"
+				delegateExpression="${moduleExecutionEndListener}"></activiti:executionListener>
+		</extensionElements>
+		<startEvent id="start" />
+		<sequenceFlow sourceRef="start" targetRef="Image_Process_CreateMultiPage_Files_Plugin-Plugin" />
+	<callActivity id="Image_Process_CreateMultiPage_Files_Plugin-Plugin"
+			activiti:async="true" calledElement="Image_Process_CreateMultiPage_Files_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Image_Process_CreateMultiPage_Files_Plugin-Plugin"
+			targetRef="Copy_Batch_XML_Files_Plugin-Plugin" />
+		<callActivity id="Copy_Batch_XML_Files_Plugin-Plugin"
+			activiti:async="true" calledElement="Copy_Batch_XML_Files_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="Copy_Batch_XML_Files_Plugin-Plugin"
+targetRef="CleanUp_Plugin-Plugin" />
+		<callActivity id="CleanUp_Plugin-Plugin" activiti:async="true"
+			calledElement="CleanUp_Plugin">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow sourceRef="CleanUp_Plugin-Plugin"
+			targetRef="end" />
+		<endEvent id="end" />
+	</process>
+	<bpmndi:BPMNDiagram id="BPMNDiagram_Export_Module_BC3">
+		<bpmndi:BPMNPlane bpmnElement="Export_Module_BC3"
+			id="BPMNPlane_Export_Module_BC3" />
+	</bpmndi:BPMNDiagram>
+</definitions>

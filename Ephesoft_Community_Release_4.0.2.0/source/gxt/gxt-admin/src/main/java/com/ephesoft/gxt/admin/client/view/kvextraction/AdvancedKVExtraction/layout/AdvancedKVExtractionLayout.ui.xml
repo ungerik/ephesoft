@@ -1,0 +1,110 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:core="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="topPanelData">
+		<ui:attributes size="50" floatable="false"/>
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftLogoPanel">
+		<ui:attributes size="50" split="true" floatable="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftPoweredPanel">
+		<ui:attributes size="0.03" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData">
+		<ui:attributes size="341" collapsible="true"
+			collapseMini="true" floatable="false" maxSize="341"  />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchGridPanelData">
+		<ui:attributes size="0.70" split="true" maxSize="1000"
+			floatable="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchDetailPanelData">
+		<ui:attributes size="0.35" collapsible="true"
+			collapseMini="true" floatable="false" />
+	</ui:with>
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="dropFilePanelData">
+		<ui:attributes size="0.35" collapsible="true"
+			collapseMini="true" />
+	</ui:with>
+
+	<container:Viewport>
+		<container:SimpleContainer>
+			<core:BorderLayoutContainer ui:field="mainPage">
+				<core:west layoutData="{westData}">
+					<gxt:ContentPanel headerVisible="false" ui:field="leftPanel">
+						<container:Viewport>
+							<core:BorderLayoutContainer>
+								<core:north layoutData="{ephesoftLogoPanel}">
+									<gxt:ContentPanel headerVisible="false"
+										borders="false" bodyBorder="false" ui:field="logoPanel">
+										<coreView:Logo width="100%" height="100%" />
+									</gxt:ContentPanel>
+								</core:north>
+								<core:center layoutData="{batchGridPanelData}">
+									<gxt:ContentPanel headerVisible="false"
+													borders="false" ui:field="inputPanel" resize="false" />
+								</core:center>
+								<core:south layoutData="{ephesoftPoweredPanel}">
+									<g:Label ui:field="ephesoftPoweredLabel" />
+								</core:south>
+							</core:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</core:west>
+				<core:center>
+					<gxt:ContentPanel headerVisible="false" ui:field="mainPanel">
+						<container:Viewport>
+							<core:BorderLayoutContainer ui:field="viewContainer">
+								<core:north layoutData="{topPanelData}">
+									<gxt:ContentPanel headerVisible="false"  ui:field="buttonPanel">
+										<core:BorderLayoutContainer>
+											<core:center >
+												<gxt:ContentPanel headerVisible="false"
+													borders="false" ui:field="optionsPanel" resize="false" />
+											</core:center>
+										</core:BorderLayoutContainer>
+									</gxt:ContentPanel>
+								</core:north>
+								<core:center>
+									<container:Viewport>
+										<gxt:ContentPanel resize="true"
+											headerVisible="false" ui:field="imagePanel">
+										</gxt:ContentPanel>
+									</container:Viewport>
+								</core:center>
+								<core:south layoutData="{batchDetailPanelData}">
+									<gxt:ContentPanel headerVisible="false"
+										borders="true" ui:field="bottomPanel">
+									</gxt:ContentPanel>
+								</core:south>
+							</core:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</core:center>
+			</core:BorderLayoutContainer>
+		</container:SimpleContainer>
+	</container:Viewport>
+</ui:UiBinder>

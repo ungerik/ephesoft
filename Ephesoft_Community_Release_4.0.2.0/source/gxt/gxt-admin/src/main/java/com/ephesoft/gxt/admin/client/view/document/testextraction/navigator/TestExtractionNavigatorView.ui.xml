@@ -1,0 +1,23 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:tree="urn:import:com.ephesoft.gxt.admin.client.widget"
+	xmlns:treeWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="navigationPanelData">
+		<ui:attributes width="1" height="-1" />
+	</ui:with>
+
+
+	<container:VerticalLayoutContainer
+		ui:field="treeContainer">
+		<container:child layoutData="{navigationPanelData}">
+			<tree:TestExtractionNavigationTree
+				ui:field="navigationTree" />
+		</container:child>
+	</container:VerticalLayoutContainer>
+
+</ui:UiBinder>

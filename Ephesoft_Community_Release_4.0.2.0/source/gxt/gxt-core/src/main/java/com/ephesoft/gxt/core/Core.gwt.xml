@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Google Inc.//DTD Google Web Toolkit 2.5.1//EN"
+  "http://google-web-toolkit.googlecode.com/svn/tags/2.5.1/distro-source/core/src/gwt-module.dtd">
+<module rename-to='core'>
+
+	<!-- Inherit the core Web Toolkit stuff. -->
+	<inherits name='com.google.gwt.user.User' />
+
+	<!-- GWT Default theme. This theme will not inherit non used javascript/CSS. 
+		It will reduce the non used CSS, which will overcome the issue with the Standard 
+		theme. -->
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	<inherits name="com.google.gwt.resources.Resources" />
+	<!-- <inherits name='org.swfupload.SWFUpload' /> -->
+	<super-source path="jre" />
+	  <inherits name='com.sencha.gxt.theme.gray.Gray' />
+	<!-- Modules that are accessible on the client side -->
+
+	<!-- GWT Module thaat is accessible on the client side -->
+	<inherits name="com.google.gwt.user.User" />
+
+	<inherits name="com.sencha.gxt.ui.GXT" />
+	
+	<inherits name='com.sencha.gxt.theme.neptune.Theme' />
+	<!-- Accessible module DCMA-Batch to access the XSD and XML generated for 
+		batch processing -->
+	<inherits name="com.ephesoft.dcma.batch.Batch" />
+
+	<!-- Core Module that is accessible on the client side -->
+	<inherits name="com.ephesoft.dcma.core.Common" />
+
+	<!-- Data Access module accessible on the client side. -->
+	<inherits name="com.ephesoft.dcma.da.Property" />
+
+	<!-- Module inherited for internationalization -->
+	<inherits name="com.google.gwt.i18n.I18N" />
+
+	<inherits name='com.google.web.bindery.event.EventBinder' />
+	
+	<!-- Module inherited for moxiapps Uploader -->
+	 <inherits name="org.moxieapps.gwt.uploader.Uploader"/>
+
+	<inherits name='org.matheclipse.parser.Parser' />
+	
+	 <inherits name="com.googlecode.gwtx.Java"/>
+	 
+	 <!-- Module inherited for Charts -->
+	 <inherits name='com.sencha.gxt.chart.Chart' />
+	
+	<!-- Module inherited for Client side logging -->
+	<!-- <inherits name="com.google.gwt.logging.Logging" /> -->
+
+	<!-- Enables the logging. -->
+	<!-- <set-property name="gwt.logging.enabled" value="TRUE" /> -->
+
+	<!-- Setting the Log level -->
+	<!-- <set-property name="gwt.logging.logLevel" value="SEVERE" /> -->
+
+	<!-- Setting the property for logging on console -->
+	<!-- <set-property name="gwt.logging.consoleHandler" value="ENABLED" /> -->
+
+	<!-- Setting the property for logging on firebug -->
+	<!-- <set-property name="gwt.logging.firebugHandler" value="ENABLED" /> -->
+
+	<!-- Setting the property for logging with a pop-up -->
+	<!-- <set-property name="gwt.logging.popupHandler" value="DISABLED" /> -->
+
+	<!-- Setting the property for logging at Remote with an RPC call. This can 
+		be enabled using the specific entry -->
+	<!-- <set-property name="gwt.logging.simpleRemoteHandler" -->
+	<!-- value="ENABLED" /> -->
+
+
+	<!-- Folders which are accessible at the client side. -->
+	<source path='client' />
+	<source path='shared' />
+
+</module>

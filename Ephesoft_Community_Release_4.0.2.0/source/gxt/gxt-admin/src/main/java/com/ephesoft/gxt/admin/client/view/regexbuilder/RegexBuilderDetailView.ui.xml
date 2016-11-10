@@ -1,0 +1,18 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'
+	xmlns:regex-builder='urn:import:com.ephesoft.gxt.admin.client.view.regexbuilder'>
+	
+	<g:VerticalPanel>
+		<g:ScrollPanel ui:field="regexScrollPanel" width="100%">
+			<g:VerticalPanel width="100%" height="100%">
+				<regex-builder:RegexFieldDetailView
+					ui:field="regexFieldDetailView" width="100%" height="100%"></regex-builder:RegexFieldDetailView>
+				<regex-builder:RegexQuantifierDetailView
+					ui:field="regexQuantifierDetailView" width="100%" height="100%">
+				</regex-builder:RegexQuantifierDetailView>
+				<regex-builder:RegexGroupDetailView
+					ui:field="regexGroupDetailView" width="100%" height="100%"></regex-builder:RegexGroupDetailView>
+			</g:VerticalPanel>
+		</g:ScrollPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

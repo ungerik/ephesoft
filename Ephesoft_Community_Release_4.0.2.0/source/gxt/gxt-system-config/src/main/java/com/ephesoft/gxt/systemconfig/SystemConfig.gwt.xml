@@ -1,0 +1,12 @@
+<module rename-to="systemConfig">
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	<inherits name='com.ephesoft.gxt.core.Core' />
+	<inherits name="com.google.gwt.resources.Resources" />
+<!-- 	<set-configuration-property name="CssResource.obfuscationPrefix" -->
+<!-- 		value="M" /> -->
+	<source path="client"/>
+	<source path="shared"/>
+	<entry-point
+		class='com.ephesoft.gxt.systemconfig.client.SystemConfigEntryPoint' />
+</module>

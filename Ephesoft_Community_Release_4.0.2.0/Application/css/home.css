@@ -1,0 +1,405 @@
+
+@import "font-awesome/css/font-awesome.css";
+
+/**
+	CSS for Ephesoft Cloud home page
+*/
+
+/**
+	This CSS sets the background image for ephesoft university logo links.
+*/
+.university_panel {
+	background: url("../images/university_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft wiki logo links.
+*/
+.wiki_panel {
+	background: url("../images/wiki_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft training logo links.
+*/
+.training_panel {
+	background: url("../images/training_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft cloud home center panel.
+*/
+.home_panel {
+	background: url("../images/home_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS is used for setting the text as BOLD.
+*/
+.bold {
+	font-weight: bold;
+}
+
+/**
+	This CSS is used for setting the text as ITALICS.
+*/
+.italic {
+	font-style: italic;
+}
+
+/**
+	This CSS is used for setting the text note for training label.
+*/
+.training_label {
+	padding-left: 30px;
+    padding-top: 10px;
+    width: 196px;
+    font-weight: bold;
+    color: #2f4f4f;
+	font: bold 16px arial;
+}
+
+/**
+	This CSS is used for setting padding of an element by 143.
+*/
+.padding_left_143 {
+	padding-left: 143px;
+}
+
+/**
+	This CSS is used for setting padding of an element by top by 15 and left by 22.
+*/
+.padding_top_left {
+	padding-left: 22px;
+    padding-top: 15px;
+}
+
+/**
+	This CSS is used for setting padding bottom of an element by 17.
+*/
+.padding_bottom_17 {
+	padding-bottom: 17.0px;
+}
+
+/**
+	This CSS is used for setting padding left of an element by 25.
+*/
+.padding_left_25 {
+	padding-left: 25px;
+}
+
+/**
+	This CSS is used for setting margin right of an element by 22.
+*/
+.margin_right_22 {
+	margin-right: 22px;
+}
+
+/**
+	This CSS is used for setting margin right of an element by 34.
+*/
+.margin_right_34 {
+	margin-right: 34px;
+}
+
+/**
+	This CSS is used for setting padding top of an element by 20.
+*/
+.padding_top_20 {
+	padding-top: 20px;
+}
+
+/**
+	This CSS is used for setting cursor for an element as hand.
+*/
+.cursor_hand {
+	cursor: pointer !important;
+}
+
+/**
+	This CSS is used for setting padding left of an element by 20.
+*/
+.padding_left_20 {
+	padding-left: 20px;
+}
+
+/**
+	This CSS is used for setting element in center.
+*/
+.center_align_panel {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+	This CSS is for slider/disclosure tab header element.
+*/
+.slider {
+	background: #037ecf !important;
+}
+
+/**
+	This CSS is for slider/disclosure tab header element.
+*/
+.last_slider {
+	background:#037ecf !important;
+	width:257px;
+	border-top:1px solid #34495e;
+}
+
+/**
+	This CSS is for Ephesoft Cloud Home left account panel.
+*/
+.account_panel {
+	font-weight: bold;
+    height: 320px;
+    padding-left: 20px;
+    padding-top: 52px;
+    width: 330px;
+	color: #2f4f4f;
+	font: bold 16px arial;
+}
+
+.head {
+	background-color:#D0E4F6;
+	text-align: center;
+}
+
+.logo {
+    background: url("../../themes/default_theme/images/logo_login.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 63px;
+    margin: 5px auto 0;
+    width: 260px;
+}
+
+.app_links {
+	/* width: 100px;
+	height: 75px;
+	margin: auto; */
+}
+
+.footer {
+	clear: both;
+    margin-top:10px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.link {
+    color: #000000;
+    font-family: Arial Unicode MS,Arial,sans-serif;
+    font-size: small;
+    margin: 50px;
+    text-decoration: none;
+}
+.operatorManageDiv{
+color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: left;
+    text-indent: 10px;
+	cursor:pointer;
+}
+.userIconDiv:before{
+display: inline-block;
+    float: left;
+    font-family: FontAwesome;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 10px 10px 0 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content:"\f007";
+}
+.adminManageDiv{
+color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: left;
+    text-indent: 10px;
+	cursor:pointer;
+}
+
+.adminContentDiv{ margin-top:10px;}
+
+.anchorIconsDiv:before{
+color: #eb4e45;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f022';
+}
+
+.anchorIconsDiv, .anchorIconsReviewDiv, .anchorIconsWebDiv, .anchorIconsUploadDiv{ display: block;
+    text-decoration: none;
+    width: 100px;
+	margin-top:10px;
+	height: 110px;
+}
+.anchorIconsText{
+	color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.anchorIconsText:hover{ text-decoration:underline;}
+
+
+
+.anchorIconsReviewDiv:before{
+color: #0085c6;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f1e5';
+}
+
+.anchorIconsWebDiv:before{
+color: #E4DF41;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f02f';
+}
+.anchorIconsUploadDiv:before{
+color: #00a03e;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f093';
+}
+
+
+
+.anchorIconsBatchDiv, .anchorIconsBatchMDiv, .anchorIconsFolderDiv, .anchorIconsRepDiv{ display: block;
+    text-decoration: none;
+    width: 100px;
+	margin-top:10px;
+	height: 110px;
+}
+
+.anchorIconsBatchDiv:before{
+	color: #00a03e;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f085';
+}
+.anchorIconsBatchMDiv:before{
+	color: #e4df41;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f0e8';
+}
+
+.anchorIconsFolderDiv:before{
+	color: #eb4e45 ;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f07c';
+}
+
+.anchorIconsRepDiv:before{
+	color: #0085c6;
+    font-family: FontAwesome;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  	content: '\f080';
+}
+
+.Upfolding, .downfold{display: block;
+    float: right;
+    margin-top: 6px;
+    text-decoration: none;
+    width: 30px;
+}
+
+.Upfolding:before{
+	border: none; 
+	margin-top: 5px; 
+	margin-right: 9px; 
+	float:right;
+	color:#fff;
+	font-size:27px;
+	content: '\f139 ';
+	display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.downfold:before{
+	border: none; 
+	margin-top: 5px; 
+	margin-right: 9px; 
+	float:right;
+	color:#fff;
+	font-size:27px;
+	content: '\f13a ';
+	display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

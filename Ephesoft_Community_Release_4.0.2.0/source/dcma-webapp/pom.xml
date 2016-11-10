@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<packaging>war</packaging>
+
+	<parent>
+		<groupId>com.ephesoft.dcma</groupId>
+		<artifactId>dcma-gwt</artifactId>
+		<version>0.0.15-SNAPSHOT</version>
+		<relativePath>../dcma-gwt</relativePath>
+	</parent>
+	<artifactId>dcma-webapp</artifactId>
+	<name>DCMA: Web application Model</name>
+	<description>The DCMA web Application model.</description>
+
+	<dependencies>
+		<!-- After code integration this jar was required. Adding dependency for 
+			the same. -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>4.1.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-heart-beat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-ftp</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-dynamic-services</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-tempfolder-cleanup</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-admin</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-login</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-batch-instance</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-folder-manager</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-home</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-review-validate</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-system-config</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-upload-batch</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+
+		<!-- <dependency> <groupId>com.ephesoft.dcma</groupId> <artifactId>dcma-gwt-license-generator</artifactId> 
+			</dependency> -->
+
+		<!-- sources -->
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-batch-instance</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-admin</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-login</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-folder-manager</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-review-validate</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-system-config</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-core</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-home</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>gxt-upload-batch</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-core</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-batch</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-gwt-core</artifactId>
+			<version>${project.version}</version>
+			<classifier>sources</classifier>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0-alpha-1</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>${project.parent.parent.basedir}/ephesoft-keystore/keystore.properties</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<additionalProjectnatures>
+						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+						<projectnature>com.google.gwt.eclipse.core.gwtNature</projectnature>
+						<projectnature>com.google.appengine.eclipse.core.gaeNature</projectnature>
+					</additionalProjectnatures>
+					<additionalBuildcommands>
+						<buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+						<buildcommand>com.google.gwt.eclipse.core.gwtProjectValidator</buildcommand>
+						<buildcommand>com.google.appengine.eclipse.core.enhancerbuilder</buildcommand>
+					</additionalBuildcommands>
+					<classpathContainers>
+						<classpathContainer>com.google.gwt.eclipse.core.GWT_CONTAINER</classpathContainer>
+					</classpathContainers>
+					<wtpversion>1.5</wtpversion>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>gwt-maven-plugin</artifactId>
+				<version>2.6.0</version>
+
+
+				<executions>
+					<execution>
+						<configuration>
+							<compileSourcesArtifacts>
+								<compileSourcesArtifact>com.ephesoft.dcma:dcma-batch</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-core</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-admin</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-review-validate</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-home</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-batch-instance</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-folder-manager</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-upload-batch</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-login</compileSourcesArtifact>
+								<compileSourcesArtifact>com.ephesoft.dcma:gxt-system-config</compileSourcesArtifact> 
+							</compileSourcesArtifacts>
+							<modules>
+								<module>com.ephesoft.gxt.core.Core</module>
+								<module>com.ephesoft.dcma.batch.Batch</module>
+								<module>com.ephesoft.gxt.admin.BatchClassManagement</module>
+								<module>com.ephesoft.gxt.rv.ReviewValidate</module>
+								<module>com.ephesoft.gxt.login.Login</module>
+								<module>com.ephesoft.gxt.foldermanager.FolderManager</module>
+								<module>com.ephesoft.gxt.home.BatchList</module>
+								<module>com.ephesoft.gxt.batchinstance.BatchInstance</module>
+								<module>com.ephesoft.gxt.uploadbatch.UploadBatch</module>
+								<module>com.ephesoft.gxt.systemconfig.SystemConfig</module> 
+							</modules>
+							<localWorkers>2</localWorkers>
+							<extraJvmArgs>-Xmx768m</extraJvmArgs>
+							<sourcesOnPath>true</sourcesOnPath>
+							<force>true</force>
+							<deploy>./temp</deploy>
+						</configuration>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<webResources>
+						<resource>
+							<directory>${basedir}/../parent/external-libs</directory>
+
+							<includes>
+								<include>**/*.jar</include>
+							</includes>
+
+						</resource>
+						<resource>
+
+							<directory>${basedir}/../dcma-batch/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+
+							<excludes>
+								<exclude>**/*.xml</exclude>
+								<exclude>**/*/schema</exclude>
+								<exclude>**/dcma-kvfinder/*</exclude>
+							</excludes>
+						</resource>
+						<resource>
+
+							<directory>${basedir}/../dcma-core/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+								<exclude>**/*/*.xml</exclude>
+
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-data-access/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*db.properties</include>
+								<include>**/*/*/*dao.xml</include>
+								<include>**/*/*ehcache.xml</include>
+								<include>**/*schema.sql</include>
+								<include>**/*data.sql</include>
+							</includes>
+
+						</resource>
+
+
+						<resource>
+							<directory>${basedir}/../dcma-encryption/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-export/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+								<exclude>**/*/*.xml</exclude>
+
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-ftp/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+
+						<resource>
+							<directory>${basedir}/../dcma-heart-beat/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-imagemagick/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-import-folder/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-mail/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+								<exclude>**/*details.properties</exclude>
+								<exclude>**/*/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-open-office/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-tabbed-pdf/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-tesseract/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-user-connectivity/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-util/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+							</includes>
+							<excludes>
+
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</resource>
+
+						<resource>
+							<directory>${basedir}/../dcma-workflows/src/main/resources/META-INF</directory>
+							<targetPath>WEB-INF/classes/META-INF</targetPath>
+							<includes>
+								<include>**/*/*.properties</include>
+								<include>**/*/*cfg.xml</include>
+							</includes>
+							<excludes>
+								<exclude>**/*/*community.properties</exclude>
+								<exclude>**/*.xml</exclude>
+								<!-- <exclude>**/*/batch-workflows/*</exclude> -->
+								<exclude>**/mail-template/*</exclude>
+							</excludes>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>stand-alone</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>exec-maven-plugin</artifactId>
+						<version>1.1.1</version>
+						<executions>
+							<execution>
+								<phase>test</phase>
+								<goals>
+									<goal>java</goal>
+								</goals>
+								<configuration>
+									<mainClass>com.ephesoft.dcma.webapp.DCMAExecuter</mainClass>
+									<arguments>
+										<argument>none</argument>
+									</arguments>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<!--Defines the rendered class and and rendering class. -->
+	<renderer renderedClass="com.ephesoft.dcma.util.logger.LogFileInstance"
+		renderingClass="com.ephesoft.dcma.util.logger.InstanceTypeLogRenderer" />
+
+	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} [%p] [%t] [%c] - %m%n" />
+		</layout>
+	</appender>
+
+	<!--Defines the custom Appender class. -->
+	<appender name="CORE"
+		class="com.ephesoft.dcma.util.logger.EphesoftFileAppender">
+		<param name="File" value="${dcma.home}/logs/dcma-all.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2MB" />
+		<param name="MaxBackupIndex" value="30" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- Added OS name -->
+			<param name="ConversionPattern" value="4.0.0.0 ${os.name} %d{ISO8601} %-5p %t %c - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="ERRORS" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${dcma.home}/dcma-errors.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2MB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %-5p %t %c - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="USERLOGENTRY" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${dcma.home}/dcma-user-log-entry.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2MB" />
+		<param name="MaxBackupIndex" value="30" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{ISO8601} %m%n" />
+		</layout>
+	</appender>
+
+	<!-- EMail events to an administrator -->
+	<appender name="SMTP" class="org.apache.log4j.net.SMTPAppender">
+		<param name="Threshold" value="ERROR" />
+		<param name="To" value="enterprise.support@ephesoft.com" />
+		<param name="From" value="enterprise.support@ephesoft.com" />
+		<param name="Subject" value="Email logs" />
+		<param name="SMTPHost" value="${mail.host}" />
+		<param name="BufferSize" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{ABSOLUTE},%c{1}, %X{host}] %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Appender for reporting module -->
+	<appender class="org.apache.log4j.RollingFileAppender" name="REPORT_APPENDER">
+		<param value="true" name="Append" />
+		<param value="${dcma.home}/logs/dcma_report_all.log" name="File" />
+		<param value="true" name="ImmediateFlush" />
+		<param value="10" name="MaxBackupIndex" />
+		<param value="10000KB" name="MaxFileSize" />
+		<param value="DEBUG" name="Threshold" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param
+				value="4.0.0.0 ${os.name} [%-5p %d{dd/MM/yyyy hh:mm:ss,SSS}] %l - %m%n"
+				name="ConversionPattern" />
+		</layout>
+	</appender>
+
+	<!-- Appender for user information logging -->
+	<appender name="USER_APPENDER"
+		class="com.ephesoft.dcma.util.logger.EphesoftFileAppender">
+		<param name="File" value="${dcma.home}/logs/dcma-user.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="2MB" />
+		<param name="MaxBackupIndex" value="30" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="4.0.0.0 ${os.name} %d{ISO8601} %-5p %t %c - %m%n" />
+		</layout>
+	</appender>
+	<appender class="org.apache.log4j.varia.NullAppender" name="NULL_APPENDER" />
+
+	<!-- Added for reporting -->
+	<category name="com.ephesoft.dcma.report" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="REPORT_APPENDER" />
+	</category>
+
+	<logger name="com.ephesoft.gxt.log">
+		<level value="INFO" />
+		<appender-ref ref="USER_APPENDER" />
+	</logger>
+
+	<logger name="com.ephesoft">
+		<level value="ERROR" />
+	</logger>
+
+	<logger name="org">
+		<level value="ERROR" />
+	</logger>
+
+	<!-- logger name="org.hibernate"> <level value="INFO" /> </logger -->
+
+	<root>
+		<level value="ERROR" />
+		<appender-ref ref="CORE" />
+		<appender-ref ref="CONSOLE" />
+		<appender-ref ref="NULL_APPENDER" />
+	</root>
+</log4j:configuration>

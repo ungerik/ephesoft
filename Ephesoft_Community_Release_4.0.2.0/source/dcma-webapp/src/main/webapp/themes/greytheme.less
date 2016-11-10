@@ -1,0 +1,68 @@
+/*less css start here*/
+
+@base: #5B5B5B; /* tab and sub tab css color (default: #1e75cd, grey: #5B5B5B) */
+@baseDark: #282828; /* header color */
+@baseLight: #CCCCCC; /* grid table and background css color (default: #92C1F0, grey: #CCCCCC) */
+@themeImagePath: "themes/default_theme/images/"; /* image theme folder */
+@black:black; /* font or text color for normal tab */
+@white:white; /*  font or text color for selected tab */
+@messageColor: @black;
+
+.bdrLight{border-color:@baseLight !important; border:1px solid;}
+.bdrBottomLight{ border-bottom-color:@baseLight !important; border-bottom:1px solid;}
+.bdrTopLight{border-top-color:@baseLight !important; border-top:1px solid;}
+.bdrLeftLight{border-left-color:@baseLight !important; border-left:1px solid;}
+.bdrRightLight{border-right-color:@baseLight !important; border-right:1px solid;}
+.darkbdr {border-color:@base !important;border: 1px solid;}
+.darkbdrBottom{border-bottom-color:@base !important;border-bottom: 2px solid;}
+.bdrDarker {border: 1px solid !important; border-color:lighten(@baseDark, 41%) !important;}
+.bdrThumbnailDarker {border: 1px solid; border-color:lighten(@baseDark, 41%);}
+.bdrBottomDarker {border-bottom: 1px solid !important; border-bottom-color:lighten(@baseDark, 41%) !important;}
+
+.headerLeft{
+	background-image: -moz-linear-gradient(left, @white 0%, @baseDark 100%);
+	background-image: -ms-linear-gradient(left, @white 0%, @baseDark 100%);
+	background-image: -webkit-linear-gradient(left, @white 0%, @baseDark 100%);
+}
+
+.tabNormalBg{background: lighten(@base, 45%);}
+.tabSelectedBg{background:@base !important;}
+.tabDisableBg{background: lighten(@baseDark, 65%) !important; color:lighten(@black, 55%) !important;}
+.btnNormalBg{
+	background-color:@base;
+	background: -webkit-linear-gradient(top, @base 0%, @base 50%, @base 51%, @base);
+	background: -o-linear-gradient(top, @base 0%, @base 50%, @base 51%,@base);
+	background: -ms-linear-gradient(top, @base 0%, @base 50%, @base 51%, @base);
+	background: linear-gradient(to bottom, @base 0%, @base 50%, @base 51%, @base);
+}
+
+.btnHoverBg{
+	background: -webkit-linear-gradient(top, @baseDark, @baseDark 50%, @baseDark 51%, @baseDark);
+	background: -o-linear-gradient(top, @baseDark, @baseDark 50%, @baseDark 51%, @baseDark);
+	background: -ms-linear-gradient(top, @baseDark, @baseDark 50%, @baseDark 51%, @baseDark);
+	background: linear-gradient(to bottom, @baseDark, @baseDark 50%, @baseDark 51%, @baseDark);
+}
+
+.btnDisableBg{
+    background:lighten(@baseDark, 68%) !important; /* for non-css3 browsers */
+	/* Safari 5.1, Chrome 10+ */ 
+	background: -webkit-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important; 
+	/* Firefox 3.6+ */ 
+	background: -moz-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important; 
+	/* IE 10 */ 
+	background: -ms-linear-gradient(top, lighten(@baseDark, 68%), lighten(@baseDark, 68%)) !important;
+	/* Opera 11.10+ */ 
+	background: -o-linear-gradient(top, lighten(@baseDark, 68%),  lighten(@baseDark, 68%)) !important;	
+}
+
+/*fontAwesome for icon*/
+.fontAwesome{
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*less css end here*/

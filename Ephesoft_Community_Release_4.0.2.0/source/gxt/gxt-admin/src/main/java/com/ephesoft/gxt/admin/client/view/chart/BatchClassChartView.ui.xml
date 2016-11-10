@@ -1,0 +1,41 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:treeWidget="urn:import:com.ephesoft.gxt.admin.client.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="layoutData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="verticalLayoutData">
+		<ui:attributes width="1" />
+	</ui:with>
+
+	<gxt:ContentPanel headerVisible="false" borders="false"
+		ui:field="treePanel">
+		<container:VerticalLayoutContainer
+			layoutData="{layoutData}">
+			<container:child layoutData="{verticalLayoutData}">
+				<g:VerticalPanel ui:field="barChartVerticalPanel">
+					<gxt:ContentPanel resize="true" ui:field="barChartContainer" />
+				</g:VerticalPanel>
+			</container:child>
+			<container:child layoutData="{verticalLayoutData}">
+				<g:VerticalPanel ui:field="gaugeChartVerticalPanel">
+					<gxt:ContentPanel resize="true" ui:field="gaugeChartContainer" />
+				</g:VerticalPanel>
+			</container:child>
+			<container:child layoutData="{verticalLayoutData}">
+				<g:VerticalPanel ui:field="notificationChartVerticalPanel">
+					<gxt:ContentPanel resize="true" ui:field="notificationContainer" />
+				</g:VerticalPanel>
+			</container:child>
+		</container:VerticalLayoutContainer>
+	</gxt:ContentPanel>
+
+</ui:UiBinder>

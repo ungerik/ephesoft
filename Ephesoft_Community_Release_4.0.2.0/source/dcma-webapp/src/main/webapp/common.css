@@ -1,0 +1,3115 @@
+@import "themes/theme.less";
+
+@import "font-awesome/css/font-awesome.css";
+
+* {
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+body,input,select,textarea {
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-size: small !important;
+	color: @black !important;
+	margin: 0 !important;
+}
+
+.logoPanel .iconImage {
+	background: url("@{themeImagePath}logo_login.svg") no-repeat scroll 0 0;
+	float: left;
+	width: 203px !important;
+	height: 46px !important;
+	margin: 2px 0 0 2px;
+	background-size:100%;
+}
+
+.bottomPanel.GKVVQWVDEUC,.bottomPanel.MEUC,.leftBottomPanel.GKVVQWVDEUC,.leftPanel .GKVVQWVDEUC
+	{
+	border-width: 0 !important;
+}
+
+.logoPanel {
+	.headerLeft;
+}
+
+.buttonPanel {
+	background-color: @baseDark;
+}
+
+.buttonPanel .GKVVQWVDHFD,.logoPanel .GKVVQWVDHFD,.logoPanel .MHFD,.buttonPanel .MHFD,.buttonPanel .MOWC,.buttonPanel .GKVVQWVDOWC,.gridPanel .x-toolbar-mark .MOOD,.gridPanel .x-toolbar-mark .GKVVQWVDOOD,.leftPanel .MOWC,.leftPanel .GKVVQWVDOWC/*,.GKVVQWVDKDD .GKVVQWVDHDD*/
+	{
+	background: none;
+}
+
+.simpleContainer .menuContainerPanel td {
+	vertical-align: top !important;
+}
+
+.simpleContainer .buttonPanel {
+	height: 50px !important
+}
+
+.simpleContainer .logoPanel .iconImage {
+	margin-top: 8px;
+}
+/*panel node css*/
+.mainPage>div:nth-child(3n),.mainPage>div:nth-child(4n),.mainPage .subMainPanel>div:nth-child(4n),.mainPage .subBottomPanel>div:nth-child(3n)
+	{
+	background: lighten(@base, 5%);
+	overflow: visible;
+}
+
+.mainPage>div:nth-child(3n) {
+	top: 50px !important;
+}
+
+.simpleContainer .mainPage>div:nth-child(4n),.mainPage .subBottomPanel>div:nth-child(3n)
+	{
+	width: 5px !important;
+	z-index : 10;
+}
+
+/*
+.mainPage .subMainPanel>div:nth-child(4n) {
+	height: 5px !important;
+} */
+
+.mainPage .subMainPanel>div:nth-child(4n) {
+	left: 2px !important;
+}
+
+.simpleContainer .leftPanel,.simpleContainer .mainPage>div:nth-child(3n)
+	{
+	top: 0px !important;
+}
+
+.simpleContainer .mainPage>div:nth-child(3n)>div {
+	padding: 0 !important;
+}
+
+
+/*.simpleContainer .middlePanel .GKVVQWVDHFD { overflow:visible;}*/
+.batchClassImportContainerStyle,.learnFilesMainhorizontalPanel {
+	padding: 10px 15px;
+}
+
+.mainPage .rightPanel.GKVVQWVDEUC,.GKVVQWVDEUC,.simpleContainer .menuContainerPanel .buttonPanel,.buttonPanel .optionsPanel.GKVVQWVDEUC
+	{
+	border: 0 !important;
+}
+
+.mainPage .rightPanel .borderImageThumb,.mainPage .rightPanel.imageOverlayContainer
+	{
+	border-left: 5px solid lighten(@base, 5%)
+}
+
+table.buttonPanel,.buttonContainer,.buttonContainer .buttonBottomPanel,.menuContainerPanel .buttonBottomPanel
+	{
+	width: 100%;
+}
+
+.buttonContainer .buttonBottomPanel,.menuContainerPanel .buttonBottomPanel
+	{
+	padding: 5px 5px 0px 12px;
+	background-color: lighten(@baseLight, 10%);
+	border-top: 2px solid darken(@baseLight, 30%);
+	border-bottom: 2px solid darken(@baseLight, 30%);
+}
+
+.buttonContainer .buttonBottomPanel td,.menuContainerPanel .buttonBottomPanel td
+	{
+	line-height: 24px;
+}
+
+.buttonContainer .buttonBottomPanel table tr td {
+	padding: 0 0 5px 0;
+}
+
+.buttonContainer .buttonPanel {
+	padding-bottom: 2px;
+}
+/*.menuContainerPanel .buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal{padding: 0 0 0 10px;}*/
+.menuContainerPanel .buttonBottomPanel td,.menuContainerPanel .buttonBottomPanel .menuPanel td
+	{
+	line-height: normal;
+}
+/*.menuContainerPanel{ overflow:visible;}
+.leftBottomPanel .documentViewPanel .buttonPanel{ display:none;}*/
+/*navigation css*/
+.gwt-MenuBar-horizontal,.buttonPanel .optionsPanel>div:nth-child(2n)>div,.simpleContainer .middleDetailPanel>div.GKVVQWVDEUC
+	{
+	background: none !important;
+	border: none !important;
+	position: relative !important;
+}
+
+.buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal {
+	padding: 13px 0 0 10px;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS {
+	padding: 13px 0 0 10px;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .gwt-MenuBar.gwt-MenuBar-horizontal
+	{
+	padding: 0px;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem {
+	background: none !important;
+	padding: 0 !important;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem>div,.tableOptionsButton
+	{ .tabNormalBg;
+	color: @base !important;
+	font-size: 12px;
+	font-weight: normal;
+	cursor: pointer !important;
+	border-radius: 3px;
+	padding: 4px 13px;
+	box-shadow: 1px 1px 3px@black;
+	margin: 0 2px 0 0;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected>div,.gwt-MenuBar.externalInterfaceMenu .gwt-MenuItem.selectedTab>div,.tableOptionsButton:hover
+	{ .tabSelectedBg;
+	color: @white !important;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-disabled>div,.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled>div:hover,.tableOptionsButton:disabled,.tableOptionsButton:disabled:hover, .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled:hover
+	{ .tabDisableBg;
+	cursor: default !important;
+}
+
+.gwt-MenuBar .gwt-MenuItem-disabled:hover > div > div
+	{ color:lighten(@black, 55%) !important;
+}
+.gwt-MenuBar.gwt-MenuBar-vertical/*,.GKVVQWVDKDD,.MKDD*/ { .tabNormalBg;
+	
+}
+
+.GKVVQWVDKDD .GKVVQWVDHDD {
+	color: @base !important;
+}
+
+.gwt-MenuBarPopup .gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem {
+	cursor: pointer;
+	font-size: 12px;
+	padding: 2px 40px 2px 5px;
+}
+
+.gwt-MenuBarPopup .gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem:hover,.gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem.gwt-MenuItem-selected,.gwt-MenuBar.gwt-MenuBar-vertical .subMenuIcon-selected/*,.x-view-highlightrow.GKVVQWVDHDD,.x-view-highlightrow.MJDD.MHDD*/
+	{ .tabSelectedBg;
+	color: @white !important;
+}
+
+.gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem.gwt-MenuItem-disabled,.gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem.gwt-MenuItem-disabled:hover,.gwt-MenuBar.gwt-MenuBar-vertical .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled:hover
+	{ .tabDisableBg;
+	cursor: default !important;
+}
+
+.simpleContainer .viewPort>.middleDetailPanel:first-child {
+	top: 129px !important
+}
+
+.middleDetailPanel>div:first-child,.middleDetailPanel>div:first-child>div>div
+	{
+	width: 100% !important;
+}
+
+.tableOptionsButton {
+	padding: 2px 5px;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS {
+	width: auto !important;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .gwt-TextBox {
+	padding: 5px 4px !important;
+	width: 195px;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .uploadBatchLabelCSS,.buttonPanel .uploadBatchinputPanelCSS .gwt-Label
+	{
+	color: @white;
+	vertical-align: middle;
+	padding: 5px 0 0 0;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .uploadBatchLabelCSS {
+	margin: 0 8px 0 0;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .gwt-TextBox,.buttonPanel .uploadBatchinputPanelCSS .setIconForSorting,.buttonPanel .uploadBatchinputPanelCSS .gwt-Label
+	{
+	margin: 0 20px 0 0 !important;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS .GKVVQWVDH3C {
+	border-color: @baseLight !important;
+}
+
+.buttonPanel .uploadBatchinputPanelCSS #batchClassComboBox,.buttonPanel .uploadBatchinputPanelCSS #batchClassComboBox>div
+	{
+	width: 230px !important;
+}
+
+.buttonContainer .buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal {
+	padding: 2px 0 0 10px;
+}
+
+.menuContainerPanel .buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal {
+	padding: 10px 0 0 10px;
+}
+
+.treeContainer .GKVVQWVDH3C {
+	box-shadow: 0px 0px 0px @black;
+	border-radius: 0px;
+	border: 1px solid @base !important; .tabNormalBg;
+	color: @base !important;
+	cursor: pointer !important;
+	padding: 3px 0;
+}
+
+.treeContainer .GKVVQWVDH3C .GKVVQWVDF3C,.folderOptionsBox .GKVVQWVDG3C/*,.MKDD .MHDD*/
+	{
+	background: none !important;
+}
+
+.folderOptionsBox .GKVVQWVDH3C {
+	border-width: 0;
+}
+
+.folderOptionsBox .GKVVQWVDF3C {
+	color: @base !important;
+	cursor: pointer !important;
+}
+/*.buttonContainer .buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem > div,
+.menuContainerPanel .buttonPanel .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem > div{border-radius: 3px;padding:2px 10px;}*/
+.simpleContainer .documentTreeContentPanel.leftBottomPanel {
+	/*top: 0 !important; */
+}
+/*.simpleContainer .middleDetailPanel .GKVVQWVDHFD, .simpleContainer .menuContainerPanel, .simpleContainer .middleDetailPanel{height:auto !important;}
+.simpleContainer .middleDetailPanel:nth-child(2n),
+.simpleContainer .middleDetailPanel > div:first-child > div > div{height:auto !important;}*/
+.simpleContainer .middleDetailPanel:nth-child(2n),.simpleContainer .middleDetailPanel:nth-child(2n)>div>div:nth-child(2n)>div
+	{
+	height: auto !important;
+}
+
+.simpleContainer .menuContainerPanel .menuPanel td .detailHeaderLabel {
+	padding: 0 5px 0 0;
+}
+
+.simpleContainer .menuContainerPanel .menuPanel td .gwt-Label {
+	padding: 0 20px 0 0;
+}
+/*grid css*/
+.gridPanel .x-toolbar-mark,.gridPanel .folderManagerFooter {
+	background: lighten(@base, 48%);
+	border-bottom: 1px solid @baseLight;
+	padding-left: 12px;
+}
+
+.gridPanel .folderManagerFooter {
+	padding: 5px 12px;
+}
+
+.gridView>div:first-child table td,.gridView>div:first-child>div,.dataTableGrid>div:first-child table td {
+	background: @base !important;
+	color: @white;
+}
+
+.gridView>div:first-child table td.MCAD>div,.gridView>div:first-child table td.MCAD>div.MBAD,.gridView>div:first-child table td.GKVVQWVDCAD>div.GKVVQWVDBAD,.gridView>div:first-child table td:hover>div
+	{
+	background: lighten(@baseLight, 10%) !important;
+	color: @base;
+}
+
+.gridView tr.evenRow td,.bim_detail_grid tr.evenRow td {
+	background: lighten(@baseLight, 16%) !important;
+	border-top-color: lighten(@baseLight, 16%) !important;
+}
+
+.gridView .GKVVQWVDKBD .GKVVQWVDLAD,.gridView tr.evenRow:hover td,.bim_detail_grid tr.evenRow:hover td,.gridView tr.evenRow.gridRightSelection td,.gridView tr.gridRightSelection td
+	{
+	background: lighten(@baseLight, 10%) !important;
+	border-top-color: lighten(@baseLight, 10%) !important;
+}
+
+.gridView .selectedRow td,.gridView .evenRow.selectedRow td,.gridView .evenRow.selectedRow:hover td
+	{
+	background: lighten(@baseLight, 0%) !important;
+	border-top-color: lighten(@baseLight, 10%) !important;
+}
+
+.gridView .selectedRow td.selectedColumn,.gridView .evenRow.selectedRow td.selectedColumn {
+	background: darken(@baseLight, 15%) !important;
+	border-top-color: lighten(@baseLight, 10%) !important;
+}
+
+.gridView .selectedRow td.MGKE.styleName>div {
+	background-color: pink !important;
+}
+
+.gridView td label.MKQ,.gridView td label.GKVVQWVDKQ,.gridView td.x-grid-cell-first label
+	{
+	margin-left: 0;
+}
+
+.gridView div:first-child table td div,.bim_detail_grid tr td {
+	font-size: 12px !important;
+	line-height: 19px;
+}
+
+.gridView.gridViewWithoutCheckbox div:first-child table td div {
+	height: 21px;
+	line-height: 21px;
+}
+
+.gridView .MFAD.MPK,.gridView .GKVVQWVDFAD {
+	border-width: 0;
+}
+
+.fuzzySearchResultGrid .selectedRow td	{
+	background: lighten(@baseLight, 0%) !important;
+	border-top-color: lighten(@baseLight, 10%) !important;
+}
+
+.bim_detail_grid tr td.x-grid-cell-first {
+	font-weight: bold;
+}
+/*.gridPanel .keyGenerationVerticalPanel{padding:10px;}*/
+
+/*bottom pannel*/
+.subBottomPanel table td div.gwt-Label.labelCss {
+	margin: 20px 0 0 0;
+}
+
+.subBottomPanel .pad-text {
+	overflow: scroll !important;
+}
+
+.subBottomPanel .pad-text td {
+	padding: 2px;
+}
+
+.subBottomPanel .pad-text .gwt-Label {
+	width: 90px;
+}
+
+.subBottomPanel .pad-text .gwt-Button { .btnNormalBg;
+	color: @white;
+	font-weight: bold;
+	border-radius: 4px;
+	border: 1px solid lighten(@base, 5%);
+	padding: 4px;
+	cursor: pointer;
+	outline: none;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.subBottomPanel .pad-text .gwt-Button:hover { .btnHoverBg;
+	
+}
+
+.subMainPanel .panelHeader.bottomDetailPanel .GKVVQWVDEK {
+	display: block !important;
+}
+.notificationNotDynamicChart>div:nth-child(1n)>div:nth-child(1n)>div:nth-child(3n) {
+	font-size: 10px !important;
+}
+
+.bottomPanel .subBottomPanel .GKVVQWVDKFD {
+	background: lighten(@base, 5%) !important;;
+}
+/*icon css*/
+.mainPage>div:nth-child(3n)>div,.mainPage>div:nth-child(4n)>div,.subBottomPanel>div:nth-child(3n)>div
+	{
+	background: lighten(@base, 5%);
+	width: 10px !important;
+	opacity: 1;
+	padding: 10px 2px;
+	height: auto;
+}
+
+.subMainPanel>div:nth-child(4n)>div {
+	background: lighten(@base, 5%);
+	height: 10px;
+	opacity: 1;
+	padding: 2px 20px;
+	width: auto;
+}
+
+.buttonPanel .gwt-MenuBar .gwt-MenuItem.gwt-MenuItem-dropdown>div>div:after,.mainPage>div:nth-child(3n)>div.GKVVQWVDNSD:before,.mainPage>div:nth-child(3n)>div.GKVVQWVDPSD:before,.mainPage>div:nth-child(3n)>div.MNSD:before,.mainPage>div:nth-child(3n)>div.MPSD:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDNSD:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDPSD:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDNSD:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDPSD:before,.subMainPanel>div:nth-child(4n)>div.GKVVQWVDATD:before,.subMainPanel>div:nth-child(4n)>div.MMSD:before,.subMainPanel>div:nth-child(4n)>div.MATD:before,.subMainPanel>div:nth-child(4n)>div.GKVVQWVDMSD:before,.folderOptionsBox .GKVVQWVDH3C>div.GKVVQWVDG3C:after
+	{ .fontAwesome;
+	color: @white;
+	font-size: 25px;
+}
+
+.mainPage>div:nth-child(3n)>div.GKVVQWVDNSD:hover:before,.mainPage>div:nth-child(3n)>div.GKVVQWVDPSD:hover:before,.mainPage>div:nth-child(3n)>div.MNSD:hover:before,.mainPage>div:nth-child(3n)>div.MPSD:hover:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDNSD:hover:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDPSD:hover:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDNSD:hover:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDPSD:hover:before,.subMainPanel>div:nth-child(4n)>div.GKVVQWVDATD:hover:before,.subMainPanel>div:nth-child(4n)>div.MMSD:hover:before,.subMainPanel>div:nth-child(4n)>div.MATD:hover:before,.subMainPanel>div:nth-child(4n)>div.GKVVQWVDMSD:hover:before,.folderOptionsBox .GKVVQWVDH3C>div.GKVVQWVDG3C:hover:after
+	{
+	opacity: 0.9;
+}
+
+.buttonPanel .gwt-MenuBar .gwt-MenuItem.gwt-MenuItem-dropdown>div>div:after
+	{
+	content: "\f0d7";
+	font-size: 12px;
+	padding-left: 5px;
+	color: @base;
+}
+
+.folderOptionsBox .GKVVQWVDH3C>div.GKVVQWVDG3C:after {
+	content: "\f0d7";
+	color: @base;
+	font-size: 15px;
+}
+
+.buttonPanel .gwt-MenuBar .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-dropdown>div>div:after
+	{
+	color: @white;
+}
+
+.mainPage>div:nth-child(3n)>div.GKVVQWVDNSD:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDNSD:before,.mainPage>div:nth-child(3n)>div.MNSD:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDNSD:before
+	{
+	content: "\f0d9";
+}
+
+.mainPage>div:nth-child(3n)>div.GKVVQWVDPSD:before,.mainPage>div:nth-child(3n)>div.MPSD:before,.mainPage>div:nth-child(4n)>div.GKVVQWVDPSD:before,.subBottomPanel>div:nth-child(3n)>div.GKVVQWVDPSD:before
+	{
+	content: "\f0da";
+}
+
+.subMainPanel>div:nth-child(4n)>div.GKVVQWVDMSD:before,.subMainPanel>div:nth-child(4n)>div.MMSD:before
+	{
+	content: "\f0d7";
+	position: relative;
+	top: -7px;
+}
+
+.subMainPanel>div:nth-child(4n)>div.GKVVQWVDATD:before,.subMainPanel>div:nth-child(4n)>div.MATD:before
+	{
+	content: "\f0d8";
+	position: relative;
+	top: -7px;
+}
+
+.move_toolbar_button,.no_error_icon,.error_icon,.tableViewValidButton,.tableViewInValidButton,.zoomHoverButton,.zoomInButton,.zoomOutButton,.rotateButton,.splitButton,.deleteButton,.duplicateButton,.fitToPageButton,.nextPageButton, .prevPageButton,.firstPageButton,.lastPageButton,.searchButton, .rotateLeftButton
+	{
+	border: none;
+	background: none;
+	margin: 6px 0;
+	cursor: pointer;
+}
+
+.move_toolbar_button:before,.no_error_icon:before,.error_icon:before,.tableViewValidButton:before,.tableViewInValidButton:before,.zoomHoverButton:before,.zoomInButton:before,.zoomOutButton:before,.rotateButton:before,.splitButton:before,.deleteButton:before,.duplicateButton:before,.fitToPageButton:before,.screenNavigatorDefaultPosition:before,.nextPageButton:before,.prevPageButton:before,.firstPageButton:before,.lastPageButton:before,.searchButton:before,.rotateLeftButton:before
+	{ .fontAwesome;
+	font-size: 15px;
+	color: @base;
+}
+
+.move_toolbar_button:hover:before,.no_error_icon:hover:before,.error_icon:hover:before,.tableViewValidButton:hover:before,.tableViewInValidButton:hover:before,.zoomHoverButton:hover:before,.zoomInButton:hover:before,.zoomOutButton:hover:before,.rotateButton:hover:before,.splitButton:hover:before,.deleteButton:hover:before,.duplicateButton:hover:before,.fitToPageButton:hover:before,.nextPageButton:hover:before,.prevPageButton:hover:before,.firstPageButton:hover:before,.lastPageButton:hover:before,.searchButton:hover:before,.rotateLeftButton:hover:before
+	{
+	color: darken(@base, 10%);
+	/*opacity:0.9;*/
+}
+
+.move_toolbar_button.btndisabled:before,.no_error_icon.btndisabled:before,.error_icon.btndisabled:before,.tableViewValidButton.btndisabled:before,.tableViewInValidButton.btndisabled:before,.zoomHoverButton.btndisabled:before,.zoomInButton.btndisabled:before,.zoomOutButton.btndisabled:before,.rotateButton.btndisabled:before,.splitButton.btndisabled:before,.deleteButton.btndisabled:before,.duplicateButton.btndisabled:before,.fitToPageButton.btndisabled:before, .nextPageButton.btndisabled:before,.prevPageButton.btndisabled:before,.firstPageButton.btndisabled:before,.lastPageButton.btndisabled:before,.searchButton.btndisabled:before,.rotateLeftButton.btndisabled:before
+	{
+	cursor: default !important;
+	color: lighten(@black, 75%)
+}
+
+.move_toolbar_button.btndisabled,.no_error_icon.btndisabled,.error_icon.btndisabled,.tableViewValidButton.btndisabled,.tableViewInValidButton.btndisabled,.zoomHoverButton.btndisabled,.zoomInButton.btndisabled,.zoomOutButton.btndisabled,.rotateButton.btndisabled,.splitButton.btndisabled,.deleteButton.btndisabled,.duplicateButton.btndisabled,.fitToPageButton.btndisabled,.nextPageButton.btndisabled,.prevPageButton.btndisabled,.firstPageButton.btndisabled,.lastPageButton.btndisabled,
+.searchButton.btndisabled,.rotateLeftButton.btndisabled
+	{
+	cursor: default !important;
+	color: lighten(@black, 75%)
+}
+
+.move_toolbar_button:before,.screenNavigatorDefaultPosition:before {
+	content: "\f0da";
+	font-size: 22px;
+}
+
+.screenNavigatorDefaultPosition:before {
+	font-size: 30px;
+	margin-top: 35px;
+	color: @white;
+}
+
+.move_toolbar_button_east:before {
+	content: "\f0d9";
+	font-size: 22px;
+}
+
+.zoomInButton:before {
+	content: "\f00e";
+}
+
+.zoomOutButton:before {
+	content: "\f010";
+}
+
+.zoomHoverButton:before {
+	content: "\f0a6";
+}
+
+.rotateButton:before {
+	content: "\f01e";
+}
+
+.rotateLeftButton:before {
+	content: "\f0e2";
+}
+
+.fitToPageButton:before {
+	content: "\f047";
+}
+
+.no_error_icon:before {
+	content: "\f058";
+}
+
+.error_icon:before {
+	content: "\f059";
+}
+
+.tableViewValidButton:before {
+	background: url("@{themeImagePath}validTable.svg") center center
+		no-repeat;
+}
+
+.tableViewInValidButton:before {
+	background: url("@{themeImagePath}invalidTable.svg") center center
+		no-repeat;
+}
+
+.splitButton:before {
+	content: "\f0db";
+}
+
+.deleteButton:before {
+	content: "\f014";
+}
+
+.duplicateButton:before {
+	content: "\f0c5";
+}
+
+
+.firstPageButton:before {
+	content: "\f100";
+}
+
+.lastPageButton:before {
+	content: "\f101";
+}
+
+.nextPageButton:before {
+	content: "\f105";
+}
+
+.prevPageButton:before {
+	content: "\f104";
+}
+
+.searchButton:before {
+	content: "\f002";
+}
+
+
+.setIconForSorting {
+	background: transparent url("@{themeImagePath}sort.png") center center
+		no-repeat;
+	width: 22px;
+	height: 22px;
+	border: 0;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.toolbarContainer {
+	background: lighten(@base, 48%);
+	border: 1px solid@base;
+	border-radius: 3px;
+	width: 20px;
+	top: 170px !important;
+	z-index: 100;
+	padding: 2px;
+	height: auto !important;
+}
+
+.btnfirst {
+	margin-top: 0 !important;
+}
+
+.btnlast {
+	margin-bottom: 0 !important;
+}
+/*input checkbox css start
+input[type="checkbox"] {
+    display:none;
+}
+input[type="checkbox"] + label{line-height:16px;}
+input[type="checkbox"] + label:before {
+		display:inline-block;
+		content:'';
+		position: relative;
+		top: -2px;
+}
+input[type="checkbox"] + label:before {
+    display:inline-block;
+    width:16px;
+    height:16px;
+    vertical-align:middle;
+    background:url("@{themeImagePath}unchecked.gif") center center no-repeat;
+    cursor:pointer;
+		vertical-align:middle;
+}
+input[type="checkbox"]:checked + label:before {
+    background:url("@{themeImagePath}checked.gif") center center no-repeat;
+} */
+.rightPanel.GMMNKTXCHPB {
+	border-left-width: 3px !important;
+	border-color: @baseLight !important;
+}
+
+.GMMNKTXCFUB {
+	border-color: @baseLight !important;
+}
+
+.dropBatchClassLbl {
+	padding: 10px;
+}
+
+.overflowauto-scroll {
+	overflow: auto !important;
+}
+
+.testExtractionTogglerButton .html-face { .tabNormalBg;
+	color: @base;
+	padding: 3px 13px;
+	display: inline-block;
+	margin: 15px 0 0 8px;
+	position: relative;
+	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 3px 4px lighten(@base, 25%);
+}
+
+.testExtractionTogglerButton.testExtractionTogglerButton-up .html-face {
+	.tabNormalBg;
+	color:@black;
+}
+
+.testExtractionTogglerButton.testExtractionTogglerButton-up-hovering .html-face
+	{ .tabSelectedBg;
+	color: @white !important;
+	top: 1px;
+}
+
+.testExtractionTogglerButton.testExtractionTogglerButton-down .html-face
+	{ .tabSelectedBg;
+	color: @white;
+	box-shadow: 0 0 lighten(@base, 25%);
+	margin-top: 13px;
+	top: 2px;
+}
+
+.testExtractionTogglerButton.testExtractionTogglerButton-down-hovering .html-face
+	{ .tabSelectedBg;
+	color: @white;
+	box-shadow: 0 0 lighten(@base, 25%);
+	margin-top: 13px;
+	top: 2px;
+}
+
+.testExtractionTogglerButton.testExtractionTogglerButton-up-disabled .html-face
+	{ .tabDisableBg;
+	cursor: default !important;
+	box-shadow: 0 0 lighten(@base, 25%);
+}
+/*.toolbarEast {
+left: 600px !important}
+
+.dropBatchClassLbl {
+    border: 2px dashed #4c6df5;
+    color:@black;
+    display: block;
+    font-size: 0.85em;
+    line-height: 170%;
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+}
+.verticalPanelStyleName {
+    border-color: #4c6df5;
+    border-style: dashed !important;
+    border-width: 1px !important;
+    font-size: 12px;
+    padding-bottom: 24%;
+    padding-left: 19%;
+    padding-top: 30%;
+}
+*/
+
+/*left navigator css*/
+.screenNavigatorView {
+	z-index: 9999; 
+	background:@baseDark !important;
+	padding: 0 0 0 4px;
+}
+
+.screenNavigatorDefaultPosition {
+	margin-top: 20%;
+	height: 100px;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	opacity: 0.8;
+}
+
+.screenNavigatorDefaultPosition * {
+	display: none !important;
+}
+
+.screenNavigatorCompleteView {
+	width: 200px;
+	height: 100%;
+	color: @white;
+	background-color: @baseDark;
+	opacity: 0.9;
+	left: 0;
+	padding: 10px 10px;
+	display: block !important; /*-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;*/
+}
+/*left navigator icon*/
+.navigationView .batchList:before,.navigationView .reviewValidate:before,.navigationView .webScanner:before,.navigationView .uploadBatch:before,.navigationView .batchClassManagement:before,.navigationView .batchInstanceManagement:before,.navigationView .folderManagement:before,.navigationView .systemConfig:before,.navigationView .reporting:before, .navigationView .userLabel:before,.navigationView .signout:before
+	{ .fontAwesome;
+	color: @white;
+	font-size: 18px;
+	display: inline-block;
+	position: absolute;
+}
+/*.navigationView:hover .batchList:before,
+.navigationView:hover .reviewValidate:before,
+.navigationView:hover .webScanner:before,
+.navigationView:hover .uploadBatch:before,
+.navigationView:hover .batchClassManagement:before,
+.navigationView:hover .batchInstanceManagement:before,
+.navigationView:hover .folderManagement:before,
+.navigationView:hover .systemConfig:before,
+.navigationView:hover .signout:before{
+  color:darken(@white, 10%);
+  }*/
+.navigationView .batchList:before {
+	content: '\f022';
+}
+
+.navigationView .reviewValidate:before {
+	content: '\f1e5';
+}
+
+.navigationView .webScanner:before {
+	content: '\f02f';
+}
+
+.navigationView .uploadBatch:before {
+	content: '\f093';
+}
+
+.navigationView .batchClassManagement:before {
+	content: '\f085';
+}
+
+.navigationView .batchInstanceManagement:before {
+	content: '\f0e8';
+}
+
+.navigationView .folderManagement:before {
+	content: '\f07c';
+}
+
+.navigationView .systemConfig:before {
+	content: '\f0ad';
+}
+.navigationView .reporting:before {
+	content: '\f080';
+}
+.navigationView .userLabel:before {
+	content: '\f007';
+}
+.navigationView .signout:before {
+	content: '\f011';
+}
+
+.screenNavigatorView.screenNavigatorCompleteView .navigationView {
+	background-color: @baseDark;
+	margin-top: 5px;
+}
+
+.screenNavigatorView.screenNavigatorCompleteView .navigationView:hover {
+/*	background-color: @base;
+	opacity: 1 !important;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.75); */
+}
+
+.navigationTitle {
+	position: relative !important;
+	padding: 5px 0 5px 0;
+	padding-left: 25px !important;
+	width: 175px;
+	color: @white;
+}
+
+.navigationView:hover .navigationTitle {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.navigationView.logoutView {
+	position: absolute !important;
+	top: 92% !important;
+	margin: 0 10px !important;
+}
+
+.gwt-TextBox,.gwt-ListBox,.gwt-PasswordTextBox {
+	padding: 0 !important;
+	border: 1px solid@baseLight !important;
+}
+
+.boldTxt,.simpleContainer .menuContainerPanel .detailHeaderLabel {
+	font-weight: bold
+}
+
+.panelHeader .MGGD,.panelHeader .GKVVQWVDGG,.panelHeader .GKVVQWVDGGD {
+	padding: 0 10px;
+	line-height: 13px;
+}
+
+.folderOptionsBox,.folderOptionsBox>div {
+	width: 100% !important;
+}
+/*.folderNavigationTree .GKVVQWVDMPD{background:none !important;}*/
+.draggableImage {
+	border-color: @black;
+	border-style: solid;
+	height: 120px !important;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 90px !important;
+}
+
+.thumbnailHighlighted {
+	border: 2px solid @black !important;
+	border-collapse: separate;
+	box-shadow: 1px 1px 5px 5px #7eb6ff;
+}
+
+.thumbStackPanel {
+	background: none repeat scroll 0 0 #7eb6ff;
+	border-style: solid !important;
+	border-width: 2px;
+	box-shadow: 1px 1px 2px black;
+	margin: 5px 0 10px 0;
+	padding: 10px !important;
+}
+
+.thumbnailStack {
+	height: 130px;
+	margin-top: 0 !important;
+	width: 249px !important;
+}
+
+.stackImage {
+	border-color: black;
+	border-style: solid;
+	position: relative;
+}
+
+.thumbnailFirstImage {
+	width: 90px;
+	height: 120px;
+	z-index: 10;
+}
+
+.thumbnailSecondImage {
+	height: 100px;
+	width: 60px;
+	margin-left: -30px;
+	margin-top: 10px !important;
+	z-index: 9;
+}
+
+.thumbnailMiddleImage {
+	height: 90px;
+	width: 60px;
+	margin-left: -10px;
+	margin-top: 18px;
+	z-index: 8;
+}
+
+.thumbnailSecondLastImage {
+	height: 100px;
+	width: 60px;
+	margin-left: -30px;
+	margin-top: 10px;
+	z-index: 9;
+}
+
+.thumbnailLastImage {
+	height: 120px;
+	width: 90px;
+	margin-left: -40px;
+	z-index: 10;
+}
+
+.gwt-PopupPanelGlass {
+	z-index: 150000000000000000;
+	background: url("/dcma/images/screenmask.gif") center center no-repeat
+		!important;
+	opacity: 0.5 !important;
+	background-color: black !important;
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.screenMask .dialogTop {
+	display: none !important
+}
+
+.screenMask .gwt-Label {
+	margin-top: 150px;
+	text-align: center;
+	margin-left: -65px;
+	border: none !important;
+	font-size: 1.5em;
+	color: white !important;
+	text-shadow: 1px 2px 3px white;
+}
+
+.screenMask * {
+	border: none !important;
+}
+
+.screenMask {
+	margin-top: -59px;
+}
+
+.screenMask {
+	z-index: 15000000000001 !important;
+}
+/*BIM Details Grid CSS Starts here*/
+.bim_detail_grid>div:nth-child(2) table {
+	width: 100% !important;
+}
+
+.bim_detail_grid>div:nth-child(2) {
+	width: 100% !important;
+}
+/*BIM Details Grid CSS Ends here*/
+
+/*SystemConfig Tree CSS Starts here*/
+.systemConfigNavigationTree {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.systemConfigTreeContainer>div:nth-of-type(1) {
+	height: 100% !important;
+}
+/*SystemConfig Tree CSS Ends here*/
+
+/* System Config Dependency drag drop widget CSS starts here*/
+
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(1) {
+                visibility : hidden !important;
+}
+
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(2) {
+                visibility : hidden !important;
+}
+
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(5) {
+                visibility : hidden !important;
+}
+
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(6){
+                visibility : hidden !important;
+}
+
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > div{
+width : 40px !important;
+height : 30px !important;
+background : url("/dcma/themes/default_theme/images/AND.svg") no-repeat scroll 0 0;
+}
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4)> td > div{
+margin-top : 10px;
+width : 30px !important;
+height : 30px !important;
+background : url("/dcma/themes/default_theme/images/OR.svg") no-repeat scroll 0 0;
+}
+
+/* System Config Dependency drag drop widget CSS ends here*/
+
+/* BIM Progress bar color CSS starts here*/
+.greenbackground div {
+	background: none !important;
+	background-color: #00a900 !important;
+	color:@white;
+	font-weight: normal;
+}
+
+.redbackground div {
+	background-color: #fdfd9c !important;
+	color: grey !important;
+	font-weight: normal;
+}
+
+/* BIM Progress bar color CSS ends here*/
+
+/* Batch Class tree CSS */
+.navigationPanel {
+	overflow: hidden !important;
+}
+/***Folder Management NAvigation Tree Starts***/
+.folderNavigationTree {
+	height: 100% !important;
+}
+
+.treeContainer>div:nth-of-type(2) {
+	height: 94.5% !important;
+}
+/***Folder Management NAvigation Tree Ends ***/
+
+/***Folder Management Context menu Starts ***/
+.contextMenu {
+	width: 69px !important;
+}
+
+.contextMenu .gwt-MenuBar-vertical table {
+	border-collapse: collapse;
+	width: 100% !important;
+}
+/***Folder Management Context menu Ends***/
+
+/**System Config application view css Starts***/
+.keyGenerationHorizontalPanel {
+	left: 19px !important;
+	top: 17px !important;
+}
+
+.keyGenerationHorizontalPanel .gwt-Label {
+	left: -5px !important;
+}
+/**System Config application view css Ends ***/
+
+.poweredByEphesoftLabel {
+	text-align: center;
+	color: @white;
+	background-color: @base;
+	cursor: pointer;
+	padding: 2px 0 0 0;
+}
+
+.poweredByEphesoftLabel a {
+	color: @white;
+}
+
+.poweredByEphesoftLabel:hover {
+text-decoration: underline;
+}
+
+/*review validate css*/
+.tableButtonPanel{
+	padding:0 0 5px 0 !important;
+}
+.tableViewContainer{
+	border-width:0 !important;
+	border-radius:0 !important;
+}
+.tableViewContainer .tableMenuBar{
+	height:40px !important;
+	width:100% !important;
+	background-color: @baseDark !important;
+	padding: 10px 0 0 10px !important;
+}
+.tableButtonPanel  .tableName{
+	font-size:14px; 
+	font-weight:bold;
+	padding:2px 0 0 0;
+}
+.domainListPanel .dataTableGrid{	
+	border-bottom: 1px solid darken(@baseLight, 10%);
+}
+.testExtractionDataTablesGrid div:first-child > div
+{
+	width:100% !important;
+}/**/
+.testExtractionDataTablesGrid div:first-child > div > table
+{
+	width:100% !important;
+}
+.testExtractionDataTablesGrid  div:nth-child(2n) > div > table{
+	width:100% !important;
+}
+.domainListPanel .GKVVQWVDFAD{
+	border-top-width:0 !important;
+}
+
+@media all and (max-width: 1280px) {
+	.buttonPanel .uploadBatchinputPanelCSS .uploadBatchLabelCSS,.buttonPanel .uploadBatchinputPanelCSS .gwt-Label
+		{
+		line-height: 14px;
+	}
+	.buttonPanel .uploadBatchinputPanelCSS #batchClassComboBox,.buttonPanel .uploadBatchinputPanelCSS #batchClassComboBox>div
+		{
+		width: 150px !important;
+	}
+	.validationTabPanel>div:nth-child(2) {
+		height: 91% !important;
+		overflow-y: auto !important;
+	}
+}
+/*Gaurav CSS*/
+/*Advanced KV*/
+.advKVMenuPanel td {
+	height: 100% !important;
+	vertical-align: middle !important;
+}
+
+
+.advKVMenuPanel {
+	height: 100% !important;
+	width: 100% !important;
+}
+
+.advKVInputPanel>div>div>div:nth-child(2) {
+	top: 50% !important;
+	margin-top : 5px !important;
+}
+
+.advKVInputPanel {
+	height: 100% !important;
+	width: 100% !important;
+	left: 15px;
+}
+
+.advKVInputPanel > div:nth-child(1)>div>div:nth-child(1){
+/*top : 15px !important;*/
+}
+.advKVInputPanel > div:nth-child(1)>div>div:nth-child(2){
+left : -3% !important;
+}
+
+.advKVInputPanel>div>div {
+	top: 10px !important;
+	width: 167px !important;
+}
+
+.advKVInputPanel>div>div>table {
+	left: 157px !important;
+}
+
+.advKVInputLabel>label {
+	font-weight: bold !important;
+	width : 100% !important;
+	padding : 0px !important;
+}
+
+.advKVInputLabel {
+	font-weight: bold !important;
+	/*margin-left: 10% !important;*/
+	width : 100% !important;
+}
+
+.advKVImportPanel div {
+	text-align: center !important;
+}
+
+.advKVImportPanel>div:nth-child(1) {
+	padding-top: 3% !important;
+}
+
+.advKVMenuPanel>tbody>tr>td:nth-child(3),.advKVMenuPanel>tbody>tr>td:nth-child(5)
+	{
+	color: white !important;
+	padding-top: 1% !important;
+}
+
+.advKVMenuPanel>tbody>tr>td:nth-child(4),.advKVMenuPanel>tbody>tr>td:nth-child(6)
+	{
+	padding-top: 1% !important;
+}
+.advKVMenuPanel>tbody>tr>td:nth-child(6)>div>div{
+width : 69px !important;
+}
+.advKVPageButton-next {
+	background: url("images/chevron-circle-right.svg") no-repeat !important;
+}
+
+.advKVPageButton-previous {
+	background: url("images/chevron-circle-left.svg") no-repeat !important;
+}
+
+.advKVPageButton {
+	height: 32px !important;
+	width: 32px !important;
+	border: none !important;
+	z-index : 5 !important;
+}
+
+.advKVOverlay, .keyAdvKVOverlay , .valueAdvKVOverlay{
+	position : absolute !important;
+	opacity : 0.4;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+.advKVOverlay .GNOCXWODGCC , .keyAdvKVOverlay .GNOCXWODGCC, .valueAdvKVOverlay .GNOCXWODGCC{
+	height :0px !important;
+	width :0px !important; 
+}
+
+.advKVOverlay, .advKVOverlay *{
+z-index : 8500000000000000000;
+}
+.keyAdvKVOverlay, .keyAdvKVOverlay * {
+background-color : #99cc66 !important; 
+border-color : black !important;
+z-index : 8500000000000000000;
+}
+.keyAdvKVOverlay div, .valueAdvKVOverlay div, .advKVOverlay div{
+background-color : inherit !important; 
+}
+.keyAdvKVOverlay> .MCEB, .valueAdvKVOverlay> .MCEB, .advKVOverlay> .MCEB{
+opacity : 1 !important;
+}
+.valueAdvKVOverlay, .valueAdvKVOverlay * {
+background-color : #CC3333 !important; 
+border-color : black !important;
+z-index : 8500000000000000000;
+}
+.uploadFileProgress {
+	left: 40% !important;
+}
+
+.advKVImagePanel{
+background: #F0F0F0 !important;
+}
+
+.advKVImagePanel>div:nth-child(3) {
+	left: 97% !important;
+	height: 0% !important;
+	vertical-align: middle;
+}
+
+.advKVImagePanel>div:nth-child(3)>div {
+	height: 0% !important;
+}
+
+.advKVImagePanel>div:nth-child(2) {
+	width: 100% !important;
+	height: 100% !important;
+}
+
+.advKVImagePanel>div:nth-child(2)>div,.advKVImageScrollPanel,.advTCERImageScrollVLayout>div,.gridViewMainPanel>tbody
+	{
+	height: 100% !important;
+}
+
+.advKVImageScrollPanel img {
+	width: 100% !important;
+}
+
+.imageLabel {
+	display: inline;
+	position: absolute;
+}
+
+.advFramedPanel{
+height:100% !important;
+border-width:0 !important;
+border-radius:0 !important;
+}
+.advFramedPanel>div:nth-child(1)>div{
+width:100% !important;
+}
+/*Advanced KV*/
+/* Set Coordinates CSS start here*/
+.advTCERInputlabel,.advTCERInputlabel>label {
+	font-weight: bold !important;
+	width: 100% !important;
+}
+
+.advTCERInputPanel>div {
+	padding-left: 5% !important;
+	padding-top: 3% !important;
+}
+
+.advTCERInputField {
+	width: 130% !important;
+}
+
+.advTCERImageScrollVLayout {
+	height: 100% !important;
+	width: 99% !important;
+}
+
+.advTCERImageScrollVLayout>div {
+	height: 100% !important;
+}
+
+.advTCERImageScroll {
+	height: 99% !important;
+	background: #F0F0F0 !important;
+}
+
+.overlay {
+	position : absolute !important;
+	opacity : 0.4 !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+.overlay .GNOCXWODGCC {
+	height :0px !important;
+	width :0px !important; 
+}
+
+.overlay, .overlay * {
+background : none !important;
+background-color : #FFFF66 !important; 
+border-color : #FFFF66 !important;
+z-index : 8500000000000000000;
+}
+
+.uploadFileProgress {
+	left: 40% !important;
+}
+/*Set Coordinates Ends Here*/
+/* Module Listing CSS starts here.*/
+.changeStyleTextBox {
+	border: thin solid red !important;
+}
+
+.configurationLabel {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 2% !important;
+}
+
+.availableConfLabel {
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 33% !important;
+	margin-top: 2% !important;
+}
+
+.selectedConfLabel {
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 50% !important;
+	margin-top: 2% !important;
+}
+
+.fromViewDualList, .toViewDualList {
+	height: 450px !important;
+	width: 300px !important;
+	overflow-x: hidden !important;
+}
+
+.dualList {
+	margin-left: 25% !important;
+	margin-top: 2% !important;
+	height: 100% !important;
+}
+
+.dualList>table>tbody>tr>td:nth-child(2) {
+	vertical-align: middle !important;
+}
+
+.fieldSet {
+	margin-left: 1% !important;
+	height: 97% !important;
+	width: 96% !important;
+}
+
+.fieldSet>div {
+	height: 100% !important;
+}
+
+.pluginVerticalLayout {
+	height: 100% !important;
+}
+
+.pluginFieldLabel {
+	left: 27% !important;
+	width: 100% !important;
+}
+
+.pluginFieldLabel>label {
+	width: 20% !important;
+}
+
+.pluginDetailScrollPanel {
+	height: 98% !important;
+	width: 99.3%;
+}
+
+.editPluginPanel {
+	width: 98%;
+}
+
+.pluginPanel {
+	padding-top: 5px !important;
+	width: 100% !important;
+}
+
+.pluginPanel td {
+	width: 45% !important;
+}
+
+.pluginLabel {
+	float: right !important;
+	padding-right: 15px !important;
+}
+
+.widgetPluginLabel {
+	width: 32% !important;
+}
+
+.widgetPluginLabel>div,.widgetPluginLabel input,.addModuleTextField>div,.addModuleTextField input
+	{
+	width: 100% !important;
+}
+
+.noPluginLabel {
+	color: #000099;
+	margin-left: 45%;
+}
+
+.fromViewDualList .dependencyColor {
+	background: #FFFF00 !important;
+}
+
+.addModuleTextField {
+	width: 90% !important;
+}
+/*Dual List Buttons*/
+.left {
+	background: url("images/chevron-circle-left.svg") no-repeat !important;
+	height: 32px !important;
+	width: 32px !important;
+}
+
+.right {
+	background: url("images/chevron-circle-right.svg") no-repeat !important;
+	height: 32px !important;
+	width: 32px !important;
+}
+
+.allRight {
+	width: 0% !important;
+	height: 0% !important;
+}
+
+.allLeft {
+	width: 0% !important;
+	height: 0% !important;
+}
+
+.up {
+	background: url("images/chevron-circle-up.svg") no-repeat !important;
+	height: 32px !important;
+	width: 32px !important;
+}
+
+.down {
+	background: url("images/chevron-circle-down.svg") no-repeat !important;
+	height: 32px !important;
+	width: 32px !important;
+}
+/*Dual List*/
+/*Module Listing CSS ends here*/
+/*Ends*/
+
+/***Web Scanner Profile Starts***/
+td>.WebScannergrid {
+	/*height: 100% !important;*/
+	/*overflow-y: hidden;*/
+	overflow-x: scroll; /*margin-bottom : -1.8% !important;*/
+}
+
+.WebScannergrid>div:nth-child(1) {
+	overflow: visible !important;
+}
+
+.WebScannergrid>div:nth-child(2) {
+	overflow: visible !important;
+}
+/***Web Scanner Profile Ends***/
+
+/***Cell Style red Starts***/
+.styleName>div {
+	background-color: red !important;
+	line-height: 194% !important;
+}
+/***Cell Style red Ends***/
+
+/***Table Extraction Rule Starts***/
+.compositeCellStyle>div>span>div {
+	margin-left: 10px !important;
+	display: inline-block;
+}
+
+.compositeCellStyle>div>span:first-child>div {
+	margin-left: 0 !important;
+	display: inline-block;
+}
+
+.compositeCellStyle label {
+	margin-left: 2px !important;
+	padding-right: 0 !important;
+}
+/***Table Extraction Rule Ends***/
+
+/***Table Validation Rule Starts***/
+.tableRulesCell>div>span>div {
+	margin-left: 10px !important;
+	display: inline-block;
+}
+
+.tableRulesCell>div>span:first-child>div {
+	margin-left: 0 !important;
+	display: inline-block;
+}
+
+.tableRulesCell label {
+	margin-left: 2px !important;
+	padding-right: 0 !important;
+}
+/***Table Validation Rule Ends***/
+
+/***Test Table Starts***/
+.invalidRow .GKVVQWVDGKE div {
+	background-color: #F99F9F !important;
+}
+
+.invalidColumn.GCGCW0WDLFC div,.invalidRow .GCGCW0WDLFC div {
+	background-color: rgb(207, 161, 161) !important;
+}
+/*
+.invalidColumn div, .invalidRow  div{
+background-color : rgb(207, 161, 161) !important;
+}*/
+.invalidRow td {
+	background-color: rgb(246, 201, 201) !important;
+}
+
+.invalidColumn {
+	background: #ECD9DA !important;
+}
+/***Test Table Ends***/
+
+/*** Text bold Starts***/
+.fontBold {
+	font-weight: bold;
+}
+/***Text bold Ends***/
+.screenNavigatorView>div {
+	height: 35px !important;
+}
+
+.header {
+	border-style: solid;
+	margin-top: 20px !important;
+}
+
+.invalidField,.invalidField input {
+	background: #F4C7C7 !important;
+}
+
+.gwt-MenuBarPopup .menuPopupTopLeft .menuPopupTopCenter {
+	background: darken(@baseLight, 15%) !important;
+}
+
+.importBatchClassView>div {
+	height: 25px;
+	margin-top: 3px !important;
+}
+
+.importBatchClassInputLabel {
+	margin-left: 10px !important;
+}
+
+.batchClassFieldTextField {
+	margin-left: 54px !important;
+}
+
+.batchClassDescriptionTextField {
+	margin-left: 23px !important;
+}
+
+.batchClassPrioritySlider {
+	margin-left: 122px !important;
+	
+}
+
+.batchClassPrioritySlider > div  > div{ width:151px !important;
+}
+
+
+
+.uncFolderPanel {
+	width:150px !important;
+}
+
+.uncFolderCombo {
+	margin-left: 95px !important;
+	
+}
+
+.uncFolderTextField {
+	margin-left: 95px !important;
+}
+
+.useExistingUNC {
+	margin-left: 15px !important;
+	margin-top: 7px !important;
+	left: 310px !important;
+	
+}
+
+.importHighlightLabel {
+	margin-top: 10px !important;
+	margin-left: 2px !important;
+	margin-bottom: 5px !important;
+	font-weight: bold;
+}
+
+.useExistingKey {
+	margin-left: 88px !important;
+	margin-top: 8px !important;
+}
+
+.batchClassKeyTextField {
+	margin-left: 62px !important;
+	margin-top: 10px !important;
+}
+
+.encryptionAlgorithmCombo {
+	margin-left: 105px !important;
+	margin-top: 10px !important;
+	left: 59px !important;
+}
+
+.encryptionKeyLabel,.encryptionAlgorithmLabel {
+	margin-top: 12px !important;
+}
+
+.withLearnedFilesRadio input,.withoutLearnedFilesRadio input {
+	margin-left: 12px !important;
+	margin-top: 10px !important;
+}
+
+.exportPluginCheckBox,.importConfigCheckbox,.exportPluginCheckbox {
+	margin-left: 12px !important;
+}
+/**TestExtraction */
+.testExtractionHorizontalPanel {
+	top: 6px !important;
+}
+
+.testClassificationHorizontalPanel.testExtractionHorizontalPanel {
+	top: 15px !important;
+}
+
+.classificationTypeLabel,.extractionModulesLabel {
+	font-weight: bold;
+}
+
+.classificationTypesComboBox {
+	margin-right: 20px;
+}
+
+.screenMask .dialogTopLeft,.screenMask .Caption,.screenMask .dialogTopRight,.screenMask .dialogMiddleLeft,.screenMask  .dialogMiddleCenter,.screenMask .dialogBottomLeft,.screenMask .dialogBottomCenter,.screenMask .dialogBottomRight,.screenMask  .dialogMiddleRight
+	{
+	background: none !important;
+	border: none !important;
+}
+
+.noResultViewPanel {
+	width: 100% !important;
+}
+
+.noResultViewPanel .noResultViewLabel {
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+
+.GKVVQWVDJUC {
+	opacity: 1.0 !important;
+}
+
+.leftMargin_30 {
+	margin-left: 30px !important;
+}
+
+.leftMargin_60 {
+	margin-left: 90px !important;
+}
+/***If column validation fails add this stylename. ***/
+.styleName > div {
+	background-color: red !important;
+	line-height: 194% !important;
+}
+/***Cell Style red Ends***/
+
+/**TestExtraction */
+.testExtractionDialogWindow {
+	background: @white;
+}
+
+.testExtractionDialogWindow .MOWC {
+	background: none !important;
+}
+
+.firstContentPanel > div:nth-child(2n) > div > div, .firstContentPanel > div:nth-child(2n) > div > div > div, .firstContentPanel > div:nth-child(2n) > div > div > div > .thirdContentPanel > div:nth-child(2n) > div
+	{
+	height: 115px !important;
+	border-bottom: 2px solid darken(@baseLight, 30%);
+}
+
+.firstContentPanel > div:nth-child(2n) > div {
+	height: auto !important;
+}
+
+.secondContentPanel{
+	border-bottom: 2px solid darken(@baseLight, 30%);
+}
+
+.secondContentPanel,.secondContentPanel > div:nth-child(2n),.secondContentPanel > div:nth-child(2n) > div,.secondContentPanel > div:nth-child(2n) > div > div,.tcMenuContentPanel > div:nth-child(2n) > div,.tcMenuContentPanel > div:nth-child(2n) > div > div
+	{
+	height: 33px !important;
+}
+
+.firstContentPanel .thirdContentPanel {
+	top: 35px !important;
+	padding: 0 0 0 10px;
+}
+
+.tcComboBoxContentPanel .testClassificationVerticalPanel {
+	padding: 0 0 0 10px;
+}
+
+.firstContentPanel .thirdContentPanel .gwt-Label, .testClassificationHorizontalPanel.testExtractionHorizontalPanel .gwt-Label
+	{
+	padding: 0 10px 0 0;
+	line-height: 25px;
+}
+
+.testExtractionDialogWindow {
+	z-index: 0 !important;
+	border-radius: 0 !important;
+}
+
+.MAJ.MHK,.secondContentPanel .MJFD, .tcMenuContentPanel .MJFD {
+	display: none !important;
+}
+
+.mainPage>div:nth-child(3n),.mainPage>div:nth-child(3n)>div {
+	z-index: 1;
+}
+
+.testExtractionNavigationTreeContainer .testExtractionNavigationTree, .tcMenuContentPanel .MHFD
+	{
+	width: 100% !important;
+	overflow: visible !important;
+}
+
+.testExtractionNavigationTreeContainer {
+	overflow: auto !important;
+	border-right: 2px solid darken(@baseLight, 30%);
+}
+
+.testClassifcationButtonContainer {
+	overflow: hidden;
+	border-bottom: 2px solid darken(@baseLight, 30%);
+}
+/*.extractedDlfGridViewMainPanel .extractedDlfGrid,
+.fourthContentPanel{top:75px !important;}
+.fifthContentPanel{top:85px !important;}*/
+.dialog .MOWC {
+	background: none !important;
+}
+
+.dataTablesGridViewMainPanel{
+ height:100% !important;
+ overflow:auto !important;
+}
+.secondContentPanel .gwt-MenuBar.gwt-MenuBar-horizontal,.testClassifcationButtonContainer .gwt-MenuBar.gwt-MenuBar-horizontal
+{
+	padding: 7px 0 0 10px;
+}
+
+.secondContentPanel .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem > div,.testClassifcationButtonContainer .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem > div
+{
+	border-radius: 3px 3px 0px 0px;
+}
+/*.extractedDlfGridViewMainPanel .extractedDlfGrid > div > div, .extractedDlfGridViewMainPanel .extractedDlfGrid > div > div > table {
+            	width:98% !important;
+            }
+            .extractedDlfGrid {
+            border: 1px solid darken(@baseLight, 30%);
+            }*/
+.invalidColumn {
+	background: #ECD9DA !important;
+}
+
+.manualValidatedColumn,.manualValidatedColumn * {
+	background: rgb(172, 172, 173) !important;
+}
+
+.invalidRow .GKVVQWVDGKE div {
+	background-color: #F99F9F !important;
+}
+
+.manualValidatedColumn.GKVVQWVDGKE div {
+	background-color: powderblue !important;
+}
+
+.invalidColumn.GCGCW0WDLFC div,.invalidRow .GCGCW0WDLFC div {
+	background-color: rgb(207, 161, 161) !important;
+}
+
+.invalidRow td {
+	background-color: rgb(246, 201, 201) !important;
+}
+/**chirag */
+
+/***
+Rajan
+***/
+.GKVVQWVDJUC {
+	opacity: 1.0 !important;
+}
+
+.leftMargin_30 {
+	margin-left: 30px !important;
+}
+
+.leftMargin_60 {
+	margin-left: 90px !important;
+}
+/*CSS defined for matched text area used in regex builder dialog */
+.matchedHTMLRegexBuilder {
+	width: 200px;
+	height: 80px;
+	border: 1px solid darken(@baseLight, 20%) !important;
+	overflow: auto;
+}
+
+.systemConfigRegexGrid>div:nth-child(2) {
+	overflow-x: hidden !important;
+	height: 90% !important;
+	overflow-y: auto !important;
+	width : 100% !important;
+}
+
+
+.regexGrid>div:nth-child(2) {
+	overflow-x: hidden !important;
+	width : 100% !important;
+}
+
+.regexGrid>div {
+	overflow-x: hidden !important;
+}
+
+/* .regexGrid >  div, .regexGrid >  div > div , .regexGrid >  div > div table {
+width : 100% !important;
+} */
+
+
+
+.regexGrid>div:nth-child(2)>div {
+	overflow-y: auto !important
+}
+
+.tabPanelRegexBuider {
+	width: 100% !important;
+}
+
+.widthExpand {
+width : 100% !important;
+}
+
+/**
+.regex_builder_main_view_vertical_panel{
+overflow: auto;
+}
+
+.regexGroupGrid > div {
+width : 100% !important;
+}
+
+.setWidth > div > div > div {
+width : 100%;
+}
+
+.setWidth > div > div {
+width : 100%;
+}
+
+.setWidth > div {
+width : 100%;
+}
+
+
+
+**/
+/*** Css to make font red starts***/
+.fontRed {
+	color: red;
+}
+/*** Css to make font red ends***/
+
+/*** Css for detail list on upload batch starts.  ***/
+.upload_speed_detail_grid tr.evenRow td{background:lighten(@baseLight, 16%) !important;border-top-color:lighten(@baseLight, 16%) !important;}
+.upload_speed_detail_grid tr.evenRow:hover td,
+.upload_speed_detail_grid tr td.x-grid-cell-first{font-weight:bold;}
+.upload_speed_detail_content_panel {
+	margin-top : 50px !important;
+}
+
+.upload_speed_detail_grid > div:nth-child(2n) {
+	overflow : hidden !important;
+}
+
+.upload_speed_detail_grid > div:nth-child(2n) > div table {
+	width :auto !important;
+}
+.upload_speed_detail_grid tr td.x-grid-cell-first{
+width:50% !important;
+}
+
+.upload_speed_detail_content_panel > div > div  div.upload_speed_detail_grid {
+	overflow : hidden !important;
+	margin :50px 10px 0 10px !important;
+	border-width:1px !important;
+}
+/*** Css for detail list on upload batch ends.  ***/
+
+/*-------------------------------- Bhavna-09-01-2015-------------------------------------------------------*/
+.marRight20 {
+	margin-right: 20px !important;
+}
+
+.testPanelRegexBuider {
+	background: none repeat scroll 0 0 #fff;
+	border-top: 2px solid #308dd1;
+	bottom: 0;
+	display: block;
+	height: 58px;
+	padding: 5px 10px;
+	position: relative;
+	width: 100% !important;
+}
+
+.tabPanelRegexBuider {
+	width: 100% !important;
+}
+
+table.tabPanelRegexBuider tr:nth-child(2)>td>div.gwt-TabPanelBottom {
+	display: block;
+	height: 475px;
+	overflow: auto !important;
+}
+/*Test Table Starts*/
+.testTable>div {
+	padding-top: 5px;
+}
+
+.testTable>div:first-child {
+	padding-top: 0px !important;
+}
+
+.testTable>div>div{
+	position: relative !important;
+	overflow:auto !important;
+}
+
+.regexBuilderLabelCss {
+	line-height: 14px;
+	margin-left: 5px;
+	vertical-align: middle;
+	width: 255px;
+	
+}
+
+.testPanelRegexBuider td {
+	vertical-align: middle !important;
+}
+
+.testPanelRegexBuider td div {
+	margin-right: 20px;
+	margin-left: 0;
+	width: auto;
+}
+
+/*Test Table Ends*/
+
+
+/* System Config CSS */
+.regexBuilderScrollPanel table td {
+	padding-bottom: 1px;
+	vertical-align: middle !important;
+}
+
+.backgroundColorRegexBuilder1 {
+	background: #308dd1;
+}
+.backgroundColorRegexBuilder2 {
+	background: #b0b0b0;
+}
+
+.testPanelRegexBuider td div.matchedHTMLRegexBuilder {
+	height: 49px !important;
+	width: 150px !important;
+}
+
+.ConnectionManagerCss td .gwt-Button {
+	 .btnNormalBg;
+	border: 1px solid #126daf;
+	border-radius: 4px;
+	color: @white;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	margin: 0 auto;
+	outline: medium none;
+	overflow: hidden;
+	padding: 4px;
+	white-space: nowrap;
+}
+
+.tabPanelRegexBuider .gwt-TabBar {
+	background: #fff;
+	border-bottom: 2px solid #308dd1;
+}
+
+.tabPanelRegexBuider .gwt-TabBar .gwt-TabBarItem-selected {
+	background: lighten(@base, 48%) !important;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 -1px 2px #000000;
+    color: @base !important;
+    cursor: pointer !important;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0 2px 0 5px;
+    padding: 4px 13px;
+}
+
+.tabPanelRegexBuider .gwt-TabBar .gwt-TabBarItem {
+	background: none repeat scroll 0 0 #eaeff3;
+	color: #b1b1b1;
+	cursor: default;
+	border-radius: 3px 3px 0 0;
+	box-shadow: 0 -1px 2px #000000;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0 2px 0 5px;
+	padding: 4px 13px;
+}
+
+.paddingBottom {
+	padding: 5px 0 0 10px;
+}
+
+.paddingBottom td {
+	padding-bottom: 0px;
+}
+
+.bottomPanel div.GKVVQWVDIFD {
+	
+}
+
+.ConnectionManagerCss {
+    float: right;
+    margin-right: 30px;
+    width: 275px !important;
+}
+
+.emptyGrid {
+	background: none repeat scroll 0 0 #fff;
+	border-bottom: 1px solid #ededed;
+	color: #000000;
+	padding: 10px 0 10px 10px;
+}
+.dateBoxErrorMsgNew{
+	background: none repeat scroll 0 0 #ffcccc;
+	padding:5px;
+}
+.helpSC > div.GKVVQWVDETD > div.GKVVQWVDDTD > div.GKVVQWVDEXC{
+	margin:0;
+}
+
+.helpSC > div.GKVVQWVDETD > div.GKVVQWVDDTD > div.GKVVQWVDEXC > ol{
+	padding-left: 10px;
+	margin:0;
+}
+
+.helpSC > div.GKVVQWVDETD > div.GKVVQWVDDTD > div.GKVVQWVDEXC > li{
+	margin:0;
+}
+
+.helpSC > div.GKVVQWVDETD > div.GKVVQWVDDTD > div.GKVVQWVDEXC > ol > li{
+	margin:0 0 3px 0;
+}
+.helpSC > div.GKVVQWVDETD > div.GKVVQWVDDTD > div.GKVVQWVDEXC > ol > ol > li{
+	margin:0 0 3px 0;
+}
+
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem:hover > div {
+    .tabSelectedBg;
+	color:@white !important;
+}
+.hyphenSpace{
+    line-height: 14px;
+    margin-left: 5px;
+	margin-right: 5px;
+    vertical-align: middle;
+    width: auto !important;
+}
+.paddingBottom td .boldTxt{ width:175px;}
+
+.tabPanelBottomScroll > div:first-child{
+	overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* regex builder multiple tabs css case*/
+.tabPanelBottomScrollPopUp {
+	width: 910px !important;
+	height:600px!important;
+	
+}
+.connectionManagerBottomPanel{ 
+overflow-y:auto; 
+height:100% !important; 
+}
+
+/* System Config CSS end */
+
+.toolbarButton img{
+display : none !important;
+}
+
+.firstToolbarButton  > div {
+background : url("/dcma/images/backward.svg")  no-repeat !important;
+}
+
+.firstToolbarButton.buttonDisable > div {
+ background : url("/dcma/images/backward-dis.svg")  no-repeat !important;
+}
+
+.previousToolbarButton  > div {
+background : url("/dcma/images/previous.svg") no-repeat !important;
+}
+
+.previousToolbarButton.buttonDisable   > div {
+background : url("/dcma/images/previous-dis.svg") no-repeat !important;
+}
+
+.nextToolbarButton > div {
+background : url("/dcma/images/next.svg") no-repeat !important;
+} 
+
+.nextToolbarButton.buttonDisable > div {
+background : url("/dcma/images/next-dis.svg") no-repeat !important;
+}
+
+.lastToolbarButton > div {
+background : url("/dcma/images/last.svg") no-repeat !important;
+}
+
+.lastToolbarButton.buttonDisable > div {
+background : url("/dcma/images/last-dis.svg") no-repeat !important;
+}
+
+.refreshToolbarButton  > div {
+background : url("/dcma/images/refresh.svg") no-repeat !important;
+}
+
+.refreshToolbarButton.buttonDisable  > div {
+background : url("/dcma/images/refresh-dis.svg") no-repeat !important;
+}
+
+.messageDisplay{
+background:none !important;
+}
+
+
+.messageDisplay > div {
+padding:0px !important;
+background:@baseLight !important;
+border:2px solid @base;
+-webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 2px 5px 0px rgba(50, 50, 50, 0.75);
+
+}
+.messageDisplay > div > div{
+padding:0px !important;
+}
+
+
+.messageDisplay > div > div > div:first-child{
+background:@base !important;
+color:@messageColor !important;
+padding:5px 10px !important;
+}
+.messageDisplay > div > div > div:last-child{
+padding:10px !important;
+background:@white !important;
+}
+
+
+.messageDisplay {
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease-in-out;	
+	-webkit-animation-timing-function: ease-in-out;		
+
+	visibility: visible !important;	
+}
+
+@keyframes slideRight {
+	0% {
+		transform: translateX(-150%);
+	}
+	50%{
+		transform: translateX(8%);
+	}
+	65%{
+		transform: translateX(-4%);
+	}
+	80%{
+		transform: translateX(4%);
+	}
+	95%{
+		transform: translateX(-2%);
+	}			
+	100% {
+		transform: translateX(0%);
+	}	
+}
+
+@-webkit-keyframes slideRight {
+	0% {
+		-webkit-transform: translateX(-150%);
+	}
+	50%{
+		-webkit-transform: translateX(8%);
+	}
+	65%{
+		-webkit-transform: translateX(-4%);
+	}
+	80%{
+		-webkit-transform: translateX(4%);
+	}
+	95%{
+		-webkit-transform: translateX(-2%);
+	}			
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}
+
+
+.mainPage > div:nth-child(1).MCQD.MEQD.MMK {
+width : 25px !important;
+background-color : @base !important;
+z-index : 10 !important;
+}
+
+/**
+Uploader CSS
+**/
+.multiFileUploader {
+text-align : center;
+height : 100% !important;
+display : block !important;
+width : 100% !important;
+}
+
+
+.uploaderPanel, .uploadORLabel {
+width : 100% !important;
+}
+
+.dragDropLabel {
+border-style : dashed;
+}
+
+.uploadProgressBar {
+margin : auto;
+}
+
+
+
+/* Web Scanner CSS */
+.errorStyle {
+    color: red;
+    font-weight: bold;
+}
+
+.leftBottomPanel .thumbStackPanel {
+	width: 100% !important;
+}
+
+.borderImageThumb .gwt-Image.overlayDisplayImage {
+	width: 100%;
+	
+}
+
+.imageOverlayContainer{
+height : 100% !important;
+width: 100% !important;
+background: none  !important;
+position: absolute !important;
+}
+
+.overlayImageScrollPanel {
+	width: 97% !important;
+	height: 100% !important;
+}
+
+.fitToPageImage {
+width:99% !important;
+}
+
+.overlayPanel {
+    height: 100% !important;
+    width: 100% !important;
+}
+/* Web Scanner CSS end */
+
+.uploadPanelDragOver {
+background-color : lighten(@base, 40%) !important;
+font-size : 20px !important;
+}
+
+.uploaderPanel {
+text-decoration: underline;
+color: blue;
+cursor: pointer;
+}
+
+.dataTablesGridViewMainPanel{
+overflow:auto;
+height:100%;
+}
+.paddingLeft{ width:100%;}
+
+.dragDropLabel {
+    border-color: @base;
+    border-style: dashed;
+    border-width: 2px;
+}
+.uploaderPanel{ padding-top:10px; line-height: 0;}
+
+.gwt-MenuBarPopup .menuPopupTop , .gwt-MenuBarPopup .menuPopupBottom {
+display : none !important;
+}
+
+.gwt-MenuBarPopup {
+box-shadow: 2px 3px 3px 2px grey;
+}
+
+
+.bottomDetailPanel .documentLearningHorizontalPanel,
+.bottomDetailPanel > div:nth-child(2n) > div{
+width:100% !important;
+height:100% ;
+}
+.documentLearningHorizontalPanel td .dropViewHorizontalPanel  {
+width:100% !important;
+}
+
+.dropViewHorizontalPanel {
+	height : 198px !important;
+}
+.Progress > div > div > div.GKVVQWVDHGD{
+	background: lighten(@base, 48%) !important;
+}
+.upload_speed_detail_grid  table.GKVVQWVDPAD td div.GKVVQWVDNAD{ width:138px;}
+.uploadPanelDragOver{ opacity:1; background: lighten(@base, 48%) !important;}
+#pluginDependenciesView {overflow: auto; height: 185px;}
+.dependencyDragDropListCSS td div div { font-size:12px;}
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(3) > td > div { border:none;}
+.dependencyDragDropListCSS > tbody > tr > td:nth-child(2) > table > tbody > tr:nth-child(4) > td > div {border:none;}
+
+.upload_speed_gauge_chart_container div:nth-child(2n) div{ overflow:visible;}
+.modal{-webkit-box-shadow: 0px 1px 7px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 1px 7px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 7px 0px rgba(50, 50, 50, 0.75);
+}
+.modal .Caption{background:@base !important; color:@white !important;}
+.modal .modal_buttons .gwt-Button {.btnNormalBg;
+	color: @white;
+	font-weight: bold;
+	border-radius: 4px;
+	border: 1px solid lighten(@base, 5%);
+	padding: 4px;
+	cursor: pointer;
+	outline: none;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-left:5px;
+}
+.keyHorizontalPanel{ width:auto !important;}
+.keyVerticalPanel{display: block;
+    height: auto !important;
+    margin: 10px;
+    width: 100% !important;
+}
+.keyVerticalPanel tr{
+display: block;
+    margin-bottom: 10px;
+}
+/*
+.keyVerticalPanel tr td{
+display: block;
+}*/
+.keyHorizontalPanel td .gwt-Label , .encryptionAlgoHorizontalPanel td .gwt-Label {
+	float: left;
+    text-align: right;
+    width: auto;
+}
+.keyGeneratorDialogWindow div:first-child > div.x-small-editor { width:100% !important;}
+.keyGeneratorDialogWindow div:nth-child(2n) > div.MDTD { width:100% !important; height: auto !important;}
+.keyGeneratorDialogWindow{ width:auto !important;}
+.keyHorizontalPanel td, .encryptionAlgoHorizontalPanel td{
+	width:auto;
+}
+.encryptionAlgoHorizontalPanel td:first-child{
+	width:105px !important;
+}
+
+
+/** License Generator CSS **/
+.footer {
+	text-align: center;
+	color: @white;
+	background-color: @base;
+	cursor: pointer;
+	padding: 2px 0 0 0;
+}
+
+.footer:hover {
+text-decoration: underline;
+}
+
+.footer td a {
+color: @white;
+}
+	
+.btnMrgRight {
+    margin: 0 10px 0 0 !important;
+} 
+
+.tabPanel tr td div.gwt-TabPanelBottom{
+width: 100%;
+height: 100%;
+}
+
+.gwt-TabPanel .gwt-TabBar .gwt-TabBarItem {
+    background: none repeat scroll 0 0 #eaeff3;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 -1px 2px #000000;
+    color: #b1b1b1;
+    cursor: default;
+    font-size: 12px;
+    font-weight: normal !important;
+    margin: 0 2px 0 5px;
+    padding: 4px 13px;
+}
+.gwt-TabPanel .gwt-TabBar .gwt-TabBarItem-selected {
+    background: none repeat scroll 0 0 #c9e9fe !important;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 -1px 2px #000000;
+    color: #037ecf !important;
+    cursor: pointer !important;
+    font-size: 12px;
+    font-weight: normal !important;
+    margin: 0 2px 0 5px;
+    padding: 4px 13px;
+}
+
+.logoHeaderPanel .logoPanel {
+    background-image: -moz-linear-gradient(left center , #ffffff 0%, #34495e 100%);
+    height: 100% !important;
+    width: 100%;
+}
+
+.logoPanel .gwt-Label {
+color: @white;
+}
+
+.logoPanel .gwt-Anchor {
+    border-left-color: #add2ed !important;
+    border-left-style: solid;
+    border-left-width: 1px;
+    line-height: normal;
+    margin: 0 0 0 5px;
+    padding: 0 0 0 5px;
+	color: @white;
+}
+
+.margin5px {
+    margin: 5px;
+}
+
+.scrollDisplayValues {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.captionPanel {
+	.tabNormalBg;
+}
+
+.captionPanel legend {
+padding-left: 4px !important;
+}
+
+.gwt-TextBox.margin5px, .gwt-ListBox.margin5px, .gwt-TextBox.dateBoxFormatError {
+	padding: 2px !important;
+	margin-bottom: 6px !important;
+}
+
+.paddingSelectAll {
+    display: block;
+    height: auto !important;
+    margin: 0 auto 10px;
+    width: 378px !important; 
+}
+
+.paddingSelectAll .gwt-Button, .BrowsePanel .gwt-Button{
+  background: linear-gradient(to bottom, #4b9cd7 0%, #3892d3 50%, #358ac8 51%, #3892d3) repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+    border: 1px solid #126daf !important;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    outline: medium none;
+    overflow: hidden;
+    padding: 4px !important;
+    white-space: nowrap;
+}
+	
+.paddingSelectAll .gwt-Button.buttonDisabled, .BrowsePanel .gwt-Button.buttonDisabled {
+	background: none repeat scroll 0 0 #eaeff3 !important;
+    color: #bfbfbf !important;
+    cursor: default !important;
+}
+
+.BrowserVisible {
+    height: 26px;
+    left: 0;
+    position: relative;
+    top: -27px;
+    width: 224px;
+    z-index: 1;
+}
+
+.BrowserHidden {
+    height: 26px;
+	cursor: pointer;
+    opacity: 0;
+    position: relative;
+    text-align: right;
+    width: 225px;
+    z-index: 2;
+}
+
+.FileField {
+    border: 1px solid #000;
+    cursor: none;
+    font-size: 16px;
+    height: 23px;
+    width: 160px;
+}
+
+/** for regex buttons **/
+.regexDialogWindow {
+
+    left: 401px;
+    position: absolute;
+    top: 2px;
+    width: 910px;
+
+}
+
+/** License Generator CSS end **/
+
+/*DB Export Starts here*/
+
+.exportMappingParentContainer >div:nth-child(1) >table {
+padding-top: 4px !important;
+padding-bottom: 3px !important;
+background-color: lighten(@baseLight, 10%) !important;
+}
+.connectionCombo {
+padding-top: 4px !important;
+padding-bottom: 33px !important;
+background-color: lighten(@baseLight, 10%) !important;
+}
+.connectionCombo > div:nth-child(1){
+margin-top : 6px !important;
+margin-left : 10px !important;
+}
+
+.connectionCombo > div:nth-child(2){
+margin-top : 2px !important;
+margin-left : 17px !important;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.selected-Menu > div {
+background-color : lighten(@base, 40%) !important;
+}
+
+.optionalParamsView {
+width : 100% !important;
+margin-top: 6px;
+margin-left: 53px;
+}
+/*
+.exportSingleRowGrid  > div, .exportSingleRowGrid  > div > div, .exportSingleRowGrid  > div > div > table {
+width : 100% !important;
+overflow-x: hidden !important;
+}
+*/
+
+.optionalParamDetails tr:nth-child(1) {
+height : 10px !important;
+}
+
+/*DB Export Ends here*/
+
+.hoveredMultiSelectOption {
+background-color : @base;
+color : white;
+display : block ;
+height : 22px !important;
+width : 100% !important;
+
+}
+
+.multiselectOptionsPanel {
+height : initial !important;
+width:100% !important;
+}
+
+.multiselectOptionsPanel tr {
+height : 20px !important;
+}
+
+.multiselectOptionsPanel span {
+padding-top : 5px !important;
+padding-bottom : 5px !important;
+}
+
+.multiselectOptionsPanel span * {
+margin-top : 5px !important;
+}
+
+.multiselectOptionsPanel span label {
+margin-left : 3px !important;
+/*Increasing Roles label width for selection */
+width:80%;
+display:inline-block;
+}
+
+.multiselectOptionsPanel label {
+/* padding-right : 84% !important; */
+}
+
+.importRolesCheckBox , .importEmailAccountsCheckBox {
+margin-left : 3px !important;
+}
+
+.invalidTableViewMenu#rv-tableView-Button > div {
+background-color : rgb(215, 132, 132) !important;
+}
+
+.importRolesCheckBox , .importConnectionsCheckBox {
+margin-left : 3px !important;
+}
+
+
+
+/*-------------------------------------------------------------------Grey theme CSS -----------------------------------------
+
+
+.buttonPanel div.MGUB > div{ background:@baseDark;}
+.buttonPanel div.MGUB > div > div{ background:@baseDark;}
+.logoPanel div.MGUB > div.MFUB{ .headerLeft;}
+
+
+.subMainPanel > div:nth-child(3n) > div.GMMNKTXCOOB:before, .subMainPanel > div:nth-child(3n) > div.MOOB:before, .subMainPanel > div:nth-child(4n) > div.GMMNKTXCOOB:before, .subMainPanel > div:nth-child(4n) > div.MOOB:before
+	{
+	content: "\f0d7";
+	position: relative;
+	top: -7px;
+}
+
+.subMainPanel > div:nth-child(3n) > div.GMMNKTXCDPB:before, .subMainPanel > div:nth-child(3n) > div.MDPB:before, .subMainPanel > div:nth-child(4n) > div.GMMNKTXCDPB:before, .subMainPanel > div:nth-child(4n) > div.MDPB:before
+	{
+	content: "\f0d8";
+	position: relative;
+	top: -7px;
+}
+.subMainPanel > div:nth-child(4n) > div.GMMNKTXCOOB:before, .subMainPanel > div:nth-child(4n) > div.GMMNKTXCDPB:before, .subMainPanel > div:nth-child(4n) > div.MOOB:before, .subMainPanel > div:nth-child(4n) > div.MDPB:before, .mainPage>div:nth-child(3n)>div.GMMNKTXCOOB:before, .mainPage>div:nth-child(3n)>div.GMMNKTXCCPB:before,.mainPage>div:nth-child(3n)>div.MOOB:before,.mainPage>div:nth-child(3n)>div.MCPB:before, .subMainPanel > div:nth-child(3n) > div.GMMNKTXCOOB:before, .subMainPanel > div:nth-child(3n) > div.GMMNKTXCDPB:before, .subMainPanel > div:nth-child(3n) > div.MOOB:before, .subMainPanel > div:nth-child(3n) > div.MDPB:before, .mainPage>div:nth-child(4n)>div.GMMNKTXCOOB:before, .mainPage>div:nth-child(4n)>div.GMMNKTXCCPB:before,.mainPage>div:nth-child(4n)>div.MOOB:before,.mainPage>div:nth-child(4n)>div.MCPB:before, .subBottomPanel>div:nth-child(3n)>div.GMMNKTXCOOB:before,.subBottomPanel>div:nth-child(3n)>div.GMMNKTXCCPB:before,{.fontAwesome;
+	color: @white;
+	font-size: 25px;
+}
+.mainPage>div:nth-child(4n)>div.GMMNKTXCOOB:before, .mainPage>div:nth-child(4n)>div.MOOB:before, .mainPage>div:nth-child(3n)>div.GMMNKTXCOOB:before, .mainPage>div:nth-child(3n)>div.MOOB:before, .subBottomPanel>div:nth-child(3n)>div.GMMNKTXCOOB:before{content: "\f0d9";}
+.mainPage>div:nth-child(4n)>div.GMMNKTXCCPB:before, .mainPage>div:nth-child(4n)>div.MCPB:before, .mainPage>div:nth-child(3n)>div.GMMNKTXCCPB:before, .mainPage>div:nth-child(3n)>div.MCPB:before, .subBottomPanel>div:nth-child(3n)>div.GMMNKTXCCPB:before{content: "\f0da";}
+.firstContentPanel div:first-child > div.MOVB{ background:@base; color:@white; padding-bottom: 5px;}
+.navigationPanel .MLJ{ background:none;}
+.firstContentPanel > div:nth-child(2n) > div > div > div {
+   background:none;
+}
+.secondContentPanel .MHUB, .tcMenuContentPanel .MHUB {
+	display: none !important;
+}
+.navigationPanel, .leftBottomPanel{ background:#fff;}
+.toolbarButton div table{ height:29px; width:25px;}
+.toolbarButton div table td{ display:none;}
+
+.buttonPanel div.GMMNKTXCGUB > div > div.GMMNKTXCGQB{ background:@baseDark;}
+.buttonPanel div.GMMNKTXCGUB > div.GMMNKTXCFUB{ background:@baseDark;}
+.logoPanel div.GMMNKTXCGUB > div.GMMNKTXCFUB{ .headerLeft;}
+.folderOptionsBox > div > table, #batchClassComboBox > div > table{ width:100%;}
+.folderOptionsBox > div > table td, #batchClassComboBox > div > table td{ width:100%;}
+.folderOptionsBox > div > table td input{ width:98% !important;}
+ #batchClassComboBox > div > table td input{ width:96% !important;}  */
+
+/** RV document select CSS **/
+.selectedTreeDocument {
+background: @baseLight !important;
+}
+
+.selectedDraggableImage {
+border-color: @base !important;
+box-shadow: 1px 1px 5px 5px @baseLight;
+}
+
+/*Filter columns header css starts here.*/
+
+.gridView > div:first-child table td div.filterEnableColumnHeader:after {
+.fontAwesome;
+	color: @white;
+	font-size: 15px;
+	display: inline-block;
+	position: absolute;
+	top: 9px;
+	padding-left: 5px;
+	content: '\f0b0';
+    float: right;
+    text-align: right;
+}
+
+.filterEnableColumnHeader span{
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 51%;
+}
+
+/*Filter columns header css ends here.*/
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled:hover > div{
+ background:transparent !important;
+ color: #bfbfbf !important;
+}
+/*Copy batch class css */
+.copyBatchClassDialogWindow {
+background: @white;
+}
+.copyVerticalPanel{display: block;
+    height: auto !important;
+    margin: 10px;
+    width: 100% !important; 
+}
+.copyBatchClassDialogWindow div:first-child > div.x-small-editor {
+ width:100% !important; 
+ }
+.copyBatchClassDialogWindow div:nth-child(2n) > div.MDTD { 
+ width:100% !important; 
+height: auto !important; 
+}
+.copyBatchClassDialogWindow{ 
+ width:auto !important;
+}
+
+
+.copyBatchSliderTextBox > div {
+width: 33px !important;
+left: 10px !important;
+
+}
+
+.filterEnableColumnHeader img{ vertical-align:top;}
+
+
+/** important batch dialog window class **/
+
+.priorityTextBox > div {
+width: 33px !important;
+position: relative !important;
+left: 133px !important;
+
+}
+
+/*------------------------ Bhavna-04-02-2015-------------------------------------------------------*/
+.regexGrid  > div:first-child table{ width:100% !important;}
+
+.regexGrid  > div:nth-child(2n) table{ width:100% !important;}
+
+.regexDialogWindow :nth-child(2n) > div > table{ width:100%;}
+
+.copyBatchClassDialogWindow .boldTxt{ width:115px;}
+
+.copyBatchSliderTextBox{ width:auto !important;}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-disabled > div, .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled > div:hover, .tableOptionsButton:disabled, .tableOptionsButton:disabled:hover, .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled:hover > div {
+background: none repeat scroll 0 0 #eaeff3 !important;
+    color: #bfbfbf !important;
+    cursor: default !important;
+}
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled:hover > div > div, .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-selected.gwt-MenuItem-disabled > div:hover > div, .gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.gwt-MenuItem-disabled > div > div{color: #bfbfbf !important;}
+
+.uncHorizontalPanel td #x-auto-84, .uncHorizontalPanel td #x-auto-84 > div, .uncHorizontalPanel td #x-auto-84 > div > input {width:150px !important;}
+
+.nameHorizontalPanel td #x-auto-81, .nameHorizontalPanel td #x-auto-81 > div, .nameHorizontalPanel td #x-auto-81 > div > input{width:150px !important;}
+
+.prioritySliderCopy > div  > div{ width:150px !important;}
+
+/* CSS for Details Grid Tooltip: Fixed text overflow out of tooltip.*/
+.word_wrap_css {
+word-wrap: break-word !important;
+}
+
+/* Css for BIM Troubleshooting tree scrollbars.*/
+.overflowDisableTree {
+overflow: inherit !important;
+}
+
+.x-toolbar.x-toolbar-mark  > div{
+width : 100% !important;
+}
+
+.pagingPanel  {
+margin-left : 100px !important;
+top : 8px !important;
+}
+
+.pagingTextBox {
+margin-top: -3px;
+margin-left: 11px;
+margin-right: 10px;
+}
+
+.pagingTextBox input {
+height : 17px !important;
+padding :  0 !important;
+}
+
+.navigationView a, .navigationView a:visited {
+color : @white !important;
+}
+
+
+.toolbarEast {
+margin-left : -10px;
+}
+.fromViewDependencyList, .toViewDependencyList{
+overflow-x : hidden !important;
+}
+
+/* CSS for reporting tree */
+.reportingTree {
+height:100% !important;
+width:100% !important;
+}
+
+.reportingTreeContainer>div:nth-child(2) {
+height:88% !important;
+}
+
+.advKVGridView{
+padding-top:1px !important;
+background-color:blue !important;
+}
+/* CSS for controlling height of roles widget role */
+.multiselectWindow  .MDTD {
+	min-height: 75px;
+	height: auto !important;
+	max-height: 100px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.documentTreeScrollIE11 > div {
+height : 1px !important;
+}
+/* CSS for default overlays */
+.defaultKVOverlay{
+opacity: 0.6 !important;
+}
+
+.searchLabelCss {
+   left: 966px !important;
+    margin: 0;
+    position: absolute;
+    top: 17px !important;
+font-size: 16px !important;
+    font-weight: bold !important;
+color: white !important;
+
+}
+
+.searchTextBoxCss {
+
+left: 1051px !important;
+    top: 15px !important;
+
+}
+
+.searchButtonCss {
+
+    left: 1213px !important;
+    top: 12px !important;
+
+}
+
+.setIconForSearchButton {
+	background: transparent url("@{themeImagePath}search.png") center center
+		no-repeat;
+	width: 22px;
+	height: 25px;
+	border: 0;
+	vertical-align: middle;
+	cursor: pointer;
+	margin: 0 20px 0 0 !important;
+}
+.multiSelectDraggableImage{
+box-shadow: 1px 1px 5px 5px pink !important;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem.dirtyBatchClass > div {
+	background : red !important;
+}.dbExportRefreshButton {
+background : url("/dcma/images/refresh.svg") no-repeat !important;
+width : 25px !important;
+height : 25px !important;
+left: 237px !important;
+top :6px !important;
+border: 0 !important;
+}
+.dbExportRefreshButton:active {
+opacity:0.5 !important;
+}
+.fuzzyDbRefreshButton{
+background : url("/dcma/images/refresh.svg") no-repeat !important;
+width : 25px !important;
+height : 25px !important;
+border: 0 !important;
+}
+.fuzzyDbRefreshButton:active {
+opacity:0.5 !important;
+}
+
+.markedNode {
+background : lighten(@black, 80%) !important;
+}
+
+.selectedTreeDocument.markedNode {
+background : lighten(@baseDark, 30%) !important;
+}
+
+.copyDocumentTypeDialogWindow{
+height: 207px !important;
+width: 426px !important;
+}
+
+.copyDocumentTypeDialogWindow > div:nth-child(2){
+height : 66% !important;
+width : 100% !important;
+}
+
+.copyDocumentTypeDialogWindow > div:nth-child(1){
+width : 100% !important;
+}
+
+.copyDocumentTypeDialogWindow > div:nth-child(1)> div.x-small-editor {
+ width:98% !important; 
+ }
+ 
+.copyDocumentTypeDialogWindow > div:nth-child(2)> div:nth-child(1){
+height : 100% !important;
+width : 100% !important;
+}
+
+.copyDocumentTypeDialogWindow > div:nth-child(2)> div.x-small-editor {
+ width:100% !important; 
+ } 
+ 
+.copyDocumentTypeView{
+height : 100% !important;
+width:100% !important;
+font-weight: bold;
+}
+
+.copyDocumentTypeView > div{
+height : 20% !important;
+}
+
+.copyDocumentTypeView > div> div> div:nth-child(2){
+left:215px !important;
+}
+
+.copyDocumentTypeView > div> .copyDocumentTypeNotLearnFiles{
+left:8px !important;
+top:9px !important;
+}
+
+.copyDocumentTypeView > div> .copyDocumentTypeLearnFiles{
+left:8px !important;
+top:9px !important;;
+}
+
+.copyDocumentTypeView > div> div:nth-child(1){
+left:8px !important;
+top:9px !important;
+}

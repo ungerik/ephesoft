@@ -1,0 +1,110 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:regexComboBox="urn:import:com.ephesoft.gxt.admin.client.widget"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="verticalLayoutData">
+		<ui:attributes width="150" height="55" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.HorizontalLayoutContainer.HorizontalLayoutData"
+		field="horizontalLayoutData">
+		<ui:attributes width="150" height="30" />
+	</ui:with>
+	<c:FramedPanel width="100%" height="100%" bodyStyle="background: 
+		none; padding: 15px" ui:field="advKVFramedPanel">
+	<container:VerticalLayoutContainer
+		width="100%" ui:field="advKVInputViewPanel">
+		<container:child layoutData="{verticalLayoutData}">
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="useExistingKeyLabel" />
+				</container:child>
+				<container:child>
+					<form:CheckBox ui:field="useExistingKey" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="keyPatternLabel" />
+				</container:child>
+				<container:child>
+					<g:HorizontalPanel ui:field="keyPatternPanel"
+											width="100%" />
+					<!-- <form:TextField ui:field="keyPatternText"
+						allowBlank="false" /> -->
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="valuePatternLabel" />
+				</container:child>
+				<container:child>
+					<regexComboBox:RegexComboBox ui:field="valuePattern" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="keyFuzzinessLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="keyFuzzinessComboBox" forceSelection="true" triggerAction="ALL"
+						width="inherit" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="fetchValueLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="fetchValue" forceSelection="true" triggerAction="ALL" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="kvPageValueLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="kvPageValue" forceSelection="true" triggerAction="ALL" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="extractZoneLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="extractZoneComboBox" forceSelection="true" triggerAction="ALL" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="weightLabel" />
+				</container:child>
+				<container:child>
+					<form:TextField ui:field="weightText" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+	</container:VerticalLayoutContainer>
+	</c:FramedPanel>
+</ui:UiBinder>

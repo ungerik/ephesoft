@@ -1,0 +1,126 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:rvView="urn:import:com.ephesoft.gxt.rv.client.view"
+	xmlns:batchDetailView="urn:import:com.ephesoft.gxt.rv.client.view.menu" xmlns:coreContainer="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData">
+		<ui:attributes size="341" collapsible="true" maxSize="341"
+			collapseMini="true" floatable="false" split="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchInstanceOptions">
+		<ui:attributes size="130" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchResultsPanel">
+		<ui:attributes size="200" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftPoweredPanel">
+		<ui:attributes size="0.03" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftLogoPanel">
+		<ui:attributes size="50" split="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="imageOverlayView">
+		<ui:attributes size="0.47" split="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="middlePanelView">
+		<ui:attributes size="200" split="false" />
+	</ui:with>
+
+	<container:Viewport>
+		<container:SimpleContainer styleName="simpleContainer">
+			<coreContainer:BorderLayoutContainer
+				ui:field="mainPage">
+				<coreContainer:west layoutData="{westData}">
+					<gxt:ContentPanel headerVisible="false" ui:field="westPanel">
+						<container:Viewport>
+							<coreContainer:BorderLayoutContainer>
+								<coreContainer:north layoutData="{ephesoftLogoPanel}">
+									<gxt:ContentPanel headerVisible="false"
+										borders="false" bodyBorder="false" ui:field="logoPanel">
+										<coreView:Logo width="100%" height="100%" />
+									</gxt:ContentPanel>
+								</coreContainer:north>
+								<coreContainer:center>
+									<gxt:ContentPanel headerVisible="false"
+										borders="false" ui:field="treePanel">
+										<rvView:DocumentTreeView ui:field='documentTreeView' />
+									</gxt:ContentPanel>
+								</coreContainer:center>
+								<coreContainer:south layoutData="{ephesoftPoweredPanel}">
+									<g:Label  ui:field="ephesoftPoweredLabel" />
+								</coreContainer:south>
+							</coreContainer:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</coreContainer:west>
+				<coreContainer:center layoutData="{middlePanelView}">
+					<gxt:ContentPanel headerVisible="false" resize="false"
+						ui:field="middlePanel">
+						<container:Viewport styleName="viewPort">
+							<coreContainer:BorderLayoutContainer
+								styleName="viewPort">
+								<coreContainer:north layoutData="{batchInstanceOptions}">
+									<container:Viewport styleName="middleDetailPanel">
+										<gxt:ContentPanel headerVisible="false">
+											<g:VerticalPanel styleName="menuContainerPanel">
+												<g:cell verticalAlignment="ALIGN_MIDDLE">
+													<g:VerticalPanel ui:field="buttonPanel">
+														<batchDetailView:BatchOptionsView
+															ui:field="batchOptionsView" />
+														<!-- <batchDetailView:UserInterfaceMenuView -->
+														<!-- ui:field="externalInterfaceMenuView" /> -->
+													</g:VerticalPanel>
+												</g:cell>
+												<g:cell verticalAlignment="ALIGN_MIDDLE">
+													<g:VerticalPanel ui:field="buttonBottomPanel">
+														<batchDetailView:BatchDetailView
+															ui:field="batchDetailView" />
+														<batchDetailView:DocumentOptionsView
+															ui:field="documentOptionsView" />
+													</g:VerticalPanel>
+												</g:cell>
+											</g:VerticalPanel>
+										</gxt:ContentPanel>
+									</container:Viewport>
+								</coreContainer:north>
+								<coreContainer:center>
+									<gxt:ContentPanel headerVisible="false"
+										borders="true" ui:field="detailPanel" styleName="viewPort" />
+								</coreContainer:center>
+							</coreContainer:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</coreContainer:center>
+				<coreContainer:east layoutData="{imageOverlayView}">
+					<gxt:ContentPanel headerVisible="false" resize="false"
+						styleName="imageOverlayContainer" ui:field="rightPanel">
+						<rvView:ImageOverlayView ui:field="imageOverlayPanel" />
+					</gxt:ContentPanel>
+				</coreContainer:east>
+			</coreContainer:BorderLayoutContainer>
+		</container:SimpleContainer>
+	</container:Viewport>
+</ui:UiBinder>

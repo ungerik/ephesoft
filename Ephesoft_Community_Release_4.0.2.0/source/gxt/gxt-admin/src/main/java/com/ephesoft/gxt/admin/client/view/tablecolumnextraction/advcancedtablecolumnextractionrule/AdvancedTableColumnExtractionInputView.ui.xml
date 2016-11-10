@@ -1,0 +1,65 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="verticalLayoutData">
+		<ui:attributes width="150" height="50" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.HorizontalLayoutContainer.HorizontalLayoutData"
+		field="horizontalLayoutData">
+		<ui:attributes width="150" height="30" />
+	</ui:with>
+	<c:FramedPanel width="100%" height="100%" bodyStyle="background: 
+		none; padding: 15px" ui:field="advExtrRuleFramedPanel">
+	<container:VerticalLayoutContainer
+		width="100%" ui:field="advTableColumnExtractionInputPanel">
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="tableColumnLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="tableColumnValue" forceSelection="true" triggerAction="ALL" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<form:FieldLabel ui:field="imageNameLabel" />
+				</container:child>
+				<container:child>
+					<g:Label ui:field="imageName"/>
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="startCoordinateLabel" />
+				</container:child>
+				<container:child>
+					<g:Label ui:field="startCoordinate" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+		<container:child layoutData="{verticalLayoutData}">
+			<container:VerticalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="endCoordinateLabel" />
+				</container:child>
+				<container:child>
+					<g:Label ui:field="endCoordinate" />
+				</container:child>
+			</container:VerticalLayoutContainer>
+		</container:child>
+	</container:VerticalLayoutContainer>
+	</c:FramedPanel>
+</ui:UiBinder>

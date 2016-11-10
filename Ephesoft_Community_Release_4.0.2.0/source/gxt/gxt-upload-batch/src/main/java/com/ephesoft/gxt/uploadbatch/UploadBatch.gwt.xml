@@ -1,0 +1,9 @@
+<module rename-to="uploadbatch">
+
+	<inherits name='com.google.gwt.user.User' />
+	<inherits name='com.google.gwt.user.theme.clean.Clean' />
+	<inherits name='com.ephesoft.gxt.core.Core' />
+	<entry-point class='com.ephesoft.gxt.uploadbatch.client.UploadBatch' />
+
+	<source path='client' />
+</module>

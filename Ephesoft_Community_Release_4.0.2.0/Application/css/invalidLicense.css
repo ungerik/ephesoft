@@ -1,0 +1,50 @@
+.head {
+	background-color:#D0E4F6;
+	text-align: center;
+}
+
+.message {
+	background-color: #D0E4F6;
+    height: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    width: 40%;
+}
+
+.footer {
+	clear: both;
+    height: 3em;
+    margin-top: 183px;
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    background: url("../themes/default_theme/images/logo_login.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 63px;
+    margin: 5px auto 0;
+    width: 260px;
+}
+
+.language {
+	width: 100%;
+}
+
+.blueLink {
+	color: blue !important;
+	cursor: pointer !important;
+}
+
+.blueLink:hover {
+	text-decoration: underline !important;
+}
+
+.usedLink {
+	color: #B0C4DE !important;
+	cursor: pointer !important;
+}
+
+.usedLink:hover {
+	text-decoration: underline !important;
+}

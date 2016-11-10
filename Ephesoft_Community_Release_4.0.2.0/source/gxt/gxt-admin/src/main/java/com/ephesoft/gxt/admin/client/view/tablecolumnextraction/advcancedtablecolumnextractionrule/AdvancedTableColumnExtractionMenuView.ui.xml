@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:menuWidget="urn:import:com.google.gwt.user.client.ui"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:menu="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+<container:NorthSouthContainer>
+	<g:HorizontalPanel ui:field="advTableColumnExtractionMenuPanel">
+		<menu:CustomMenuBar ui:field="advTableColumnExtractionMenuBar" />
+	</g:HorizontalPanel>
+</container:NorthSouthContainer>
+</ui:UiBinder>

@@ -1,0 +1,29 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:folderManagerView="urn:import:com.ephesoft.gxt.foldermanager.client.view">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="gridData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+<!-- 	<g:VerticalPanel ui:field="uploadedFilesMainPanel"> -->
+<!-- 		<coreWidget:Grid ui:field="folderUploadedFilesGrid" -->
+<!-- 			layoutData="{gridData}" /> -->
+<!-- 	</g:VerticalPanel> -->
+	
+	
+	<container:VerticalLayoutContainer
+		ui:field="uploadedFilesMainPanel">
+		<container:child layoutData="{gridData}">
+			<coreWidget:Grid ui:field="folderUploadedFilesGrid"/>
+		</container:child>
+	</container:VerticalLayoutContainer>
+	
+	
+</ui:UiBinder>

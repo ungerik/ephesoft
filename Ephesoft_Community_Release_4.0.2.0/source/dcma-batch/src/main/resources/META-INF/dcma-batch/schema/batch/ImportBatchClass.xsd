@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+	<!--
+		Created with Liquid XML Studio Developer Edition (Trial) 8.0.11.2171
+		(http://www.liquid-technologies.com)
+	-->
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="ImportBatchClassOptions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ImportIfConflict" type="xs:boolean" default="false"/>
+				<xs:element name="ZipFilePath" type="xs:string" />
+				<xs:element name="UseExisting" type="xs:boolean" default="false"/>
+				<xs:element name="UncFolder" type="xs:string" />
+				<xs:element name="UseSource" type="xs:boolean" default="false"/>
+				<xs:element name="Name" type="xs:string" />
+				<xs:element name="Description" type="xs:string" />
+				<xs:element name="Priority" type="xs:int" />
+				<xs:element name="RolesImported" type="xs:boolean" default="false"/>
+				<xs:element name="EmailAccounts" type="xs:boolean" default="false"/>
+				<xs:element name="CmisPlugin" type="xs:boolean" default="false"/>
+				<!-- variable to check cmis plugin properties check box is checked or not-->
+				<xs:element name="cmisPluginProperties" type="xs:boolean" default="false"/>
+				<!-- variable to check cmis mapping check box is checked or not-->
+				<xs:element name="cmisMappings" type="xs:boolean" default="false"/>
+				<xs:element name="UseKey" type="xs:boolean" default="false"/>
+				<xs:element name="BatchClassKey" type="xs:string" />
+				<xs:element name="EncryptionAlgorithm" type="xs:string" />
+				<xs:element name="importConnections" type="xs:boolean" />
+				<xs:element name="BatchClassDefinition" minOccurs="0"
+					maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Scripts" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Script" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FileName" type="xs:string" />
+													<xs:element name="Selected" type="xs:boolean" default="false"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Folders" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Folder" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FileName" type="xs:string" />
+													<xs:element name="Selected" type="xs:boolean" default="false"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="BatchClassModules" minOccurs="0"
+								maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="BatchClassModule" minOccurs="0"
+											maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="ModuleName" type="xs:string" />
+													<xs:element name="PluginConfiguration" type="xs:boolean" default="false"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

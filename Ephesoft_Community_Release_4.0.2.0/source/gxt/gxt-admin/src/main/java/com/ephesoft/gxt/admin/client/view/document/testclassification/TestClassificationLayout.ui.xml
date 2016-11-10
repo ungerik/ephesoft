@@ -1,0 +1,61 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:adminWidget="urn:import:com.ephesoft.gxt.admin.client.widget"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:classificationView="urn:import:com.ephesoft.gxt.admin.client.view.document.testclassification"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="topPanelData">
+		<ui:attributes size="0.36" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="modulesData">
+<!-- 		<ui:attributes size="0.11" /> -->
+	<ui:attributes size="115" />
+	</ui:with>
+
+
+	<container:SimpleContainer>
+		<container:child>
+			<container:BorderLayoutContainer
+				ui:field="borderLayoutContainer">
+				<container:north layoutData="{modulesData}">
+					<gxt:ContentPanel headerVisible="false"
+						ui:field="testClassificationNorthContentPanel">
+						<container:Viewport>
+							<container:BorderLayoutContainer>
+								<container:north layoutData="{topPanelData}">
+									<gxt:ContentPanel headerVisible="false"
+										styleName="tcMenuContentPanel">
+										<classificationView:TestClassificationMenuView
+											ui:field="testClassificationMenuView" />
+									</gxt:ContentPanel>
+								</container:north>
+								<container:center>
+									<gxt:ContentPanel headerVisible="false"
+										styleName="tcComboBoxContentPanel">
+										<classificationView:TestClassifyTypeView
+											ui:field="testClassifyTypeView" />
+									</gxt:ContentPanel>
+								</container:center>
+							</container:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</container:north>
+				<container:center>
+					<gxt:ContentPanel headerVisible="false"
+						ui:field="testClassificationGridPanel">
+						<classificationView:TestClassificationGridView
+							ui:field="testClassificationGridView" />
+					</gxt:ContentPanel>
+				</container:center>
+			</container:BorderLayoutContainer>
+		</container:child>
+	</container:SimpleContainer>
+</ui:UiBinder>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Created with Liquid XML Studio Developer Edition (Trial) 8.0.11.2171 
+	(http://www.liquid-technologies.com) -->
+
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ephesoft.com/batch/batchStatus"
+	xmlns:bs="http://www.ephesoft.com/batch/batchStatus">
+	<xs:simpleType name="batchStatus" id="batchStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Locked" />
+			<xs:enumeration value="Ready" />
+			<xs:enumeration value="Running" />
+			<xs:enumeration value="ReadyForReview" />
+			<xs:enumeration value="Reviewed" />
+			<xs:enumeration value="ReadyForValidation" />
+			<xs:enumeration value="Validated" />
+			<xs:enumeration value="Transferred" />
+			<xs:enumeration value="Error" />
+			<xs:enumeration value="Finished" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

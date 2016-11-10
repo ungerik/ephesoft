@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:batchInstanceDetailView="urn:import:com.ephesoft.gxt.batchinstance.client.view">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="gridData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchDetailPanelDataEast">
+		<ui:attributes size="0.45" collapsible="true" collapsed="true"
+			collapseMini="true" floatable="false"/>
+	</ui:with>
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="batchDetailPanelDataCenter">
+		<ui:attributes size="0.55" collapsible="false"
+			collapseMini="true" />
+	</ui:with>
+	<coreWidget:BorderLayoutContainer
+		ui:field="borderLayoutContainer">
+		<coreWidget:center layoutData="{batchDetailPanelDataCenter}">
+			<gxt:ContentPanel headerVisible="false">
+				<g:VerticalPanel height="100%" verticalAlignment="ALIGN_MIDDLE">
+					<g:HorizontalPanel ui:field="detailsContainer"
+						width="100%">
+
+						<g:cell horizontalAlignment="ALIGN_LEFT" verticalAlignment="ALIGN_MIDDLE"
+							width="50%">
+							<coreWidget:DetailGrid ui:field="batchInstanceDetailsGrid"
+								layoutData="{gridData}" />
+						</g:cell>
+						<g:cell horizontalAlignment="ALIGN_CENTER"
+							verticalAlignment="ALIGN_TOP"><!-- width="50%" -->
+							<container:VerticalLayoutContainer
+								ui:field="batchInstanceProgressContainer">
+							</container:VerticalLayoutContainer>
+						</g:cell>
+
+					</g:HorizontalPanel>
+				</g:VerticalPanel>
+			</gxt:ContentPanel>
+		</coreWidget:center>
+		<coreWidget:east layoutData="{batchDetailPanelDataEast}">
+			<gxt:ContentPanel bodyBorder="true" borders="true"
+				ui:field="troubleshootView" collapsible="true">
+					<batchInstanceDetailView:TroubleshootView
+						ui:field="troubleshootPanel" />
+			</gxt:ContentPanel>
+		</coreWidget:east>
+	</coreWidget:BorderLayoutContainer>
+</ui:UiBinder>

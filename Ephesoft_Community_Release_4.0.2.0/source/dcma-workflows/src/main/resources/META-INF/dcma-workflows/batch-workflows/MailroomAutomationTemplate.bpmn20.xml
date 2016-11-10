@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn"
+	xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC"
+	xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema"
+	expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+
+	<process id="MailroomAutomationTemplate" name="MailroomAutomationTemplate">
+		<startEvent id="start" />
+		<sequenceFlow sourceRef="start" targetRef="resumeEvaluation" />
+		<serviceTask id='resumeEvaluation' name='resumeEvaluation'
+			activiti:class="com.ephesoft.dcma.workflows.decisionevaluator.ResumeEvaluation" />
+		<sequenceFlow sourceRef="resumeEvaluation" targetRef="Resume_Option" />
+		<exclusiveGateway id="Resume_Option" name="Resume_Option"></exclusiveGateway>
+		<sequenceFlow sourceRef="Resume_Option" targetRef="Workflow_Status_Running-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Workflow_Status_Running'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option" targetRef="Folder_Import_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Folder_Import_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option"
+			targetRef="Recostar_Page_Process_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Recostar_Page_Process_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option"
+			targetRef="Document_Assembler_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Document_Assembler_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option"
+			targetRef="Recostar_Extraction_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Recostar_Extraction_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option"
+			targetRef="Automated_Validation_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Automated_Validation_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option" targetRef="Review_Document_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Review_Document_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option" targetRef="Validate_Document_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Validate_Document_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+		<sequenceFlow sourceRef="Resume_Option" targetRef="Export_Module-Module">
+			<conditionExpression xsi:type="tFormalExpression">${resumeEvaluationResult=='Export_Module'}
+			</conditionExpression>
+		</sequenceFlow>
+
+		<callActivity id="Workflow_Status_Running-Module" name="Workflow_Status_Running"
+			activiti:async="true" calledElement="Workflow_Status_Running">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Folder_Import_Module-Module"
+			sourceRef="Workflow_Status_Running-Module" />
+
+		<callActivity id="Folder_Import_Module-Module" name="Folder_Import_Module"
+			activiti:async="true" calledElement="Folder_Import_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Recostar_Page_Process_Module-Module"
+			sourceRef="Folder_Import_Module-Module" />
+
+		<callActivity id="Recostar_Page_Process_Module-Module"
+			name="Recostar_Page_Process_Module" activiti:async="true"
+			calledElement="Recostar_Page_Process_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Document_Assembler_Module-Module"
+			sourceRef="Recostar_Page_Process_Module-Module" />
+
+		<callActivity id="Document_Assembler_Module-Module" name="Document_Assembler_Module"
+			activiti:async="true" calledElement="Document_Assembler_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow targetRef="Review_Document_Module-Module"
+			sourceRef="Document_Assembler_Module-Module" />
+
+		<callActivity id="Recostar_Extraction_Module-Module"
+			name="Recostar_Extraction_Module" activiti:async="true"
+			calledElement="Recostar_Extraction_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Automated_Validation_Module-Module"
+			sourceRef="Recostar_Extraction_Module-Module" />
+
+		<callActivity id="Automated_Validation_Module-Module"
+			name="Automated_Validation_Module" activiti:async="true"
+			calledElement="Automated_Validation_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Validate_Document_Module-Module"
+			sourceRef="Automated_Validation_Module-Module" />
+
+		<callActivity id="Export_Module-Module" name="Export_Module"
+			activiti:async="true" calledElement="Export_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+
+		<sequenceFlow targetRef="Workflow_Status_Finished-Module"
+			sourceRef="Export_Module-Module" />
+
+		<callActivity id="Review_Document_Module-Module" name="Review_Document_Module"
+			activiti:async="true" calledElement="Review_Document_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow targetRef="Recostar_Extraction_Module-Module"
+			sourceRef="Review_Document_Module-Module" />
+		<callActivity id="Validate_Document_Module-Module" name="Validate_Document_Module"
+			activiti:async="true" calledElement="Validate_Document_Module">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow targetRef="Export_Module-Module" sourceRef="Validate_Document_Module-Module" />
+		<callActivity id="Workflow_Status_Finished-Module" name="Workflow_Status_Finished"
+			activiti:async="true" calledElement="Workflow_Status_Finished">
+			<extensionElements>
+				<activiti:in source="batchInstanceID" target="batchInstanceID" />
+				<activiti:in source="key" target="key" />
+			</extensionElements>
+		</callActivity>
+		<sequenceFlow targetRef="end" sourceRef="Workflow_Status_Finished-Module" />
+		<endEvent id="end" />
+	</process>
+</definitions>

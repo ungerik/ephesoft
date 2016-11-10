@@ -1,0 +1,127 @@
+.red_base {
+  background: #FF5555;
+}
+
+.red_base_dark{
+  background: #C30000;
+}
+
+.red_base_light {
+  background: #FF8080;
+}
+
+.red_grid_row_selection {
+  background: #DD3131;
+}
+
+.default_theme_base {
+  background: #1e75cd;
+}
+
+.default_theme_base_dark {
+  background: #16528f;
+}
+
+.default_theme_base_light {
+  background: #92C1F0;
+}
+
+.default_theme_grid_row_selection {
+  background: #1E90FF;
+}
+
+.green_base {
+  background: #5CD65C;
+}
+
+.green_base_dark {
+  background: #53C153;
+}
+
+.green_base_light {
+  background: #87D487;
+}
+
+.green_grid_row_selection {
+  background: #009900;
+}
+
+.grey_base {
+  background: #5B5B5B;
+}
+
+.grey_base_dark {
+  background: #282828;
+}
+
+.grey_base_light {
+  background: #CCCCCC;
+}
+
+.grey_grid_row_selection {
+  background: #1E90FF;
+}
+
+.pink_base {
+  background: #DB4DB8;
+}
+
+.pink_base_dark {
+  background: #C545A6;
+}
+
+.pink_base_light {
+  background: #D67DC1;
+}
+
+.pink_grid_row_selection {
+  background:  #A9659A;
+}
+
+.purple_base {
+  background: #BF5EDF;
+}
+
+.purple_base_dark {
+  background: #A319D1;
+}
+
+.purple_base_light {
+  background: #D28EE9;
+}
+
+.purple_grid_row_selection {
+  background:  #7E558C;
+}
+
+.brown_base {
+  background: #7B3F00;
+}
+
+.brown_base_dark {
+  background: #926C44;
+}
+
+.brown_base_light {
+  background: #B67C3D;
+}
+
+.brown_grid_row_selection {
+  background:  #857059;
+}
+
+.yellow_base {
+  background: #B8860B;
+}
+
+.yellow_base_dark {
+  background: #8B6508;
+}
+
+.yellow_base_light {
+  background: #F1B112;
+}
+
+.yellow_grid_row_selection {
+  background:  #CD950C;
+}

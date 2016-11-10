@@ -1,0 +1,118 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:widget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:folderManagerView="urn:import:com.ephesoft.gxt.foldermanager.client.view">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="topPanelData">
+		<ui:attributes size="50" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftLogoPanel">
+		<ui:attributes size="50" split="true" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftPoweredPanel">
+		<ui:attributes size="0.03" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData">
+		<ui:attributes size="341" maxSize="341" collapsible="true"
+			collapseMini="true" floatable="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="centerData">
+		<ui:attributes size="0.73" collapsible="true"
+			collapseMini="true" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="folderGridPanelData">
+		<ui:attributes size="0.58" split="true" maxSize="1000" />
+	</ui:with>
+
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="uploadPanelData">
+		<ui:attributes size="0.35" collapsible="true"
+			collapseMini="true" floatable="false" />
+	</ui:with>
+
+	<container:Viewport>
+		<container:SimpleContainer>
+			<widget:BorderLayoutContainer ui:field="mainPage">
+				<widget:west layoutData="{westData}">
+					<gxt:ContentPanel headerVisible="false" ui:field="leftPanel">
+						<container:Viewport>
+							<widget:BorderLayoutContainer>
+								<widget:north layoutData="{ephesoftLogoPanel}">
+									<gxt:ContentPanel headerVisible="false"
+										ui:field="logoPanel">
+										<coreView:Logo width="100%" height="100%" />
+									</gxt:ContentPanel>
+								</widget:north>
+								<widget:center>
+									<gxt:ContentPanel headerVisible="false"
+										borders="true" ui:field="navigatorPanel">
+										<folderManagerView:FolderManagementNavigatorView
+											ui:field="folderManagementNavigatorView" />
+									</gxt:ContentPanel>
+								</widget:center>
+								<widget:south layoutData="{ephesoftPoweredPanel}">
+									<g:Label ui:field="ephesoftPoweredLabel" />
+								</widget:south>
+							</widget:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</widget:west>
+
+				<widget:center layoutData="{centerData}">
+					<gxt:ContentPanel headerVisible="false" ui:field="mainPanel">
+						<container:Viewport>
+							<widget:BorderLayoutContainer
+								ui:field="viewContainer">
+								<widget:north layoutData="{topPanelData}">
+									<gxt:ContentPanel headerVisible="false"
+										ui:field="buttonPanel">
+										<folderManagerView:FolderManagementOptionsView
+											ui:field="folderManagementOptionsView" />
+									</gxt:ContentPanel>
+								</widget:north>
+								<widget:center layoutData="{folderGridPanelData}">
+									<container:Viewport>
+										<gxt:ContentPanel resize="true"
+											headerVisible="false" ui:field="gridPanel">
+											<folderManagerView:FolderManagementGridView
+												ui:field="folderManagementGridView" />
+										</gxt:ContentPanel>
+									</container:Viewport>
+								</widget:center>
+								<widget:south layoutData="{uploadPanelData}">
+									<gxt:ContentPanel headerVisible="false"
+										ui:field="bottomPanel">
+										<folderManagerView:FolderManagementUploadView
+											ui:field="folderManagementUploadView" />
+									</gxt:ContentPanel>
+								</widget:south>
+							</widget:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</widget:center>
+			</widget:BorderLayoutContainer>
+		</container:SimpleContainer>
+	</container:Viewport>
+</ui:UiBinder>

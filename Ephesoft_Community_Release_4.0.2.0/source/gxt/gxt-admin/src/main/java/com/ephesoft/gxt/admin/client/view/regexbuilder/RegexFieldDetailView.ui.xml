@@ -1,0 +1,202 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:widget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<g:VerticalPanel width="100%" spacing="2">
+		<g:HorizontalPanel>
+			<g:cell>
+				<widget:ComboBox ui:field="startsEndsStringComboBox" />
+			</g:cell>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel>
+			<g:cell>
+				<widget:ComboBox ui:field="followedByComboBox" />
+			</g:cell>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel>
+			<g:cell>
+				<g:RadioButton ui:field="exactTextRadioButton" name="text group" />
+			</g:cell>
+			<g:cell>
+				<g:Label ui:field="exactTextLabel" />
+			</g:cell>
+			<g:cell>
+				<g:RadioButton ui:field="textInRangeRadioButton" name="text group" />
+			</g:cell>
+			<g:cell>
+				<g:Label ui:field="textInRangeLabel" />
+			</g:cell>
+		</g:HorizontalPanel>
+		<g:VerticalPanel ui:field="matchExactTextPanel"
+			spacing="1">
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="matchExactTextCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="matchExactTextLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="matchExactTextTextField" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="specialCharCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="specialCharLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="specialCharTextField" />
+				</g:cell>
+				<g:cell>
+					<widget:ComboBox ui:field="specialCharComboBox" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="anyCharacterCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="anyCharacterLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:VerticalPanel ui:field="matchTextInRangePanel"
+			spacing="1">
+			<g:HorizontalPanel>
+				<g:cell>
+					<widget:ComboBox ui:field="matchStringComboBox" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="lowerCaseLetterCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="lowerCaseLetterLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="upperCaseLetterCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="upperCaseLetterLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="digitCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="digitLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="anyLetterCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="anyLetterLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="whiteSpaceCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="whiteSpaceLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="freeTextCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="freeTextLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="freeTextTextField" />
+				</g:cell>
+			</g:HorizontalPanel>
+
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="digitRangeCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="digitRangeLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="lowerDigitRangeTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="digitDashLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="upperDigitRangeTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="invalidDigitRangeLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="lowerCaseLetterRangeCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="lowerCaseLetterRangeLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="lowerRangeLowerCaseLetterTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="lowerCaseLetterDashLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="upperRangeLowerCaseLetterTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="invalidLowerCaseLetterRangeLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:cell>
+					<g:CheckBox ui:field="upperCaseLetterRangeCheckBox"></g:CheckBox>
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="upperCaseLetterRangeLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="lowerRangeUpperCaseLetterTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="upperCaseLetterDashLabel" />
+				</g:cell>
+				<g:cell>
+					<form:TextField ui:field="upperRangeUpperCaseLetterTextField" />
+				</g:cell>
+				<g:cell>
+					<g:Label ui:field="invalidUpperCaseLetterRangeLabel" />
+				</g:cell>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+		<g:HorizontalPanel ui:field="wordBoundaryPanel">
+			<g:cell>
+				<g:CheckBox ui:field="wordBoundaryCheckBox"></g:CheckBox>
+			</g:cell>
+			<g:cell>
+				<g:Label ui:field="wordBoundaryLabel" />
+			</g:cell>
+			<g:cell>
+				<widget:ComboBox ui:field="wordBoundaryComboBox" />
+			</g:cell>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel ui:field="horizontalLinePanel"
+			height="0px" width="100%">
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

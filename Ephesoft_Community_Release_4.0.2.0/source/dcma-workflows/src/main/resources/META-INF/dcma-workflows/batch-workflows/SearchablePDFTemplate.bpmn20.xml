@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
+  <process id="SearchablePDFTemplate" name="SearchablePDFTemplate" isExecutable="true">
+    <startEvent id="start" />
+    <serviceTask id="resumeEvaluation" activiti:class="com.ephesoft.dcma.workflows.decisionevaluator.ResumeEvaluation" />
+    <sequenceFlow sourceRef="resumeEvaluation" targetRef="Resume_Option" />
+    <exclusiveGateway id="Resume_Option" />
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Workflow_Status_Running-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Workflow_Status_Running'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Folder_Import_Module-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Folder_Import_Module'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Page_Process_Module_BC3-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Page_Process_Module_BC3'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Document_Assembler_Module-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Document_Assembler_Module'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Export_Module_BC3-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Export_Module_BC3'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="Resume_Option" targetRef="Workflow_Status_Finished-Module">
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${resumeEvaluationResult=='Workflow_Status_Finished'}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow sourceRef="start" targetRef="resumeEvaluation" />
+    <callActivity id="Workflow_Status_Running-Module" activiti:async="true" calledElement="Workflow_Status_Running">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Workflow_Status_Running-Module" targetRef="Folder_Import_Module-Module" />
+    <callActivity id="Folder_Import_Module-Module" activiti:async="true" calledElement="Folder_Import_Module">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Folder_Import_Module-Module" targetRef="Page_Process_Module_BC3-Module" />
+    <callActivity id="Page_Process_Module_BC3-Module" activiti:async="true" calledElement="Page_Process_Module_BC3">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Page_Process_Module_BC3-Module" targetRef="Document_Assembler_Module-Module" />
+    <callActivity id="Document_Assembler_Module-Module" activiti:async="true" calledElement="Document_Assembler_Module">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Document_Assembler_Module-Module" targetRef="Export_Module_BC3-Module" />
+    <callActivity id="Export_Module_BC3-Module" activiti:async="true" calledElement="Export_Module_BC3">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Export_Module_BC3-Module" targetRef="Workflow_Status_Finished-Module" />
+    <callActivity id="Workflow_Status_Finished-Module" activiti:async="true" calledElement="Workflow_Status_Finished">
+      <extensionElements>
+        <activiti:in source="batchInstanceID" target="batchInstanceID" />
+        <activiti:in source="key" target="key" />
+      </extensionElements>
+    </callActivity>
+    <sequenceFlow sourceRef="Workflow_Status_Finished-Module" targetRef="end" />
+    <endEvent id="end" />
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_SearchablePDFTemplate">
+    <bpmndi:BPMNPlane bpmnElement="SearchablePDFTemplate" id="BPMNPlane_SearchablePDFTemplate" />
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:systemConfigWidget="urn:import:com.ephesoft.gxt.admin.client.widget"
+	xmlns:menuWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+	<g:VerticalPanel ui:field="gridViewMainPanel">
+	    	<gxt:ContentPanel ui:field="regexPatternContainer"/>
+	</g:VerticalPanel>
+
+</ui:UiBinder>

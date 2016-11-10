@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="ExtractTableParam">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element type="xsd:string" name="BatchClassId"/>
+        <xsd:element type="xsd:string" name="HOCRFileLoaction"/>
+        <xsd:element name="Documents">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Document" maxOccurs="unbounded" minOccurs="0">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element type="xsd:string" name="Name"/>
+                    <xsd:element type="xsd:string" name="Page" maxOccurs="unbounded" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,180 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client" xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:batchInstaceView="urn:import:com.ephesoft.gxt.batchinstance.client.view"
+	xmlns:tree="urn:import:com.sencha.gxt.widget.core.client.tree">
+
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.ContentPanel.ContentPanelAppearance"
+		field="contentPanelAppearance" />
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.AccordionLayoutContainer.AccordionLayoutAppearance"
+		field="accordionLayoutAppearance" />
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="halfPanel">
+		<ui:attributes size="0.40" />
+	</ui:with>
+		<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="halfPanel2">
+		<ui:attributes size="0.60" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="northLayout">
+		<ui:attributes height=".075" width="1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="southLayout">
+		<ui:attributes height=".95" width="1" />
+	</ui:with>
+
+	<ui:with type="com.sencha.gxt.core.client.util.Margins" field="centerMargins">
+		<ui:attributes top="1" left="1" />
+	</ui:with>
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="downloadAccordianLayout">
+		<ui:attributes height="1" width="1" margins="{centerMargins}" />
+	</ui:with>
+
+	<container:BorderLayoutContainer
+		borders="true"  ui:field="troubleshootViewContainer">
+
+		<container:west layoutData="{halfPanel}">
+			<gxt:ContentPanel headerVisible="false"
+				appearance="{contentPanelAppearance}" borders="false">
+				<container:VerticalLayoutContainer
+					height="100%" ui:field="verticalLayoutContainer">
+					<container:child>
+						<g:FormPanel ui:field="formPanel" />
+					</container:child>
+					<container:child layoutData="{northLayout}">
+						<g:CheckBox ui:field="selectAll"></g:CheckBox>
+					</container:child>
+					<container:child layoutData="{southLayout}">
+						<g:ScrollPanel ui:field="panelForTree">
+						</g:ScrollPanel>
+					</container:child>
+				</container:VerticalLayoutContainer>
+			</gxt:ContentPanel>
+		</container:west>
+		<container:east layoutData="{halfPanel2}">
+			<gxt:ContentPanel ui:field="panel"
+				appearance="{contentPanelAppearance}" headerVisible="false"
+				bodyBorder="false" addStyleNames="margin-10">
+				<g:VerticalPanel width="100%">
+				<g:cell height="10%">
+				<g:HorizontalPanel horizontalAlignment="ALIGN_CENTER" width="100%" borderWidth="2">
+					<g:RadioButton name="downloadRadio" ui:field="downloadRadio"></g:RadioButton>
+					<g:RadioButton name="downloadToRadio" ui:field="downloadToRadio"></g:RadioButton>
+					<g:RadioButton name="uploadRadio" ui:field="uploadRadio"></g:RadioButton>
+					</g:HorizontalPanel>
+				</g:cell>
+				<g:cell height="90%">
+				<container:AccordionLayoutContainer
+					ui:field="con" expandMode="SINGLE_FILL" height="100%">
+
+					<gxt:ContentPanel ui:field="downloadPanel"
+						appearance="{accordionLayoutAppearance}" animCollapse="false" bodyStyleName="pad-text">
+						<g:VerticalPanel>
+						<g:VerticalPanel verticalAlignment="ALIGN_BOTTOM" horizontalAlignment="ALIGN_CENTER"
+							height="90%" width="100%" ui:field="downloadVP">
+							<g:cell>
+								<g:Button ui:field="download"></g:Button>
+							</g:cell>
+							</g:VerticalPanel>
+						</g:VerticalPanel>
+
+					</gxt:ContentPanel>
+
+					<gxt:ContentPanel ui:field="downloadToPanel"
+						appearance="{accordionLayoutAppearance}" animCollapse="false"
+						bodyStyleName="pad-text" visible="false">
+						<g:VerticalPanel ui:field="downloadToVP">
+							<g:HorizontalPanel>
+								<g:cell>
+									<g:Label ui:field="downloadToPathLabel" />
+								</g:cell>
+								<g:cell>
+									<g:TextBox width="80%" ui:field="downloadToPathTextBox" />
+								</g:cell>
+							</g:HorizontalPanel>
+							<g:VerticalPanel verticalAlignment="ALIGN_BOTTOM"
+								height="80%" width="100%" horizontalAlignment="ALIGN_CENTER">
+								<g:cell>
+									<g:Button ui:field="downloadToButton"></g:Button>
+								</g:cell>
+							</g:VerticalPanel>
+						</g:VerticalPanel>
+					</gxt:ContentPanel>
+
+					<gxt:ContentPanel ui:field="uploadPanel"
+						appearance="{accordionLayoutAppearance}" animCollapse="false"
+						bodyStyleName="pad-text" visible="false">
+
+						<g:VerticalPanel>
+						<g:VerticalPanel height="80%" width="100%" ui:field="uploadVP">
+							<g:HorizontalPanel>
+								<g:cell>
+									<g:Label ui:field="usernameLabel" />
+								</g:cell>
+								<g:cell>
+									<g:TextBox width="80%" ui:field="usernameTextBox"></g:TextBox>
+								</g:cell>
+							</g:HorizontalPanel>
+							<g:HorizontalPanel>
+								<g:cell>
+									<g:Label ui:field="passwordLabel" />
+								</g:cell>
+								<g:cell>
+									<g:PasswordTextBox width="80%" ui:field="passwordTextBox"></g:PasswordTextBox>
+								</g:cell>
+							</g:HorizontalPanel>
+							<g:HorizontalPanel>
+								<g:cell>
+									<g:Label ui:field="serverURLLabel" />
+								</g:cell>
+								<g:cell>
+									<g:TextBox width="80%" ui:field="serverURLTextBox"></g:TextBox>
+								</g:cell>
+							</g:HorizontalPanel>
+							<g:HorizontalPanel>
+								<g:cell>
+									<g:Label ui:field="ticketNoLabel" />
+								</g:cell>
+								<g:cell>
+									<g:TextBox width="80%" ui:field="ticketNoTextBox"></g:TextBox>
+								</g:cell>
+							</g:HorizontalPanel>
+							<g:HorizontalPanel horizontalAlignment="ALIGN_CENTER"
+								width="100%">
+								<g:VerticalPanel verticalAlignment="ALIGN_BOTTOM"
+									height="100%">
+									<g:cell>
+										<g:Button ui:field="uploadToButton"></g:Button>
+									</g:cell>
+								</g:VerticalPanel>
+							</g:HorizontalPanel>
+						</g:VerticalPanel>
+						</g:VerticalPanel>
+					</gxt:ContentPanel>
+				</container:AccordionLayoutContainer>
+				</g:cell>
+				</g:VerticalPanel>
+			</gxt:ContentPanel>
+
+		</container:east>
+
+	</container:BorderLayoutContainer>
+</ui:UiBinder>
+
+

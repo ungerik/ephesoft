@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ephesoft</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript" type="text/javascript"
+	src="js/licenseLocale.js"></script>
+<link rel="stylesheet" type="text/css" href="css/invalidLicense.css" />
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+	<div class="head">
+		<div class="logo"></div>
+	</div>
+	<div class="language">
+		<table style="width: 99%">
+			<tr>
+				<td>
+					<p align = "right">
+						<lable id = "englishLink" class="usedLink" onClick="changeLocale('en')">English</lable>
+						<lable id = "turkishLink" class="blueLink" onClick="changeLocale('tr')">Trukish</lable>
+						<lable id = "frenchLink" class="blueLink" onClick="changeLocale('fr')">français</lable>						
+					</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="message">
+		<label id = "topMessage"> Your Ephesoft license could not be verified. Possible causes may be: </label>
+		<ol>
+			<li id = "r1">Ephesoft license is not installed on your system.</li>
+			<li id = "r2">The installed license is invalid or expired.</li>
+			<li id = "r3">License server is not  working  as expected or is unreachable.</li>
+		</ol>
+		<label id = "bottomMessage">Please contact your system administrator for further assistance. </label>
+	</div>
+
+	<div class="footer">
+		<a id = "ephesoftLink" class="link" tabindex="0" href="http://www.ephesoft.com">Powered
+			by Ephesoft</a>
+	</div>
+
+</body>
+</html>

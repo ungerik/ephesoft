@@ -1,0 +1,18 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client.form">
+
+	<g:VerticalPanel width="100%">
+
+		<g:VerticalPanel>
+			<g:HorizontalPanel>
+				<g:RadioButton ui:field='importLearnedFilesRadio'
+					name="radios" checked="true" />
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:RadioButton ui:field='doNotImportLearnedFilesRadio'
+					name="radios" />
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+
+	</g:VerticalPanel>
+</ui:UiBinder>

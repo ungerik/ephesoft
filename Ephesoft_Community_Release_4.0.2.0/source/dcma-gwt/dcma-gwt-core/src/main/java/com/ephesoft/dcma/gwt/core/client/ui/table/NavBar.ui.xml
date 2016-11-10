@@ -1,0 +1,27 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:style>
+		.anchor {
+			margin: 0 8px;
+		}
+	</ui:style>
+
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="orderingPanel">
+			<g:Anchor styleName='{style.anchor}' ui:field='upButton'
+				href='javascript:;'>&lt; up
+			</g:Anchor>
+			<g:Anchor styleName='{style.anchor}' ui:field='downButton'
+				href='javascript:;'>&lt; down
+			</g:Anchor>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="paginationPanel">
+			<g:Anchor styleName='{style.anchor}' ui:field='newerButton'
+				href='javascript:;'>&lt; newer
+			</g:Anchor>
+			<g:Anchor styleName='{style.anchor}' ui:field='olderButton'
+				href='javascript:;'>older &gt; </g:Anchor>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder>

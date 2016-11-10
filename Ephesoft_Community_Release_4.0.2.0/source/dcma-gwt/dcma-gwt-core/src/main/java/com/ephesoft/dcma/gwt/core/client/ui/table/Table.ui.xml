@@ -1,0 +1,29 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+	<ui:image field='gradient' src='gradient_bg_dark.png'
+		repeatStyle='Horizontal' />
+
+	<g:DockLayoutPanel ui:field="outerPanel" unit="PX">
+		<g:north size="22">
+			<g:FlexTable ui:field='navBarTable' cellSpacing='0'
+				cellPadding='0' width="100%" />
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="34">
+					<g:FlexTable ui:field='headerTable' cellSpacing='0'
+						cellPadding='0' width="100%" />
+				</g:north>
+				<g:center>
+					<g:ScrollPanel height="100%" ui:field="scrollPanel">
+						<g:FocusPanel width="99.99%" ui:field="focusPanel">
+							<g:FlexTable ui:field='table' 
+								cellSpacing='0' cellPadding='0' width="100%" />
+						</g:FocusPanel>
+					</g:ScrollPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder>

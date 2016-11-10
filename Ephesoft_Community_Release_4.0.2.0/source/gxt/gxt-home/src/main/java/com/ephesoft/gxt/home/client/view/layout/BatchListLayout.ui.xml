@@ -1,0 +1,91 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:widget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:batchList="urn:import:com.ephesoft.gxt.home.client.view.layout"
+	xmlns:batchListInlineView="urn:import:com.ephesoft.gxt.home.client.view">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="topPanelData">
+		<ui:attributes size="50" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftLogoPanel">
+		<ui:attributes size="50" split="false" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="ephesoftPoweredPanel">
+		<ui:attributes size="0.03" />
+	</ui:with>
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.BorderLayoutContainer.BorderLayoutData"
+		field="westData">
+		<ui:attributes size="341" collapsible="true" maxSize="341"
+			collapseMini="true" floatable="false"/>
+	</ui:with>
+
+	<container:Viewport>
+		<container:SimpleContainer>
+			<widget:BorderLayoutContainer ui:field="mainPage">
+				<widget:west layoutData="{westData}">
+					<gxt:ContentPanel headerVisible="false" ui:field="leftPanel">
+						<container:Viewport>
+							<widget:BorderLayoutContainer>
+								<widget:north layoutData="{ephesoftLogoPanel}">
+									<gxt:ContentPanel headerVisible="false"
+										borders="false" bodyBorder="false" ui:field="logoPanel">
+										<coreView:Logo width="100%" height="100%" />
+									</gxt:ContentPanel>
+								</widget:north>
+								<widget:center>
+									<gxt:ContentPanel headerVisible="false"
+										borders="false">
+										<batchListInlineView:BatchListLeftPanelView ui:field="batchListLeftPanelView"/>
+									</gxt:ContentPanel>
+								</widget:center>
+								<widget:south layoutData="{ephesoftPoweredPanel}">
+									<g:Label  ui:field="ephesoftPoweredLabel" />
+								</widget:south>
+							</widget:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</widget:west>
+				<widget:center>
+					<gxt:ContentPanel headerVisible="false" ui:field="mainPanel">
+						<container:Viewport>
+							<widget:BorderLayoutContainer ui:field="viewContainer">
+								<widget:north layoutData="{topPanelData}">
+									<gxt:ContentPanel headerVisible="false" ui:field="buttonPanel">
+										<widget:BorderLayoutContainer>
+											<widget:center >
+												<gxt:ContentPanel headerVisible="false"
+													borders="false" ui:field="optionsPanel" resize="false" >
+													<batchList:BatchListMenuView ui:field="batchListMenuView"></batchList:BatchListMenuView>
+													</gxt:ContentPanel>
+											</widget:center>
+										</widget:BorderLayoutContainer>
+									</gxt:ContentPanel>
+								</widget:north>
+								<widget:center>
+										<gxt:ContentPanel resize="true"
+											headerVisible="false" ui:field="gridPanel">
+											<batchList:BatchListGridView
+												ui:field="batchListGridView" />
+										</gxt:ContentPanel>
+								</widget:center>
+							</widget:BorderLayoutContainer>
+						</container:Viewport>
+					</gxt:ContentPanel>
+				</widget:center>
+			</widget:BorderLayoutContainer>
+		</container:SimpleContainer>
+	</container:Viewport>
+</ui:UiBinder>

@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view" xmlns:rv="urn:import:com.ephesoft.gxt.rv.client.widget"
+	xmlns:corePanel="urn:import:com.ephesoft.gxt.core.client">
+
+	<g:VerticalPanel ui:field="documentLevelFieldPanel"
+		styleName="dlfViewPanel" spacing="5">
+		<g:Label ui:field="dlfNameLabel" styleName="dlfViewLabel" />
+	</g:VerticalPanel>
+</ui:UiBinder>

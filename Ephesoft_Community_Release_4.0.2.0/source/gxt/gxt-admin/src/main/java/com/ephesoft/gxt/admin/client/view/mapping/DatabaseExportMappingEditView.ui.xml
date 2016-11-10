@@ -1,0 +1,36 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:form="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget">
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="connectionLayoutData">
+		<ui:attributes height="26" />
+	</ui:with>
+
+
+	<container:VerticalLayoutContainer
+		styleName="exportMappingParentContainer">
+		<container:child layoutData="{connectionLayoutData}">
+			<container:HorizontalLayoutContainer
+				styleName="connectionCombo">
+				<container:child>
+					<g:Label text="Connection " />
+				</container:child>
+				<container:child>
+					<form:ComboBox ui:field="connectionCombo" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+		<container:child>
+			<container:VerticalLayoutContainer
+				borders="true" styleName="dbConfiguration" ui:field="gridContainer">
+
+			</container:VerticalLayoutContainer>
+		</container:child>
+	</container:VerticalLayoutContainer>
+</ui:UiBinder>

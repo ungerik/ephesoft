@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ephesoft</title>
+<!--<meta name="description" content="Custom Login Form Styling with CSS3" />
+        <meta name="keywords" content="css3, login, form, custom, input, submit, button, html5, placeholder" />-->
+<meta name="author" content="Ephesoft" />
+<link rel="shortcut icon" href="../favicon.ico">
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<script src="js/modernizr.custom.63321.js"></script>
+<script type="text/javascript" language="javascript"
+	src="i18n/common/locale.js"></script>
+<script src="i18n/login/locale.js"></script>
+<script type="text/javascript" language="javascript"
+	src="login/login.nocache.js"></script>
+<!--[if lte IE 7]><style>.main{display	:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+</head>
+<body>
+	<div class="container">
+		<table align="top" width="100%">
+			<tr>
+				<td id="expiryMsgLabel" align="center" class="fontRed pb15"></td>
+			</tr>
+			<tr>
+				<td id="failOverMsgLabel" align="center" class="fontRed"></td>
+			</tr>
+		</table>
+		<header>
+			<h1>
+				<img src="themes/default_theme/images/logo_login.svg" style="height:50px; width:227px;" /> <label id="versionLabel" class="versionlbl"><label>
+			</h1>
+			<div class="support-note">
+				<span class="note-ie">Sorry, only modern browsers.</span>
+			</div>
+
+		</header>
+		<!-- <table width="100%">
+			<tr>
+				<td id="expiryMsgLabel" align="center" class="fontRed"></td>
+			</tr>
+			<tr>
+				<td id="failOverMsgLabel" align="center" class="fontRed"></td>
+			</tr>
+		</table>-->
+		<section class="main">
+		<div class="form-1">
+			<form name="loginForm" id="loginForm" method="post"
+				action="j_security_check">
+				<h1 id="loginHeader"></h1>
+				<div class="frmLoginBody">
+				<div id="error">
+					<!-- This tag should not be removed. Error message would be inserted using DOM Scripts-->
+				</div>
+				<script type="text/javascript">
+					if (location.href.match(/\j_security_check/i)) {
+						document.getElementById("error").style.display = "";
+					} else {
+						document.getElementById("error").style.display = "none";
+					}
+				</script>
+				<div class="frm-ctrlsection">
+				<p class="field">
+					<input type="text" name="j_username" id="j_username" placeholder="">
+					<i class="icon-user icon-large"></i>
+				</p>
+				<p class="field">
+					<input type="password" name="j_password" id="j_password"
+						placeholder=""> <i class="icon-lock icon-large"></i>
+				</p>
+				<p id="button">
+					
+				</p>
+				</div>
+				<!--<p class="clearfix">
+				<div id="error">
+					
+				</div>
+				</p>-->
+				</div>
+			</form>
+			</div>
+			
+		</section>
+	</div>
+</body>
+</html>

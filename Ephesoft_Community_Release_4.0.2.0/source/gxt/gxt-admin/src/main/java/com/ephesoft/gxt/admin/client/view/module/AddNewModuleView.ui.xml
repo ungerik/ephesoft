@@ -1,0 +1,37 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:client="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:gxt='urn:import:com.sencha.gxt.widget.core.client.form'
+	xmlns:widget='urn:import:com.ephesoft.gxt.core.client.ui.widget'>
+
+	<g:VerticalPanel width="100%" ui:field="addNewModuleViewPanel">
+
+		<g:HorizontalPanel width="100%">
+			<g:cell width="29%" horizontalAlignment="ALIGN_RIGHT">
+				<widget:MandatoryLabel ui:field="nameLabel" />
+			</g:cell>
+			<g:cell width="3%">
+				<g:Label></g:Label>
+			</g:cell>
+			<g:cell width="68%" horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="nameTextField" width="60%" />
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%">
+			<g:cell width="29%" horizontalAlignment="ALIGN_RIGHT">
+				<widget:MandatoryLabel ui:field="descLabel" />
+			</g:cell>
+			<g:cell width="3%">
+				<g:Label></g:Label>
+			</g:cell>
+
+			<g:cell width="68%" horizontalAlignment="ALIGN_LEFT">
+				<gxt:TextField ui:field="descriptionTextField" width="60%" />
+			</g:cell>
+		</g:HorizontalPanel>
+
+		<g:HorizontalPanel width="100%" ui:field="addNewModulePanel">
+		</g:HorizontalPanel>
+
+	</g:VerticalPanel>
+</ui:UiBinder>

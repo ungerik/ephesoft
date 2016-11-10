@@ -1,0 +1,1160 @@
+.gwt-Tree .gwt-TreeItem-selected {
+	background: none !important;
+}
+
+
+.thumbnail-tree {
+
+}
+
+.thumbnail-tree .treeDocument {
+padding: 3px 3px 3px 3px !important;
+border-style :solid !important;
+border : 0px ;
+border-top :2px ;
+border-left :10px ;
+margin-top : 7px;
+box-shadow : 1px 1px 5px black ;
+border-left-color : rgb(40, 211, 40);
+border-left-style:solid;
+}
+
+.thumbnail-tree .invalidDocumentType {
+border-left-color : red !important;
+}
+
+
+
+/*.domainListPanel {
+height : 100%;
+width : 98% !important;
+overflow-y: auto !important;
+z-index : 1000;
+} */
+.documentTreeContentPanel .GCGCW0WDBUB, .middleDetailPanel {
+/* background-color : #E0FFFF !important; */
+} 
+
+.domainListPanel .noheader > .GCGCW0WDCVB ,.domainListPanel .noheader > .GCGCW0WDCVB * , .tableButtonPanel, .noheader .GCGCW0WDLUB, .noheader .GCGCW0WDNUB, .noheader .GCGCW0WDJUB, .noheader .GCGCW0WDJUB * , .noheader .GCGCW0WDAVB{
+background : none !important;
+background-color : white !important;
+}
+
+/*body , html {
+width : 100% !important;
+}*/
+
+.draggableImage {
+width:78px !important;
+height:120px !important;
+margin-top: 10px !important;
+}
+
+.viewPort, .detailPanel > div:nth-child(2) > div {
+width : 100% !important;
+}
+
+/*.middleDetailPanel {
+width : 100% !important;
+}
+
+.middleDetailPanel  .GCGCW0WDGUB , .middleDetailPanel .GCGCW0WDBUB, .imageDragDropPanel {
+width : 100% !important;
+}*/
+
+.imageDragDropPanel div {
+height : 100% !important;
+/* background-color : #E0FFFF; */
+}
+
+
+tbody {
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+
+
+.imageOverlayContainer .GCGCW0WDCQB {
+position:unset !important;
+}
+
+.overlayPanelInitialView {
+margin-left : 5px;
+}
+
+.imageOverlayContainer .GCGCW0WDBUB{
+}
+
+.overlayDisplayImage {
+width:99%;
+}
+
+.overlayPanel {
+width : 100% !important;
+height : 100% !important;
+}
+
+.imageOverlayContainer .GCGCW0WDCQB {
+width : 100% !important;
+height : 100% !important;
+}
+
+.GCGCW0WDCQB {
+background-color : white !important;
+}
+
+.imageOverlayContainer .GCGCW0WDCQB div {
+height : 100%;
+}
+/*
+.menuContainerPanel, .menuPanel {
+width : 100% !important;
+height : 100% !important;
+}./
+
+.detailHeaderLabel {
+/*
+background-color : rgb(231,231,250);
+padding-left : 25% !important;
+padding-bottom :2px;
+border-style:dashed;
+border-width : 1px;
+border-color : blue !important; */
+}
+
+.menuContainerPanel tr {
+height : 25% !important;
+}
+
+.documentOptionsView td {
+vertical-align : middle !important;
+}
+
+.iconButton {
+border: none !important; 
+padding: 0 !important;
+cursor: pointer;
+height : 20px;
+width : 15px;
+margin-top : 20px !important;
+margin-left : -3px !important;
+}
+
+.screenNavigatorView .gwt-Label {
+color : white !important;
+}
+.documentStack > tbody > tr:nth-child(1)  table {
+
+width : 100% !important;
+
+}
+.documentStack > tbody > tr:nth-child(1)  table > tbody > tr > td:nth-child(1) {
+width : 65px !important;
+}
+
+
+.menuContainerPanel > tbody  > tr:nth-child(odd) {
+
+}
+
+
+/*.tableViewContainer * {
+font-size : 9 !important;
+}*/
+
+.tableViewContainer  .GCGCW0WDABC div, .tableViewContainer > div, .tableViewContainer .GCGCW0WDLAC , .domainListPanel, .tableViewContainer .GCGCW0WDJAC {
+background : none !important;
+background-color : white !important;
+border : none !important;
+}
+/*
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+  background: #e9e9fc;
+  -webkit-border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DADAFF;
+  -webkit-border-radius: 1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-corner {
+  background: rgb(234, 212, 212);
+}*/
+/** hiii
+.dataTableGrid .GCGCW0WDKFC {
+padding : 0px !important;
+}
+*/
+
+
+
+.documentStack * {
+color : black !important;
+}
+
+.documentViewPanel > tbody > tr:nth-child(2) > td > div {
+height : 99.8% !important;
+}
+/*.dataTableGrid  {
+border-bottom-style : solid;
+border-left-style : solid;
+border-right-style : solid;
+border-width : 2px;
+border-color: rgb(240, 241, 255);
+width : 736px !important;
+}*/
+
+.domainListPanel > div > div > div:nth-child(2)  {
+margin-top : 7px !important;
+margin-left : 5px !important;
+}
+
+.highlightedLabel {
+font-weight:bold;
+color : black !important;
+font-size : 1.1em;
+}
+
+.dlfViewPanel {
+margin :0 0 0 5px ;
+}
+.docFieldListPanel > div{
+	float:left;
+}
+.dlfMultilineBox{
+	width:200px !important;
+}
+/*
+
+.dlfViewPanel td{
+width : 50% !important;
+}*/
+
+.dlfViewPanel td {
+text-align :left;
+}
+
+.tabPanelContainer {
+
+width : 100% !important;
+
+}
+
+
+/*.dlfSuggestionBox input {
+ width : 175px !important ; 
+}*/
+
+
+.docFieldListPanel > tbody > tr {
+height : 50px;
+}
+.dragPanelSwitch {
+background: none !important;
+margin-top :  0px !important;
+background:url("/dcma/images/review.png") center center no-repeat !important;
+width :  30px !important;
+}
+
+.tableButton {
+background: none !important;
+margin-top :  0px !important;
+background:url("/dcma/images/table_valid_view.png") center center no-repeat !important;
+margin-left : 75% !important;
+}
+
+.gwt-MenuBarPopup {
+z-index : 1000;
+}
+
+
+.shortcutValueLabel {
+text-align : right ;
+margin-left : 130px;
+}
+
+/*.documentOptionsView td {
+padding-left : 5px;
+}*/
+
+.GCGCW0WDHY {
+	margin-left: -6 ;
+} 
+
+.suggestionBox .GCGCW0WDHY {
+margin-left : 0;
+}
+
+.dlfSuggestionBox input {
+height : 21px !important;
+}
+
+.suggestionBox input {
+ width : 200px !important; 
+height  : 22px ;
+}
+
+#rv-documentType-comboBox input {
+height : 21.5px !important;
+}
+.simpleContainer .leftPanel > div:nth-child(2n) > div > div > div{background:none !important;}
+
+/*@media (min-width: 1280px) and (max-width: 1500px) {
+.thumbnailStack {
+width : 239px !important ;
+height :172px !important;
+margin-top:3px !important;
+}
+
+.documentStack .gwt-Label {
+font-size : 11px !important;
+}
+
+.documentStack tr .highlightedLabel {
+font-size : 14px !important;
+font-weight : normal !important;
+}
+
+.tableButtonPanel .tableOptionsButton {
+font-size : 9px !important;
+}
+
+.thumbnailFirstImage {
+width : 85px;
+height:	122px;
+}
+
+.documentStack {
+width : 250px;
+}
+
+.dlfViewLabel {
+font-size : 12px !important;
+}
+
+.tableButtonPanel .tableOptionsFirstButton {
+margin-left : 20px !important;
+}
+
+.menuContainerPanel .detailHeaderLabel {
+font-size : 11px !important;
+}
+
+.externalInterfaceMenu {
+margin-top : 9px !important;
+margin-left : 0px !important
+}
+
+.dlfSuggestionBox input {
+font-size : 12px !important;
+}
+
+.thumbnailSecondImage {
+height : 93px;
+width : 60px;
+margin-left: -40px;
+margin-top : 14px !important;
+z-index:9;
+}
+
+.thumbnailMiddleImage {
+height : 70px;
+width : 60px;
+margin-left: -10px;
+margin-top : 25px;
+z-index:8;
+}
+
+
+.thumbnailSecondLastImage {
+height : 93px;
+width : 60px;
+margin-left: -40px;
+margin-top : 14px;
+z-index:9;
+}
+
+.thumbnailLastImage {
+height : 122px;
+width : 85px;
+margin-left: -40px;
+z-index:10;
+}
+
+.threeImageStack.thumbnailSecondImage {
+margin-left : -55px !important;
+height : 90px !important;
+width : 70px !important;
+} 
+
+.threeImageStack {
+margin-left : -20px !important;
+}
+
+.iconImage {
+border-width : 1px ;
+background-size : 207;
+margin-top : 10px;
+}
+
+.draggableImage {
+width : 71px !important;
+height : 108px !important;
+border-width : 2px;
+}
+
+.stackImage {
+border-width : 2px;
+}
+
+
+#rv-documentType-comboBox {
+margin-bottom : 3px;
+margin-top : 2px;
+}
+
+#rv-documentType-comboBox .GCGCW0WDHY {
+height : 17px !important;
+}
+
+.dataTableGrid table {
+width : 100% !important;
+}
+
+.dlfMultilineBox {
+width :  100% !important;
+resize  : vertical !important;
+}
+
+}
+*/
+
+/*** From common **/
+
+
+.MFLB {
+height : 16px !important;
+width : 16px !important;
+}
+
+.stackImage {
+border-color : black;
+border-style : solid;
+position: relative ;
+}
+
+.thumbnailStack {
+width : 250px !important ;
+height :190px ;
+margin-top :10px ;
+position:relative;
+}
+
+.thumbnailFirstImage {
+width : 90px;
+height:	120px;
+z-index:10;
+}
+
+.thumbnailSecondImage {
+height : 100px;
+width : 60px;
+margin-left: -30px;
+margin-top : 10px !important;
+z-index:9;
+}
+
+.thumbnailMiddleImage {
+height : 90px;
+width : 60px;
+margin-left: -10px;
+margin-top : 18px;
+z-index:8;
+}
+
+.thumbnailSecondLastImage {
+height : 100px;
+width : 60px;
+margin-left: -30px;
+margin-top : 10px;
+z-index:9;
+}
+
+.thumbnailLastImage {
+height : 120px;
+width : 90px;
+margin-left: -40px;
+z-index:10;
+}
+
+.threeImageStack {
+margin-left : -50px !important;
+}
+
+.draggableImage {
+border-color : black;
+border-style : solid;
+margin-left : 20px ;
+margin-top : 20px;
+}
+
+
+.documentViewPanel > tbody > tr:first-child  {
+height : 10px !important;
+}
+
+.invalidField input {
+background : rgb(238, 215, 215);
+}
+
+.gwt-PopupPanelGlass {
+z-index : 150000000000000000;
+opacity :  0.5 !important;
+background-color : black !important;
+width   :  100% !important;
+height : 100% !important;
+}
+
+.screenMask .dialogTopLeft , .screenMask .Caption, .screenMask .dialogTopRight , .screenMask .dialogMiddleLeft , .screenMask .dialogMiddleCenter, .screenMask .dialogBottomLeft, .screenMask .dialogBottomCenter {
+
+background : none !important;
+border : none !important;
+}
+
+.screenMask .gwt-Label {
+margin-top : 150px ;
+text-align : center;
+margin-left :-65px;
+border : none !important;
+font-size : 1.5em;
+color : white !important;
+text-shadow: 1px 2px 3px white;
+}
+
+.screenMask * {
+border : none !important;
+}
+
+.screenMask {
+margin-top : -59px;
+}
+
+.tableMenuBar  {
+height :20px !important;
+}
+
+.documentViewPanel .imageDragDropPanel {
+height : 100% !important;
+}
+
+.fuzzySearchBox input {
+margin-left : 0px !important;
+}
+
+.gridCell .GCGCW0WDHY {
+background : none !important;
+border:none !important;
+width : 0 !important;
+}
+
+.gridCell input {
+margin-left :-2px;
+}
+
+.gridCell {
+margin-left : -75px !important;
+}
+
+.gridCell input {
+width :70px !important;
+}
+
+.overlay {
+	
+	position : absolute !important;
+	opacity : 0.6 !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+
+.overlay .GNOCXWODGCC {
+	
+	height :0px !important;
+	width :0px !important; 
+}
+
+.overlay, .overlay * {
+background : none !important;
+background-color : yellow !important; 
+border-color : yellow !important;
+z-index : 8500000000000000000;
+}
+
+.domainListPanel {
+display : block;
+}
+
+.domainListPanel tbody {
+overflow : auto;
+}
+
+/*.validationTabPanel .GCGCW0WDH1B {
+overflow-y : auto;
+height : 100%;
+}*/
+
+
+
+.tableButtonPanel .gwt-Button {
+background-color : #484848 !important;
+border-color : #484848   !important;
+}
+
+/*.tableButtonPanel .tableOptionsButton {
+height : 17px !important;
+margin-left : 12px !important;
+font-size : 10 !important;
+margin-bottom : 3px;
+padding-top : 0px !important;
+padding-bottom : 0px !important;
+padding-right : 5px !important;
+padding-left : 5px !important;
+background-color : #F8EFEF !important;
+border-color : #DFD9D9 !important;
+border-width : 1px;
+box-shadow : 2px 1px grey;
+cursor : pointer  ;
+}*/
+
+/*.tableOptionsButton[disabled] {
+background-color : white !important;
+cursor : auto !important;
+}*/
+
+
+/*.dataTableGrid .GCGCW0WDKX{
+height : auto !important;
+}*/
+.validationTabPanel{
+height :98% !important;
+}
+.validationTabPanel > div:nth-child(2){
+height : 96% !important;
+overflow-y:auto !important;
+}
+.invalidColumn {
+background : #ECD9DA !important;
+} 
+
+.manualValidatedColumn, .manualValidatedColumn * {
+background : rgb(172, 172, 173) !important;
+} 
+
+.invalidRow .GKVVQWVDGKE div {
+background-color : #F99F9F !important;
+}
+
+.manualValidatedColumn.GKVVQWVDGKE div {
+background-color : powderblue !important;
+}
+
+
+.invalidColumn.GCGCW0WDLFC div, .invalidRow .GCGCW0WDLFC div{
+background-color : rgb(207, 161, 161) !important;
+}
+
+.invalidRow td {
+background-color : rgb(246, 201, 201) !important;
+}
+
+.noHeader .GCGCW0WDOAC {
+background : none !important;
+}
+
+.noHeader .GCGCW0WDGAC, .GCGCW0WDHAC, .noHeader .GCGCW0WDIAC {
+height : 0px !important;
+}
+
+.noheader .GCGCW0WDLUB {
+width : 101% !important;
+}
+
+.simpleContainer .middleDetailPanel{
+width : 100% !important;
+}
+
+
+.tableViewContainer .GCGCW0WDOAC {
+background :   none !important;
+} 
+
+.headerCheckBox {
+margin-left : 5px;
+}
+
+.tableName {
+float : left;
+}
+
+.tableButtonPanel .tableOptionsFirstButton {
+margin-left : 20px !important;
+}
+
+
+.tableViewContainer .GCGCW0WDEWB.GCGCW0WDGWB {
+width : 0px;
+display : none;
+}
+
+.columnExtractionCheckBox {
+margin-left : 50px ;
+}
+
+.columnExtractionCheckBox input {
+height : 10px;
+}
+
+.tableButtonPanel .extractionFirstButton{
+/* margin-left : 70px !important; */
+}
+
+/*.tableButtonPanel  .tableName {
+font-size : 11px !important;
+box-shadow : 2px 2px rgb(202, 201, 201) ;
+font-weight : bold ;
+color : rgb(68, 68, 133);
+border-radius : 26px ;
+}*/
+
+
+.domainListPanel  .GCGCW0WDABC {
+background : none !important;
+}
+
+.tableViewButton {
+background: none !important;
+margin-top :  0px !important;
+background:url("/dcma/images/rotate.png") center center no-repeat !important;
+}
+
+.tableMenuBar  {
+z-index : 1000000;
+}
+
+.gwt-MenuBarPopup {
+z-index :9000000000 !important;
+}
+
+.tableViewContainer .GCGCW0WDEWB.GCGCW0WDFWB  {
+display : none;
+height : 0px;
+}
+
+.tableViewContainer .GCGCW0WDEWB.GCGCW0WDMWB {
+display : none;
+height : 0px;
+}
+
+
+
+.screenMask{
+z-index : 15000000000000000000001  !important;
+}
+
+.tableViewContainer,  .tableViewContainer >   .GCGCW0WDFAC {
+height : 100%;
+}
+
+
+.tableViewContainer .domainListPanel {
+width : 100% !important;
+height :  99%;
+overflow-y : auto ;
+}
+
+
+input:focus {
+border-color : light-blue !important;
+border-width : 2px !important;
+}
+
+.highPriorityFailure {
+color : red !important;
+font-weight : bold !important;
+font-size : 12px !important;
+}
+
+.mediumPriorityFailure {
+color : blue !important;
+font-weight : bold !important;
+font-size : 12px !important;
+}
+
+.lowPriorityFailure {
+color : green !important;
+font-weight : bold !important;
+font-size : 12px !important;
+}
+
+.errorMessageToolTip {
+width : 250px !important;
+}
+
+/*.validationTabPanel {
+width  : 99% !important;
+}
+
+.validationTabPanel .domainListPanel {
+height : 99% !important;
+overflow-y:auto;
+overflow-x:hidden;
+}*/
+
+.middleDetailPanel ul.GCGCW0WDN2B {
+/* width : 0% ; */
+} 
+
+.documentViewPanel > tbody , .documentViewPanel > tbody > tr:nth-child(2) > td{
+height : 100% ;
+}
+
+
+	
+	.dropFilesLabel{
+margin-top: 6px;
+/*padding-top: 80%;*/
+padding-bottom: 28px;
+padding-left: 20%;
+font-family: verdana, arial, sans-serif;
+font-size: 12px;
+color: #2d4b6d;
+font-weight: bold;
+text-align: center;
+display: block;
+border: 2px dashed #888888;
+border-radius: 10px;
+height: 90%;
+}
+
+.dropFilesLabelHover{
+	border: 2px solid #888888;
+}
+
+.uploadBatchbrowseButtonCSS{
+	padding-bottom: 10px;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+.uploadBatchinputPanelCSS{
+	padding-top: 5px;
+	padding-left: 30px;
+	padding-right: 20px;
+}
+
+.uploadBatchMenuBarCSS{
+	padding-top: 5px;
+	width: 100%;
+	padding-bottom: 33px;
+}
+
+.uploadBatchLabelCSS{
+text-align: ALIGN_LEFT;
+font-size: 12px;
+}
+.setIndex {
+	position:relative;
+	z-index:1000;
+}
+
+.horizontalPanelMouseHover {
+	border:1px solid #2c3138;
+	background-color:#404856;
+	background-position:0 -2700px;
+	
+	box-shadow:inset 0 1px #545a65,0 1px #626973;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+.promoBox {
+
+	background-color:#444c57;
+	color:#fff;text-shadow:0 1px #000;
+	box-shadow: inset -4px 0 10px rgba(0,0,0,.4);
+	position:relative;
+	width:28px;
+
+}
+
+.sidebarNavMenuDivider {
+	
+	border-width:1px 0;
+	border-style:solid;
+	border-color:#353c44 #555d67 #555d67;
+	width: 100%;
+	}
+	
+.setSelectedPageStyle {
+	background-color: rgb(137, 172, 82);
+	pointer-events: none;
+}
+
+.panelWidth {
+	
+}
+
+.panelHeight {
+	height: 100%;
+}
+
+.logOutStyle {
+	vertical-align: bottom;
+	margin-top: 630px;
+	
+}
+
+.panelStyle {
+	background-color: #404856;
+	height:100%;
+}
+
+/*.viewBatchImage{
+	background:url("/dcma/home/images/ViewBatchesThumb.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+
+.reviewValidateImage{
+	background:url("/dcma/home/images/OpenNextBatchThumb.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+
+.scannerImage{
+	background:url("/dcma/home/images/ScanNewThumb.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+
+.uploadBatchImage{
+	background:url("/dcma/home/images/UploadNewDocumentsThumb.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+
+.logOutImage{
+	background:url("/dcma/images/logout.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+
+.userImage{
+	background:url("/dcma/images/userThumb.png") no-repeat !important;
+	height:20px;
+	width:30px;
+}
+*/
+.panelLabelStyle{
+color:#fff !important;
+}
+.folderManagerFooter {
+	/*left:-385px !important;*/
+/*	background-color: lighten(@baseLight, 13%);*/
+	font-weight: bold;
+	text-align: left;
+}
+
+.noheader .GCGCW0WDEVB > div > div:nth-child(2) {
+overflow-x : auto ;
+}
+.folderManagerGrid{
+height:553px !important;
+}
+
+.sample {
+width : 50px !important;
+margin-left: 90px !important;
+margin-top : 66px !important;
+}
+
+.folderOptionsBox {
+	padding: 3px !important;
+ font-weight: bold !important;
+	top:8px !important;
+	width:100% !important; 
+}
+
+.confirmationCheckBox label {
+font-size : 10px;
+}
+
+
+.docFieldListPanel > div {
+height : auto;
+}
+
+.detailPanel > div > div{
+width : 100% !important;
+}
+
+.selectedButton {
+border-style : solid !important;
+border-width : 1px;
+}
+
+.veryHighPriorityFailure {
+color : #4975A6 !important;
+font-weight : bold;
+}
+
+
+.tableRulesCell > div > span:nth-child(2) > div {
+
+margin-left : 197px !important;
+margin-top : -21px !important;
+}
+
+
+.tableRulesCell > div > span:nth-child(1) > div {
+margin-left : 40px !important;
+}
+
+.tableRulesCell > div > span:nth-child(3) > div {
+margin-top : -21px !important;
+}
+
+
+.navigator {
+	position: absolute !important;
+	height: 196px !important;
+	width: 130px !important;
+	left: 0px !important;
+	top: 320px !important;
+	background-color: rgb(68, 68, 76) !important;
+	z-index: 1000 !important;
+	border-radius: 94px !important;
+	margin-left: -111px !important;
+	opacity : 0.85;
+}
+
+.n img {
+	display : none !important;
+}
+
+.n {
+z-index : 1000000 !important;
+}
+.navigator  .gwt-Label {
+	display: none !important;
+}
+
+.n .gwt-Label {
+border-bottom-style : solid;
+border-color : white !important;
+margin-top : 10px !important;
+border-width : 1px;
+}
+
+/*.sample {
+	margin-left: 95px !important;
+	margin-top : 66px !important;
+	opacity : 0.7 !important;
+}*/
+
+
+.middleDetailPanel > .GCNLWM1KUB {
+width : 100% !important;
+}
+
+.overlayImageScrollPanel , .imageOverlayContainer{
+height : 100% !important;
+background-color : white !important;
+}
+
+
+.windowSizeStyle{
+	width: 218px;
+	height: 292px; 
+}
+
+
+.datePickerStyle{
+margin-top: 5px;
+}
+
+.calendar{
+	background:url("/dcma/images/calendar.png") no-repeat !important;
+	height:21px;
+	width:21px;
+}
+
+
+.checkBoxFocus {
+box-shadow: -1px 1px 2px 1px grey;
+}
+
+.simpleContainer .documentViewPanel table.buttonPanel {
+height: 10px !important;
+background-color: #D5DAE0 !important;
+box-shadow: 1px 1px 1px 5px grey;
+}
+
+
+.gwt-MenuBar-vertical table {
+width : 100% ;
+}
+
+.gwt-MenuBar.gwt-MenuBar-horizontal .gwt-MenuItem > div {
+padding : 4px 9px !important;
+}
+
+.tableOptionsButton {
+	padding: 2px 4px !important;
+}
+
+.menuPopupMiddleCenterInner {
+max-height :250px !important;
+overflow-y : auto ;
+}
+
+
+
+.fuzzySearchResultGrid > div {
+overflow-x : hidden !important;
+}
+
+/*
+#fuzzySearchResultWindow {
+z-index: 999999999999 !important;
+}
+*/
+.tableOptionsButton {
+box-shadow : none !important;
+}
+
+.documentTreeHeader >  div , .documentTreeHeader >  div  > div {
+height : 100%;
+}
+
+.simpleContainer .logoPanel .iconImage {
+margin-top: 3px !important;
+}
+
+.docFieldListPanel .listView {
+height : 78px !important; 
+}
+
+.dataTableGrid  .x-grid-cell-first > div  > div {
+margin-left : -5px;
+} 
+
+.response-recording-checkbox:focus{
+border-width:1px;
+background-color:black !important;
+box-shadow:1px 1px 1px 1px;
+}

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>applicationContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>port</param-name>
+		<param-value>8080</param-value>
+	</context-param>
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>log4j.xml</param-value>
+	</context-param>
+	<!-- Parameter added for choosing authentication type from multiple authentication type supported by Ephesoft
+		 0:Ephesoft Authentication, 1:SSO authentication only, 2:SSO authentication and authorisation with session variables -->
+	<context-param>
+		<param-name>authenticationType</param-name>
+		<param-value>0</param-value>
+	</context-param>
+	<context-param>
+		<param-name>protocol</param-name>
+		<param-value>http</param-value>
+	</context-param>
+	<filter>
+		<filter-name>headerFilter</filter-name>
+		<filter-class>com.ephesoft.dcma.webapp.HTTPHeaderFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>hibernate.dcma</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>headerFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>hibernate.dcma</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>SessionTimeoutFilter</filter-name>
+		<filter-class>com.ephesoft.dcma.webapp.SessionTimeoutFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionTimeoutFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!-- Authentication Filter for SSO -->
+	<filter>
+		<filter-name>authenticationFilter</filter-name>
+		<filter-class>com.ephesoft.dcma.webapp.AuthenticationFilter</filter-class>
+		<!-- Name of HTTP header containing User Name. -->
+    	<init-param>
+	        <param-name>requestUsernameHeader</param-name>
+	        <param-value>REMOTE_USER</param-value>
+    	</init-param>
+    	<!-- Name of HTTP header containing Group Name. -->
+    	<init-param>
+	        <param-name>requestGroupnameHeader</param-name>
+	        <param-value>GROUP_USER</param-value>
+    	</init-param>
+    	<!-- Name of HTTP header containing Super Admin. -->
+    	<init-param>
+	        <param-name>requestSuperAdminHeader</param-name>
+	        <param-value>SUPER_ADMIN</param-value>
+    	</init-param>
+    	<!-- Logout URL -->
+    	<init-param>
+	        <param-name>logoutUrl</param-name>
+	        <param-value>https://www.eauth.usda.gov/Logout/logoff.asp</param-value>
+    	</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>authenticationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>com.ephesoft.dcma.webapp.SessionListener</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value />
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>batchListService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.home.server.BatchListServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>rvService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.rv.server.ReviewValidateServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>bmService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.BatchClassManagementServiceImpl</servlet-class>
+	</servlet>	
+	<servlet>
+		<servlet-name>loginService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.login.server.LoginServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>batchInstanceService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.batchinstance.server.BatchInstanceManagementServiceImpl</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>customWorkflowService</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.customWorkflow.server.CustomWorkflowServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>customWorkflowService</servlet-name>
+		<url-pattern>/customWorkflow/customWorkflowService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>systemConfigService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.systemconfig.server.SystemConfigServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>systemConfigService</servlet-name>
+		<url-pattern>/systemConfig/systemConfigService</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>batchInstanceService</servlet-name>
+		<url-pattern>/batchInstance/batchInstanceService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>uploadBatchService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.uploadbatch.server.UploadBatchServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>importBatchClassUploadServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ImportBatchClassUploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>importTableUploadServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ImportTableUploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>documentFileLearningUpload</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.DocumentTypeLearnFileServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>folderManagementService</servlet-name>
+		<servlet-class>com.ephesoft.gxt.foldermanager.server.FolderManagerServiceImpl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>folderManagementService</servlet-name>
+		<url-pattern>/folderManager/folderManagementService</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>uploadDownloadFilesServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.foldermanager.server.UploadDownloadFilesServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>uploadDownloadFilesServlet</servlet-name>
+		<url-pattern>/folderManager/filesUploadDownload</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>importBatchClassUploadServlet</servlet-name>
+		<url-pattern>/dcma-gwt-admin/importBatchClassUpload</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ImportPluginUploadServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.systemconfig.server.ImportPluginUploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ImportPluginUploadServlet</servlet-name>
+		<url-pattern>/dcma-gwt-custom-workflow/importPluginUploadServlet</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>uploadImageFileServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.UploadImageFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>uploadBatchImageServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.uploadbatch.server.UploadBatchImageServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>exportBatchClassDownload</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ExportBatchClassDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>exportDocumentTypeDownload</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ExportDocumentTypeDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>exportIndexFieldDownload</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ExportIndexFieldDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>importDocumentTypeUpload</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ImportDocumentTypeUploadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>importIndexField</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.ImportIndexFieldUploadServlet</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>uploadTestClassificationFile</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.UploadClassifyExtractFile</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>themeService</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.theme.server.ThemeServiceImpl</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>exportRegexPool</servlet-name>
+		<servlet-class>com.ephesoft.gxt.systemconfig.server.ExportRegexPoolServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>importPool</servlet-name>
+		<servlet-class>com.ephesoft.gxt.systemconfig.server.ImportPoolServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>exportTableColumnPool</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.systemConfig.server.ExportTableColumnPoolServlet</servlet-class>
+	</servlet>
+	
+	<!--
+		<servlet> <servlet-name>propertiesFileUploadServlet</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.licensegenerator.server.PropertiesFileUploadServlet</servlet-class>
+		</servlet> <servlet>
+		<servlet-name>licenseGeneratorService</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.licensegenerator.server.LicenseGeneratorServiceImpl</servlet-class>
+		</servlet> <servlet>
+		<servlet-name>generateLicenseServlet</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.licensegenerator.server.GenerateLicenseServlet</servlet-class>
+		</servlet> <servlet>
+		<servlet-name>generateReportServlet</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.licensegenerator.server.GenerateExcelReportServlet</servlet-class>
+		</servlet>
+	-->
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/ws/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>batchListService</servlet-name>
+		<url-pattern>/batchList/batchListService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>rvService</servlet-name>
+		<url-pattern>/reviewValidate/rvService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>bmService</servlet-name>
+		<url-pattern>/bm/bmService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>loginService</servlet-name>
+		<url-pattern>/login/loginService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadBatchService</servlet-name>
+		<url-pattern>/uploadbatch/uploadBatchService</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>importBatchClassUploadServlet</servlet-name>
+		<url-pattern>/gxt-admin/importBatchClassUpload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>importTableUploadServlet</servlet-name>
+		<url-pattern>/gxt-admin/importTableUpload</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>documentFileLearningUpload</servlet-name>
+		<url-pattern>/gxt-admin/documentFileLearningUpload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadImageFileServlet</servlet-name>
+		<url-pattern>/uploadImageFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>uploadBatchImageServlet</servlet-name>
+		<url-pattern>/dcma-gwt-upload-batch/uploadBatch</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>exportBatchClassDownload</servlet-name>
+		<url-pattern>/gxt-admin/exportBatchClassDownload</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>exportDocumentTypeDownload</servlet-name>
+		<url-pattern>/gxt-admin/exportDocumentTypeDownload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>exportIndexFieldDownload</servlet-name>
+		<url-pattern>/gxt-admin/exportIndexFieldDownload</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>importDocumentTypeUpload</servlet-name>
+		<url-pattern>/gxt-admin/importDocumentTypeUpload</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>importIndexField</servlet-name>
+		<url-pattern>/gxt-admin/importIndexField</url-pattern>
+	</servlet-mapping>
+		<servlet-mapping>
+		<servlet-name>uploadTestClassificationFile</servlet-name>
+		<url-pattern>/gxt-admin/uploadTestClassificationFile</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>logFileDownloadServlet</servlet-name>
+		<servlet-class>com.ephesoft.dcma.gwt.batchInstance.server.LogFileDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>logFileDownloadServlet</servlet-name>
+		<url-pattern>/dcma-gwt-batch-instance/logFileDownload</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>themeService</servlet-name>
+		<url-pattern>/theme/themeService</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>exportRegexPool</servlet-name>
+		<url-pattern>/gxt-system-config/exportRegexPool</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>importPool</servlet-name>
+		<url-pattern>/gxt-system-config/importPool</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>exportTableColumnPool</servlet-name>
+		<url-pattern>/dcma-gwt-system-config/exportTableColumnPool</url-pattern>
+	</servlet-mapping>
+	
+
+
+
+
+	<!-- Added for defining the servlet for troubleshooting -->
+	<servlet>
+		<servlet-name>DownloadBatchInstanceServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.batchinstance.server.BatchInfoDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestContentResultDownloadServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.TestContentResultDownloadServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TestExtractionResultDownloadServlet</servlet-name>
+		<servlet-class>com.ephesoft.gxt.admin.server.TestExtractionResultDownloadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TestContentResultDownloadServlet</servlet-name>
+		<url-pattern>/gxt-admin/downloadTestContentResult</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TestExtractionResultDownloadServlet</servlet-name>
+		<url-pattern>/gxt-admin/downloadTestExtractionResult</url-pattern>
+	</servlet-mapping>
+
+	
+	<servlet-mapping>
+		<servlet-name>DownloadBatchInstanceServlet</servlet-name>
+		<url-pattern>/dcma-gwt-batchInstance/downloadBatchInstance</url-pattern>
+	</servlet-mapping>
+
+	<!--
+		<servlet-mapping>
+		<servlet-name>propertiesFileUploadServlet</servlet-name>
+		<url-pattern>/license-generator/propertiesFileUpload</url-pattern>
+		</servlet-mapping> <servlet-mapping>
+		<servlet-name>licenseGeneratorService</servlet-name>
+		<url-pattern>/licenseGenerator/licenseGeneratorService</url-pattern>
+		</servlet-mapping> <servlet-mapping>
+		<servlet-name>generateLicenseServlet</servlet-name>
+		<url-pattern>/license-generator/generateLicenseServlet</url-pattern>
+		</servlet-mapping> <servlet-mapping>
+		<servlet-name>generateReportServlet</servlet-name>
+		<url-pattern>/license-generator/generateReportServlet</url-pattern>
+		</servlet-mapping>
+	-->
+
+	<servlet>
+		<servlet-name>SessionTimeoutServlet</servlet-name>
+		<servlet-class>com.ephesoft.dcma.webapp.SessionTimeoutServlet</servlet-class>
+	</servlet>
+ 
+	<servlet-mapping>
+		<servlet-name>SessionTimeoutServlet</servlet-name>
+		<url-pattern>/sessiontimeout</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/access-denied.html</location>
+	</error-page>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>review validate</web-resource-name>
+			<url-pattern>/ReviewValidate.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>batch list</web-resource-name>
+			<url-pattern>/BatchList.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>batch class management</web-resource-name>
+			<url-pattern>/BatchClassManagement.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>batch instance management</web-resource-name>
+			<url-pattern>/BatchInstanceManagement.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>upload batch</web-resource-name>
+			<url-pattern>/UploadBatch.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>custom workflow management</web-resource-name>
+			<url-pattern>/CustomWorkflowManagement.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>System Configuration Management</web-resource-name>
+			<url-pattern>/SystemConfig.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>folder management</web-resource-name>
+			<url-pattern>/FolderManager.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>theme</web-resource-name>
+			<url-pattern>/Theme.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/Login.html</form-login-page>
+			<form-error-page>/Login.html</form-error-page>
+		</form-login-config>
+	</login-config>
+	<security-role>
+		<role-name>*</role-name>
+	</security-role>
+	<!--
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>license generator</web-resource-name>
+			<url-pattern>/LicenseGenerator.html</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Web Based License Generator</web-resource-name>
+			<url-pattern>/licenseGenerator/licenseGeneratorService</url-pattern>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	-->	
+	
+	<error-page>
+        <error-code>404</error-code>
+        <location>/home.html</location>
+    </error-page>
+    <error-page>
+        <error-code>408</error-code>
+        <location>/home.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/home.html</location>
+    </error-page>
+    <error-page>
+        <error-code>502</error-code>
+        <location>/home.html</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/home.html</location>
+    </error-page>
+	
+</web-app>

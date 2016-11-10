@@ -1,0 +1,15 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreView="urn:import:com.ephesoft.gxt.core.client.view"
+	xmlns:rvView="urn:import:com.ephesoft.gxt.rv.client.view">
+	<g:HorizontalPanel styleName="menuPanel" spacing="3">
+		<g:Label ui:field="batchIDTextLabel" styleName="detailHeaderLabel"/>
+		<g:Label ui:field="batchInstanceIDLabel" />
+		<g:Label ui:field="batchNameTextLabel" styleName="detailHeaderLabel"/>
+		<g:Label ui:field="nameLabel" />
+		<g:Label ui:field="batchPriorityTextLabel" styleName="detailHeaderLabel"/>
+		<g:Label ui:field="priorityLabel" />
+	</g:HorizontalPanel>
+</ui:UiBinder>

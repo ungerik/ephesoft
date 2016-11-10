@@ -1,0 +1,192 @@
+/**
+	CSS for Ephesoft Cloud home page
+*/
+
+/**
+	This CSS sets the background image for ephesoft university logo links.
+*/
+.university_panel {
+	background: url("../images/university_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft wiki logo links.
+*/
+.wiki_panel {
+	background: url("../images/wiki_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft training logo links.
+*/
+.training_panel {
+	background: url("../images/training_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS sets the background image for ephesoft cloud home center panel.
+*/
+.home_panel {
+	background: url("../images/home_back.jpg") no-repeat !important;
+}
+
+/**
+	This CSS is used for setting the text as BOLD.
+*/
+.bold {
+	font-weight: bold;
+}
+
+/**
+	This CSS is used for setting the text as ITALICS.
+*/
+.italic {
+	font-style: italic;
+}
+
+/**
+	This CSS is used for setting the text note for training label.
+*/
+.training_label {
+	padding-left: 30px;
+    padding-top: 10px;
+    width: 196px;
+    font-weight: bold;
+    color: #2f4f4f;
+	font: bold 16px arial;
+}
+
+/**
+	This CSS is used for setting padding of an element by 143.
+*/
+.padding_left_143 {
+	padding-left: 143px;
+}
+
+/**
+	This CSS is used for setting padding of an element by top by 15 and left by 22.
+*/
+.padding_top_left {
+	padding-left: 22px;
+    padding-top: 15px;
+}
+
+/**
+	This CSS is used for setting padding bottom of an element by 17.
+*/
+.padding_bottom_17 {
+	padding-bottom: 17.0px;
+}
+
+/**
+	This CSS is used for setting padding left of an element by 25.
+*/
+.padding_left_25 {
+	padding-left: 25px;
+}
+
+/**
+	This CSS is used for setting margin right of an element by 22.
+*/
+.margin_right_22 {
+	margin-right: 22px;
+}
+
+/**
+	This CSS is used for setting margin right of an element by 34.
+*/
+.margin_right_34 {
+	margin-right: 34px;
+}
+
+/**
+	This CSS is used for setting padding top of an element by 20.
+*/
+.padding_top_20 {
+	padding-top: 20px;
+}
+
+/**
+	This CSS is used for setting cursor for an element as hand.
+*/
+.cursor_hand {
+	cursor: pointer !important;
+}
+
+/**
+	This CSS is used for setting padding left of an element by 20.
+*/
+.padding_left_20 {
+	padding-left: 20.0px;
+}
+
+/**
+	This CSS is used for setting element in center.
+*/
+.center_align_panel {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+	This CSS is for slider/disclosure tab header element.
+*/
+.slider {
+	background: url("../images/new_admin_sd.jpg") no-repeat !important;
+}
+
+/**
+	This CSS is for slider/disclosure tab header element.
+*/
+.last_slider {
+	background: url("../images/new_user_sd.jpg") no-repeat !important;
+}
+
+/**
+	This CSS is for Ephesoft Cloud Home left account panel.
+*/
+.account_panel {
+	font-weight: bold;
+    height: 320px;
+    padding-left: 20px;
+    padding-top: 52px;
+    width: 330px;
+	color: #2f4f4f;
+	font: bold 16px arial;
+}
+
+.head {
+	background-color:#D0E4F6;
+	text-align: center;
+}
+
+.logo {
+    background: url("../../themes/default_theme/images/logo_login.png") no-repeat scroll 0 0 transparent;
+    display: inline-block;
+    height: 63px;
+    margin: 5px auto 0;
+    width: 260px;
+}
+
+.app_links {
+	height: 347px;
+	width:258px;
+	margin: auto;
+}
+
+.footer {
+	clear: both;
+    height: 3em;
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+}
+
+.link {
+    color: #000000;
+    font-family: Arial Unicode MS,Arial,sans-serif;
+    font-size: small;
+    margin: 50px;
+    text-decoration: none;
+}

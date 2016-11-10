@@ -1,0 +1,98 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g='urn:import:com.google.gwt.user.client.ui' xmlns:core='com.ephesoft.dcma.gwt.core.client.validator'
+	xmlns:client="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client.form"
+	xmlns:gxtWidget="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:label='urn:import:com.ephesoft.gxt.core.client.ui.widget'
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+	<container:VerticalLayoutContainer
+		ui:field="parentContainer">
+
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="batchClassNameLabel" />
+				</container:child>
+				<container:child>
+					<gxt:TextField ui:field="batchClassNameTextField" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="batchClassDescriptionLabel" />
+				</container:child>
+				<container:child>
+					<gxt:TextField ui:field="batchClassDescriptionTextField" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="batchClassPriorityLabel" />
+				</container:child>
+				<container:child>
+					<label:Slider ui:field="prioritySlider" />
+				</container:child>
+				<container:child>
+					<gxt:TextField ui:field="prioritySliderTextBox"/>
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<coreWidget:MandatoryLabel ui:field="uncFolderLabel" />
+				</container:child>
+				<container:child>
+					<coreWidget:ComboBox ui:field="uncFolderComboBox" />
+				</container:child>
+				<container:child>
+					<g:CheckBox ui:field="useExistingUNCCheckBox" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<g:Label ui:field="importBatchClassWithLabel" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<container:child>
+			<g:RadioButton ui:field="withLearnFilesRadioButton"
+				name="learnFilesImport" />
+		</container:child>
+
+		<container:child>
+			<g:RadioButton ui:field="withoutLearnFilesRadioButton"
+				name="learnFilesImport" />
+		</container:child>
+
+		<container:child>
+			<g:CheckBox ui:field="importRolesCheckBox" />
+		</container:child>
+
+		
+		<container:child>
+			<container:HorizontalLayoutContainer>
+				<container:child>
+					<g:CheckBox ui:field="importConnectionsCheckBox" />
+				</container:child>
+			</container:HorizontalLayoutContainer>
+		</container:child>
+
+		<!-- <container:child> -->
+		<!-- <g:CheckBox ui:field="batchClassFieldCheckbox" /> -->
+		<!-- </container:child> -->
+	</container:VerticalLayoutContainer>
+</ui:UiBinder>

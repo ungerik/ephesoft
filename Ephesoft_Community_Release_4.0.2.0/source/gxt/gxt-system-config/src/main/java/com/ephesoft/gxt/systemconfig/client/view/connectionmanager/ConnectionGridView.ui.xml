@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:coreWidget="urn:import:com.ephesoft.gxt.core.client.ui.widget"
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
+
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="gridData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="toolbarData">
+		<ui:attributes width="1" height="-1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="panelData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<g:VerticalPanel ui:field="gridViewMainPanel" height="100%">
+		<coreWidget:Grid ui:field="connectionListGrid"
+			layoutData="{gridData}" />
+		<coreWidget:PagingToolbar ui:field="pagingToolbar"
+			layoutData="{toolbarData}" />
+	</g:VerticalPanel>
+</ui:UiBinder>

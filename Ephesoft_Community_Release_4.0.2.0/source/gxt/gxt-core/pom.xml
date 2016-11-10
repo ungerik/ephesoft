@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<gxt.version>3.1.0</gxt.version>
+	</properties>
+	<parent>
+		<groupId>com.ephesoft.dcma</groupId>
+		<artifactId>gxt</artifactId>
+		<version>0.0.15-SNAPSHOT</version>
+	</parent>
+	<artifactId>gxt-core</artifactId>
+	<name>GXT-Core-Module</name>
+	<description>GXT-Core-Module</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-workflows</artifactId>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.ephesoft.dcma</groupId> -->
+		<!-- <artifactId>dcma-workflows</artifactId> -->
+		<!-- </dependency> -->
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-data-access</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.swfupload</groupId>
+			<artifactId>swfupload-gwt</artifactId>
+			<version>1.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.ephesoft.dcma</groupId>
+			<artifactId>dcma-webservice</artifactId>
+		</dependency>
+		<!-- 3.1 feature: Dependency added for run time rule validation -->
+		<dependency>
+			<groupId>org.matheclipse</groupId>
+			<artifactId>matheclipse-parser</artifactId>
+			<version>0.0.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt.eventbinder</groupId>
+			<artifactId>eventbinder</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt</artifactId>
+			<version>${gxt.version}</version>
+		</dependency>
+
+		<!-- Charts -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt-chart</artifactId>
+			<version>${gxt.version}</version>
+		</dependency>
+
+		<!-- GXT 3.1.0+ - Neptune Theme -->
+		<dependency>
+			<groupId>com.sencha.gxt</groupId>
+			<artifactId>gxt-theme-neptune</artifactId>
+			<version>${gxt.version}</version>
+		</dependency>
+
+		<!-- Moxiapps dependency for Uploader -->
+		<dependency>
+			<groupId>org.moxieapps.gwt</groupId>
+			<artifactId>org.moxieapps.gwt.uploader</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+		<!-- Emulated JRE classes library -->
+		<dependency>
+			<groupId>com.google.code.gwtx</groupId>
+			<artifactId>gwtx</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+
+
+	</dependencies>
+</project>

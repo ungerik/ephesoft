@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Created with Liquid XML Studio Developer Edition (Trial) 8.0.11.2171 
+	(http://www.liquid-technologies.com) -->
+<xs:schema elementFormDefault="qualified"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="Common.xsd" />
+	<xs:element name="HocrPages">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Signature" type="xs:string" />
+				<xs:element name="HocrPage" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="PageID" type="xs:string" />
+							<xs:element name="Title" type="xs:string" />
+							<xs:element name="Orientation" type="xs:string" />
+							<!-- 3.1 feature : Add support to deskew images present in batch instance. -->
+							<xs:element name="DeskewAngle" type="xs:string" />
+							<xs:element name="Corners">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Corner" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="X" type="xs:string" />
+													<xs:element name="Y" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Spans">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Span" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Value" type="xs:string" />
+													<xs:element name="Coordinates" type="coordinates" />
+													<xs:element name="OcrConfidence" type="xs:string" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Barcodes">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Barcode" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Content" type="xs:string" />
+													<xs:element name="Type" type="xs:string" />
+													<!-- 3.1 feature : Add support to extract co-ordinates of barcode. -->
+													<xs:element name="Coordinates" type="coordinates" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="HocrContent" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

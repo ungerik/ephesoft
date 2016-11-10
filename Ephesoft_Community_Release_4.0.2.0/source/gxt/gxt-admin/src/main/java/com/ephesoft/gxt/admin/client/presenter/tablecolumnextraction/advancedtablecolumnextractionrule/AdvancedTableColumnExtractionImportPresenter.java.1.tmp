@@ -1,0 +1,49 @@
+package com.ephesoft.gxt.admin.client.presenter.tablecolumnextraction.advancedtablecolumnextractionrule;
+
+import com.ephesoft.gxt.admin.client.controller.BatchClassManagementController;
+import com.ephesoft.gxt.admin.client.controller.BatchClassManagementController.BatchClassManagementEventBus;
+import com.ephesoft.gxt.admin.client.event.AdvancedTableColumnExtractionLoadImageEvent;
+import com.ephesoft.gxt.admin.client.i18n.BatchClassConstants;
+import com.ephesoft.gxt.admin.client.view.tablecolumnextraction.advcancedtablecolumnextractionrule.AdvancedTableColumnExtractionImportView;
+import com.ephesoft.gxt.core.shared.dto.FileType;
+import com.ephesoft.gxt.core.shared.util.StringUtil;
+import com.google.gwt.core.shared.GWT;
+import com.google.gwt.event.shared.EventBus;
+import com.google.web.bindery.event.shared.binder.EventBinder;
+
+public class AdvancedTableColumnExtractionImportPresenter extends
+		AdvancedTableColumnExtractionInlinePresenter<AdvancedTableColumnExtractionImportView> {
+
+	public AdvancedTableColumnExtractionImportPresenter(BatchClassManagementController controller,
+			AdvancedTableColumnExtractionImportView view) {
+		super(controller, view);
+		view.initializeUploader();
+	}
+
+	interface CustomEventBinder extends EventBinder<AdvancedTableColumnExtractionImportPresenter> {
+	}
+
+	private static final CustomEventBinder eventBinder = GWT.create(CustomEventBinder.class);
+
+	@Override
+	public void injectEvents(EventBus eventBus) {
+		eventBinder.bindEventHandlers(this, eventBus);
+
+	}
+
+	@Override
+	public void bind() {
+
+	}
+
+	public void loadImage(String fileName) {
+		String extension = FileType.PNG.getExtension();
+		if(fileName.toLowerCase().contains(FileType.PDF.getExtension().toLowerCase())){
+			extension = StringUtil.concatenate(FileType.PDF.getExtension(),FileType.PNG.getExtensionWithDot());
+		}
+		String pngFileName = fileName.substring(0, fileName.lastIndexOf(BatchClassConstants.EXTENSION_CHAR) + 1)
+				+ extension;
+		BatchClassManagementEventBus.fireEvent(new AdvancedTableColumnExtractionLoadImageEvent(pngFileName));
+	}
+
+}
